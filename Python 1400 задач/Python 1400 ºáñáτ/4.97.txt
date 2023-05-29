@@ -1,0 +1,10 @@
+num = int(input("Введите число k: "))
+if num <= 190:
+    print("Ошибка: число должно быть больше 190")
+else:
+    num -= 190
+    if num % 4 == 0 or num % 4 == 1:
+        print((num // 2) % 10)
+    else:
+        print((num // 2 + 5) % 10)
+

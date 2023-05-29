@@ -1,0 +1,8 @@
+numbers_found = 0
+current_number = 500
+
+while numbers_found < 20:
+    if current_number % 13 == 0 or current_number % 17 == 0:
+        print(current_number)
+        numbers_found += 1
+    current_number += 1

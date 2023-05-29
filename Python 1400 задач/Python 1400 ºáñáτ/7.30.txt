@@ -1,0 +1,4 @@
+masses = [10, 15, 20, 25, 30] # пример значений масс предметов
+average_mass = sum(masses) / len(masses)
+print("Средняя масса предметов: ", average_mass)
+

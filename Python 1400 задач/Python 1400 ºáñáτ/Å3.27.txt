@@ -1,0 +1,16 @@
+for x in range(0, 6):
+    result_a = x > 2 and x > 3
+    result_b = not (x > 2)
+    result_c = x > 1 or x > -2
+    result_d = not (x > 0 and x < 5)
+    result_e = x > 0 and x < 5
+    result_f = x > 3 or x < -1
+    result_g = 0 < 4**x * x < 5
+    print(f"x={x}")
+    print(f"a) {result_a}")
+    print(f"б) {result_b}")
+    print(f"в) {result_c}")
+    print(f"г) {result_d}")
+    print(f"д) {result_e}")
+    print(f"е) {result_f}")
+    print()

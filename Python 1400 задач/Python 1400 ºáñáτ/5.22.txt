@@ -1,0 +1,5 @@
+cost_per_kg = float(input("Введите цену за 1 кг конфет: "))
+for kg in range(100, 2100, 100):
+    cost = cost_per_kg * kg / 1000
+    print(f"{kg} г конфет стоят {cost} рублей")
+

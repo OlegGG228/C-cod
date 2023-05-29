@@ -1,0 +1,3 @@
+word = "алигортм"
+word = word[:2] + 'г' + word[2:6] + 'и' + word[7]
+print(word)

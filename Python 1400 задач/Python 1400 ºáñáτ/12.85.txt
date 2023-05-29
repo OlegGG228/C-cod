@@ -1,0 +1,10 @@
+text = input("Введите текст: ")
+text = text.strip()
+if '.' in text:
+    first_sentence = text[:text.index('.')]
+else:
+    first_sentence = text
+n_count = first_sentence.count('и')
+letter_count = len(first_sentence)
+print("Количество букв и в первом предложении:", n_count)
+print("Количество букв в первом предложении:", letter_count)

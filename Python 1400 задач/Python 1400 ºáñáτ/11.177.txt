@@ -1,0 +1,10 @@
+arr = input("Введите массив через пробел: ").split()
+k = int(input("Введите k: "))
+
+temp = arr[k-1]
+for i in range(k-2, -1, -1):
+    arr[i+1] = arr[i]
+arr[0] = temp
+
+print("Измененный массив:", ' '.join(arr))
+

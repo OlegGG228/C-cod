@@ -1,0 +1,4 @@
+words = input("Введите последовательность слов: ").split()
+for word in words:
+    if len(word) == len(set(word)) and word == word[::-1] and word != words[0]:
+        print(word)

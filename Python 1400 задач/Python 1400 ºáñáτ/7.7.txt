@@ -1,0 +1,8 @@
+resistances = [4, 8, 12, 16] # сопротивления элементов цепи
+total_resistance = 0
+
+for resistance in resistances:
+    total_resistance += 1/resistance # суммирование обратных значений сопротивлений
+
+total_resistance = 1/total_resistance # обратное значение от суммы обратных значений
+print("Общее сопротивление цепи:", total_resistance)

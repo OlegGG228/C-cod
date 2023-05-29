@@ -1,0 +1,22 @@
+age_in_months = int(input("Введите возраст в месяцах: "))
+years = age_in_months // 12
+months = age_in_months % 12
+
+if years < 1:
+    print("{0} месяцев".format(age_in_months))
+elif years == 1:
+    if months == 0:
+        print("{0} год".format(years))
+    else:
+        print("{0} год {1} месяцев".format(years, months))
+elif 1 < years < 5:
+    if months == 0:
+        print("{0} года".format(years))
+    else:
+        print("{0} года {1} месяцев".format(years, months))
+else:
+    if months == 0:
+        print("{0} лет".format(years))
+    else:
+        print("{0} лет {1} месяцев".format(years, months))
+

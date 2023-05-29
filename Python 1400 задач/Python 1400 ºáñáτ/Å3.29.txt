@@ -1,0 +1,17 @@
+for X in range(-10, 11):
+    for Y in range(-10, 11):
+        for Z in range(-10, 11):
+            result_a = (X % 2 == 1) and (Y % 2 == 1)
+            result_b = (X < 20) != (Y < 20)
+            result_c = X == 0 or Y == 0
+            result_d = X < 0 and Y < 0 and Z < 0
+            result_e = (X % 5 == 0) != (Y % 5 == 0) != (Z % 5 == 0)
+            result_f = X > 100 or Y > 100 or Z > 100
+            print(f"X={X}, Y={Y}, Z={Z}")
+            print(f"a) {result_a}")
+            print(f"б) {result_b}")
+            print(f"в) {result_c}")
+            print(f"г) {result_d}")
+            print(f"д) {result_e}")
+            print(f"е) {result_f}")
+            print()

@@ -1,0 +1,12 @@
+marks = [5, 4, 3, 2] # список оценок
+
+fives = marks.count(5) # количество пятерок
+fours = marks.count(4) # количество четверок
+threes = marks.count(3) # количество троек
+twos = marks.count(2) # количество двоек
+
+print("Количество пятерок:", fives)
+print("Количество четверок:", fours)
+print("Количество троек:", threes)
+print("Количество двоек:", twos)
+

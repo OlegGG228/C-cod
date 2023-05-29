@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+if ' ' in sentence:
+    first_word = sentence[:sentence.index(' ')]
+else:
+    first_word = sentence
+o_count = first_word.count('о')
+print("Количество букв о в первом слове:", o_count)

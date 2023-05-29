@@ -1,0 +1,74 @@
+a) 
+
+```python
+import random
+
+for i in range(8):
+    print(random.random())
+```
+
+б) 
+
+```python
+import random
+
+k = int(input("Введите количество чисел: "))
+
+for i in range(k):
+    print(random.random())
+```
+
+в) 
+
+```python
+import random
+
+for i in range(15):
+    print(random.uniform(25, 26))
+```
+
+г) 
+
+```python
+import random
+
+for i in range(20):
+    print(random.uniform(0, 15))
+```
+
+д) 
+
+```python
+import random
+
+a = int(input("Введите значение a: "))
+b = int(input("Введите значение b: "))
+
+k = random.randint(1, a)
+for i in range(k):
+    print(random.uniform(0, b))
+```
+
+е) 
+
+```python
+import random
+
+for i in range(10):
+    print(random.uniform(-40, 40))
+```
+
+ж) 
+
+```python
+import random
+
+a = int(input("Введите значение a: "))
+b = int(input("Введите значение b: "))
+m = int(input("Введите значение m: "))
+
+k = random.randint(1, m)
+for i in range(k):
+    print(random.uniform(a, b))
+```
+

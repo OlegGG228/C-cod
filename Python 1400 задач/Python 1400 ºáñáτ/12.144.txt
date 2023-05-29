@@ -1,0 +1,8 @@
+word = input("Enter a word: ")
+k = int(input("Enter k: "))
+s = int(input("Enter s: "))
+temp = word[s-1]
+for i in range(s-1, k):
+    word[i] = word[i+1]
+word[k] = temp
+print(word)

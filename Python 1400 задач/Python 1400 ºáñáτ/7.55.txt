@@ -1,0 +1,15 @@
+n = int(input("Введите натуральное число n: "))
+a = []
+for i in range(n):
+    a.append(int(input("Введите целое число a{}: ".format(i+1))))
+t = int(input("Введите число t: "))
+q = int(input("Введите число q: "))
+
+sum_ = 0
+for num in a:
+    if num <= t:
+        sum_ += num
+if sum_ > q:
+    print("Сумма чисел a, которые не больше t, превышает q")
+else:
+    print("Сумма чисел a, которые не больше t, не превышает q")

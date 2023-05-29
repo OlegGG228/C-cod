@@ -1,0 +1,23 @@
+nums = input("Введите числа через пробел: ").split()
+goals = []
+missed = []
+
+for n in nums:
+    if len(n) == 1:
+        goals.append(int(n))
+        missed.append(0)
+    else:
+        goals.append(int(n[0]))
+        missed.append(int(n[1]))
+
+total_goals = sum(goals)
+total_missed = sum(missed)
+games = len(goals)
+
+average_goals = total_goals / games
+average_missed = total_missed / games
+print(f"Всего игр: {games}")
+print(f"Забито мячей: {total_goals}, пропущено мячей: {total_missed}")
+print(f"Среднее количество забитых мячей в игре: {average_goals:.2f}")
+print(f"Среднее количество пропущенных мячей в игре: {average_missed:.2f}")
+

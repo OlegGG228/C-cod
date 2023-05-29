@@ -1,0 +1,16 @@
+people = [{"Рост": 170, "Пол": "Мужской"}, {"Рост": 165, "Пол": "Женский"}, {"Рост": 180, "Пол": "Мужской"},
+          {"Рост": 160, "Пол": "Женский"}, {"Рост": 185, "Пол": "Мужской"}, {"Рост": 170, "Пол": "Мужской"}] # и т.д.
+
+total_height = 0
+count = 0
+
+for person in people:
+  if person["Пол"] == "Мужской":
+    total_height += person["Рост"]
+    count += 1
+
+if count > 0:
+  average_height = total_height/count
+  print("Средний рост мужчин:", average_height)
+else:
+  print("Мужчин нет")

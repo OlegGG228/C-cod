@@ -1,0 +1,12 @@
+h = int(input("Введите значение часов (от 0 до 23): "))
+m = int(input("Введите значение минут (от 0 до 59): "))
+s = int(input("Введите значение секунд (от 0 до 59): "))
+
+if h > 23 or h < 0 or m > 59 or m < 0 or s > 59 or s < 0:
+    print("Ошибка ввода значений")
+else:
+    total_seconds = (h * 3600) + (m * 60) + s
+    degrees_per_second = 360 / (12 * 60 * 60)
+    angle = total_seconds * degrees_per_second
+    
+    print("Угол между положением часовой стрелки в начале суток и указанным моментом времени: {:.2f} градусов".format(angle))

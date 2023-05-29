@@ -1,0 +1,22 @@
+arr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+a = 12
+
+# a) Вывести все элементы массива, меньшие a.
+res_a = [elem for elem in arr if elem < a]
+print("Элементы массива, меньшие a:", res_a)
+
+# б) Найти два элемента массива в интервале, между которыми находится значение а.
+for i in range(len(arr)-1):
+    if arr[i] < a < arr[i+1]:
+        print("Два элемента массива в интервале, между которыми находится значение а:", (i, arr[i]), (i+1, arr[i+1]))
+        break
+
+# в) Найти элемент массива, ближайший к a.
+min_diff = float('inf')
+closest_elem = None
+for i, elem in enumerate(arr):
+    if abs(elem-a) < min_diff:
+        min_diff = abs(elem-a)
+        closest_elem = (i, elem)
+print("Элемент массива, ближайший к a:", closest_elem)
+

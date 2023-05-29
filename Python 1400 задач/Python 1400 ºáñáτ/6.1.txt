@@ -1,0 +1,17 @@
+a = int(input("Введите натуральное число a: "))
+b = int(input("Введите натуральное число b: "))
+
+# а)
+result = 0
+while a >= b:
+    a -= b
+    result += 1
+
+print("Результат целочисленного деления a на b:", result)
+
+# б)
+remainder = a
+while remainder >= b:
+    remainder -= b
+
+print("Остаток от деления a на b:", remainder)

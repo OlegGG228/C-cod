@@ -1,0 +1,4 @@
+text = input("Введите текст: ")
+plus_count = text.count("+")
+minus_count = text.count("-")
+print("Количество символов '+' и '-' в тексте: ", plus_count + minus_count)

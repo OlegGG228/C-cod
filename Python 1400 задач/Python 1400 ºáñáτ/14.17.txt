@@ -1,0 +1,20 @@
+def triangle_area(a, b, c):
+    # Функция для рассчета площади треугольника по трем его сторонам
+    p = (a + b + c) / 2
+    return (p*(p-a)*(p-b)*(p-c)) ** 0.5
+
+def pentagon_area(a, b, c, d, e):
+    # Функция для рассчета площади пятиугольника по его сторонам
+    tri1 = triangle_area(a, b, e)
+    tri2 = triangle_area(c, d, e)
+    tri3 = triangle_area(b, c, e)
+    tri4 = triangle_area(a, d, e)
+    tri5 = triangle_area(a, b, c)
+    return tri1 + tri2 + tri3 + tri4 + tri5
+
+a = 4
+b = 5
+c = 3
+d = 2
+e = 6
+print(pentagon_area(a, b, c, d, e))

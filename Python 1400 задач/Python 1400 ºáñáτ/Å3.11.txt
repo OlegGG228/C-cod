@@ -1,0 +1,16 @@
+x = 1
+y = -1
+
+a2 = x ** 2 + y ** 4
+b2 = (x > 0) or (y ** 2 - 4)
+c2 = (x > 0) and (y ** 2 != 4)
+d2 = (x - y == 0) and (y > x)
+e2 = (not (x - y < 0)) and (y > x)
+f2 = (not (x - y < 0)) or (y > x)
+
+print(a2)  # 2
+print(b2)  # True
+print(c2)  # True
+print(d2)  # False
+print(e2)  # True
+print(f2)  # True

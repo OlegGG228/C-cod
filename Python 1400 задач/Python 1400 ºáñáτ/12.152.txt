@@ -1,0 +1,10 @@
+text = input("Введите текст: ")
+is_integer = True
+for char in text:
+    if not char.isdigit():
+        is_integer = False
+        break
+if is_integer:
+    print("Текст является правильной записью целого числа")
+else:
+    print("Текст не является правильной записью целого числа")

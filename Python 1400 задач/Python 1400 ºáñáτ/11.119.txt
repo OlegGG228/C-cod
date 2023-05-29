@@ -1,0 +1,9 @@
+scores = []
+for i in range(8):
+  score = int(input("Введите оценку судьи № {}: ".format(i+1)))
+  scores.append(score)
+scores.sort()
+scores = scores[1:7]
+mean = sum(scores)/len(scores)
+print("Средняя оценка спортсмена: ", mean)
+

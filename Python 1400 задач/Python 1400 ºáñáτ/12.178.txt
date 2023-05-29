@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+temp = words[0]
+words[0] = words[-1]
+words[-1] = temp
+new_sentence = " ".join(words)
+print(new_sentence)

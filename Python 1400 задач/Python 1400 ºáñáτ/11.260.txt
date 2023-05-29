@@ -1,0 +1,14 @@
+# 1
+a = [3, 5, 8, 13, 7, 0, -4, 1, 6, 13]
+new_arr = []
+
+for num in a:
+    if num != 13:
+        new_arr.append(num)
+        
+print(new_arr) # выводит [3, 5, 8, 7, 0, -4, 1, 6]
+# 2
+a = [3, 5, 8, 13, 7, 0, -4, 1, 6, 13]
+new_arr = [num for num in a if num != 13]
+
+print(new_arr) # выводит [3, 5, 8, 7, 0, -4, 1, 6]

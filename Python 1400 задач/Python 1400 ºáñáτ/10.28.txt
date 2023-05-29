@@ -1,0 +1,24 @@
+import random
+
+# Функция, которая проверяет, попадает ли точка в круг
+def in_circle(x, y):
+    return x**2 + y**2 <= 1
+
+# Функция, которая вычисляет значение числа л методом Монте-Карло
+def monte_carlo_pi(precision):
+    inside_circle = 0
+    total_points = 0
+    estimated_pi = 0
+    while abs(estimated_pi - 3.1415) > precision:
+        for i in range(1000):
+            x = random.uniform(0, 1)
+            y = random.uniform(0, 1)
+            if in_circle(x, y):
+                inside_circle += 1
+            total_points += 1
+        estimated_pi = 4 * inside_circle / total_points
+    return estimated_pi
+
+# Вызов функции и вывод результата
+print(monte_carlo_pi(0.0001))
+

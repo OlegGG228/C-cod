@@ -1,0 +1,14 @@
+import math
+
+a = 0
+b = math.pi / 2
+n = 1000
+dx = (b - a) / n
+
+sum = 0
+for i in range(n):
+    x1 = a + i*dx
+    x2 = x1 + dx
+    sum += (math.sin(x1) + math.sin(x2))/2 * dx
+
+print(sum)

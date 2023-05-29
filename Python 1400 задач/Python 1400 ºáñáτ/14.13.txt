@@ -1,0 +1,18 @@
+def sign(a):
+    if a < 0:
+        return -1
+    elif a == 0:
+        return 0
+    else:
+        return 1
+
+a = float(input("Введите значение a: "))
+y = float(input("Введите значение y: "))
+
+sign_a = sign(a)
+sign_y = sign(y)
+
+z = sign_a + sign_y
+
+print("Значение функции z = sign(a) + sign(y) равно:", z)
+

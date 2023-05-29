@@ -1,0 +1,11 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+count_start_n = 0
+count_end_r = 0
+for word in words:
+    if word[0] == 'н':
+        count_start_n += 1
+    if word[-1] == 'р':
+        count_end_r += 1
+print("Количество слов, начинающихся на 'н':", count_start_n)
+print("Количество слов, оканчивающихся на 'р':", count_end_r)

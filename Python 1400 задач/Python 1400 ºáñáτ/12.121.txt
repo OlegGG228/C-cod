@@ -1,0 +1,3 @@
+sentence = "Это предложение для удаления символов"
+new_sentence = sentence.replace('с', '')
+print(new_sentence)

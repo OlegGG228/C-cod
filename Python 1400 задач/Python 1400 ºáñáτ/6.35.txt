@@ -1,0 +1,31 @@
+num = int(input("Введите натуральное число: "))
+count_three = 0
+count_last_digit = 0
+count_even = 0
+sum_bigger_five = 0
+prod_bigger_seven = 1
+count_zero_five = 0
+
+while num > 0:
+    digit = num % 10
+    if digit == 3:
+        count_three += 1
+    if digit == num % 10:
+        count_last_digit += 1
+    if digit % 2 == 0:
+        count_even += 1
+    if digit > 5:
+        sum_bigger_five += digit
+    if digit > 7:
+        prod_bigger_seven *= digit
+    if digit == 0 or digit == 5:
+        count_zero_five += 1
+    num //= 10
+
+print("Количество цифр 3: ", count_three)
+print("Количество последней цифры: ", count_last_digit)
+print("Количество четных цифр: ", count_even)
+print("Сумма цифр > 5: ", sum_bigger_five)
+print("Произведение цифр > 7: ", prod_bigger_seven)
+print("Количество цифр 0 и 5: ", count_zero_five)
+

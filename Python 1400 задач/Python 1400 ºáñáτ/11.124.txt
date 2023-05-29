@@ -1,0 +1,7 @@
+arr = [1, 3, 5, 2, 5, 7, 2, 1, 2]
+max_val = max(arr)
+min_val = min(arr)
+max_count = arr.count(max_val)
+min_count = arr.count(min_val)
+print(f"Количество максимальных элементов: {max_count}")
+print(f"Количество минимальных элементов: {min_count}")

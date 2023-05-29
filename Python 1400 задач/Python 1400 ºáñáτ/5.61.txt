@@ -1,0 +1,37 @@
+Первый способ:
+
+x = int(input("Введите значение x: "))
+y = int(input("Введите значение y: "))
+
+if y > 0:
+    s = x
+    for i in range(y):
+        s += (-x)
+    print("Произведение x-у =", s)
+    
+else:
+    s = -x
+    for i in range(-y):
+        s += x
+    print("Произведение x-у =", s)
+
+Второй способ:
+
+x = int(input("Введите значение x: "))
+y = int(input("Введите значение y: "))
+
+if y > 0:
+    s = 0
+    for i in range(y):
+        s += x
+    for i in range(y):
+        s -= 1
+    print("Произведение x-у =", s)
+    
+else:
+    s = 0
+    for i in range(-y):
+        s += x
+    for i in range(-y):
+        s += 1
+    print("Произведение x-у =", s)

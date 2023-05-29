@@ -1,0 +1,5 @@
+fibonacci = [0, 1] # первые два числа ряда Фибоначчи
+for i in range(2, 10): # заполняем массив десятью первыми числами
+    fibonacci.append(fibonacci[i-1] + fibonacci[i-2])
+print(fibonacci) # выводим результат
+

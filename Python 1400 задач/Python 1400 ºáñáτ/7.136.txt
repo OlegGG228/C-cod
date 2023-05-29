@@ -1,0 +1,11 @@
+best_result = None
+
+while True:
+    result = input("Введите результат спортсмена (время в секундах): ")
+    try:
+        result = float(result)
+        if best_result is None or result < best_result:
+            best_result = result
+        print("Лучший результат: ", best_result)
+    except ValueError:
+        print("Ошибка! Введите число.")

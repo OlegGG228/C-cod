@@ -1,0 +1,7 @@
+words = input("Введите последовательность слов: ").split()
+
+for word in words:
+    if 'жи' in word or 'ши' in word:
+        print("В слове", word, "есть буквосочетание 'жи' или 'ши'")
+    else:
+        print("В слове", word, "нет буквосочетаний 'жи' или 'ши'")

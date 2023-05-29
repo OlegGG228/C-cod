@@ -1,0 +1,28 @@
+# Функция добавления нового ученика в список с ростом
+def add_student(students, name, height):
+    # Ищем, на каком месте в списке должен быть новый ученик
+    index = 0
+    for i in range(len(students)):
+        if height > students[i][1]:
+            index = i
+            break
+        else:
+            index = i + 1
+    # Добавляем нового ученика на найденное место
+    students.insert(index, [name, height])
+
+# Список с ростом учеников
+students = [['Иванов', 180],
+            ['Петров', 175],
+            ['Сидоров', 172],
+            ['Андреев', 168],
+            ['Белов', 165],
+            ['Зайцев', 163],
+            ['Новиков', 162]]
+
+# Добавляем нового ученика из списка
+add_student(students, 'Козлов', 170)
+
+# Выводим обновленный список
+for i in range(len(students)):
+    print(students[i][0], students[i][1])

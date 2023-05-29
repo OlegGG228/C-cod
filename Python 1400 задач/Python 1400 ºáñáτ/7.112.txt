@@ -1,0 +1,7 @@
+nums = [float(input()) for i in range(2, 16)]
+greater_than_10 = [num for num in nums if num > 10]
+if greater_than_10:
+    avg = sum(greater_than_10) / len(greater_than_10)
+    print("Среднее арифметическое чисел, больших 10, равно:", avg)
+else:
+    print("Среди заданных чисел нет чисел, больших 10.")

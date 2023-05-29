@@ -1,0 +1,13 @@
+def perimeter(base1, base2, height):
+    return base1 + base2 + 2 * (height * height + (base1 - base2) * (base1 - base2)) ** 0.5
+
+trap1_base1 = 10
+trap1_base2 = 8
+trap1_height = 4
+
+trap2_base1 = 12
+trap2_base2 = 8
+trap2_height = 5
+
+total_perimeter = perimeter(trap1_base1, trap1_base2, trap1_height) + perimeter(trap2_base1, trap2_base2, trap2_height)
+print("Total perimeter:", total_perimeter)

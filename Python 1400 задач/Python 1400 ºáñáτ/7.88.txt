@@ -1,0 +1,20 @@
+p = int(input("Введите натуральное число p: "))
+n = int(input("Введите количество чисел а: "))
+
+a = []
+
+for i in range(n):
+    a_i = int(input("Введите число а: "))
+    a.append(a_i)
+
+count_negative = 0
+
+for i in range(n):
+    if a[i] < 0:
+        count_negative += 1
+
+if count_negative > p:
+    print("Количество отрицательных чисел а превышает p")
+else:
+    print("Количество отрицательных чисел а не превышает p")
+

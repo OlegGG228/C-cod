@@ -1,0 +1,15 @@
+# Функция для нахождения суммы делителей числа
+def sum_of_divisors(n):
+    divisors = []
+    i = 1
+    while i <= n/2:
+        if n % i == 0:
+            divisors.append(i)
+        i += 1
+    return sum(divisors)
+
+# Нахождение чисел, у которых сумма делителей кратна 10
+for i in range(300, 601):
+    if sum_of_divisors(i) % 10 == 0:
+        print(i)
+

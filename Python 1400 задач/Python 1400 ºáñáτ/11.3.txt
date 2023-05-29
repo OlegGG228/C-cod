@@ -1,0 +1,46 @@
+# а) Вещественные значения от 0 до 1:
+
+```python
+import random
+
+array = [random.uniform(0, 1) for i in range(15)]
+print(array)
+```
+
+# б) Вещественные значения a: (22 ^ а: < 23)
+
+```python
+import random
+import math
+
+array = [math.pow(2, random.uniform(0, math.log2(23))) for i in range(15)]
+print(array)
+```
+
+# в) Вещественные значения х (0 < х < 10)
+
+```python
+import random
+
+array = [random.uniform(0, 10) for i in range(15)]
+print(array)
+```
+
+# г) Вещественные значения a: (-50 < x < 50)
+
+```python
+import random
+
+array = [random.uniform(-50, 50) for i in range(15)]
+print(array)
+```
+
+# д) Целые значения в диапазоне от 0 до 10 включительно:
+
+```python
+import random
+
+array = [random.randint(0, 10) for i in range(15)]
+print(array)
+```
+

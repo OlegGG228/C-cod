@@ -1,0 +1,4 @@
+word = input("Введите слово: ")
+unique_letters = set(word)
+print("Количество различных букв в слове:", len(unique_letters))
+

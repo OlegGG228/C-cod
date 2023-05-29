@@ -1,0 +1,38 @@
+а) 
+
+import random
+
+a = random.randint(1, 1)
+b = random.randint(0, 1)
+
+while b == a:
+    b = random.randint(0, 1)
+
+print(a, b)
+
+б)
+
+import random
+
+a = random.randint(1, 2)
+b = random.randint(0, 2)
+
+while b == a:
+    b = random.randint(0, 2)
+
+c = random.randint(1, 3)
+
+while c == a or c == b:
+    c = random.randint(1, 3)
+
+print(a, b, c)
+
+в)
+
+import random
+
+numbers = [2] * 7 + [3] * 8
+random.shuffle(numbers)
+
+print(numbers)
+

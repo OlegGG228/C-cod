@@ -1,0 +1,6 @@
+number = input("Введите число: ")
+repeat = int(input("Введите количество повторений: "))
+
+for i in range(repeat):
+    print("Число " + number + " в " + str(i+1) + "-ый раз")
+

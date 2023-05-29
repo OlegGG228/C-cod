@@ -1,0 +1,12 @@
+numerator1=1
+denominator1=1
+numerator2=2
+denominator2=1
+while abs(numerator2/denominator2 - numerator1/denominator1) > 0.001:
+    numerator3=numerator1+numerator2
+    denominator3=denominator1+denominator2
+    numerator1=numerator2
+    denominator1=denominator2
+    numerator2=numerator3
+    denominator2=denominator3
+print(numerator3,"/",denominator3)

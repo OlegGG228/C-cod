@@ -1,0 +1,7 @@
+word = "глинянный"
+correct_word = word[:3] + word[4:]
+print(correct_word)
+
+word = "граффика"
+correct_word = word[:4] + word[5:]
+print(correct_word)

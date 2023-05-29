@@ -1,0 +1,24 @@
+def sum_dividers(n):
+    dividers_sum = 1 # учесть делитель 1
+    
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            dividers_sum += i
+            if n // i != i:
+                dividers_sum += n // i
+                
+    return dividers_sum
+
+a = int(input("Введите начало интервала: "))
+b = int(input("Введите конец интервала: "))
+
+max_sum_dividers = 0
+max_num = 0
+
+for i in range(a, b+1):
+    curr_sum_dividers = sum_dividers(i)
+    if curr_sum_dividers > max_sum_dividers:
+        max_sum_dividers = curr_sum_dividers
+        max_num = i
+
+print("Натуральное число из интервала от {0} до {1} с максимальной суммой делителей: {2}".format(a, b, max_num))

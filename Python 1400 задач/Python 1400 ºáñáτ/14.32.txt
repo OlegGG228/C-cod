@@ -1,0 +1,14 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+a = int(input("Введите числитель дроби: "))
+b = int(input("Введите знаменатель дроби: "))
+
+common_factor = gcd(a, b)
+
+p = a // common_factor
+q = b // common_factor
+
+print("Сокращенная дробь: {}/{}".format(p, q))

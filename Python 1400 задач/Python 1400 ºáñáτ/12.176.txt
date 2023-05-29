@@ -1,0 +1,6 @@
+sentence = input("Введите предложение из 10 слов: ")
+words = sentence.split()
+array = [0] * 10
+for i in range(10):
+    array[i] = words[i]
+print(array)

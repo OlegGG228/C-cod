@@ -1,0 +1,10 @@
+# Вставляем числа перед и после максимального элемента
+arr = [3, 5, 7, 9, 12, 16, 15, 10, 8, 6, 2, 1]
+max_value = max(arr)
+max_index = arr.index(max_value)
+p = 100
+t = -100
+arr.insert(max_index, t)
+arr.insert(max_index+1, p)
+print(arr)  # [3, 5, 7, 9, 12, 16, -100, 100, 15, 10, 8, 6, 2, 1]
+

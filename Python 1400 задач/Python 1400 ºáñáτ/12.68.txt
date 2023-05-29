@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+vowels = "аеёиоуыэюяaeiouy"
+count = 0
+for letter in sentence.lower():
+    if letter in vowels:
+        count += 1
+print("Количество гласных букв: ", count)

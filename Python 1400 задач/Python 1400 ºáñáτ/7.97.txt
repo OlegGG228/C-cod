@@ -1,0 +1,17 @@
+numbers = []
+while True:
+    number = int(input("Введите число: "))
+    if number == -1:
+        break
+    numbers.append(number)
+
+found = False
+for i in range(len(numbers)-1):
+    if numbers[i] == numbers[i+1]:
+        found = True
+        print("Найдена пара одинаковых соседних чисел:", numbers[i], "и", numbers[i+1])
+        print("Их порядковые номера:", i+1, "и", i+2)
+        break
+
+if not found:
+    print("В последовательности нет пар одинаковых соседних чисел.")

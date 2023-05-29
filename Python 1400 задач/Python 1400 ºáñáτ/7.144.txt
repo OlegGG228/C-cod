@@ -1,0 +1,20 @@
+#A
+n = int(input("Введите количество пар: "))
+max_sum = 0
+for i in range(n):
+    a, b = map(int, input(f"Введите пару #{i+1}: ").split())
+    cur_sum = a + b
+    if cur_sum > max_sum:
+        max_sum = cur_sum
+print(f"Максимальная сумма значений чисел в паре: {max_sum}")
+
+#B
+n = int(input("Введите количество пар: "))
+min_prod = float('inf')
+for i in range(n):
+    a, b = map(int, input(f"Введите пару #{i+1}: ").split())
+    cur_prod = a * b
+    if cur_prod < min_prod:
+        min_prod = cur_prod
+print(f"Минимальное произведение значений чисел в паре: {min_prod}")
+

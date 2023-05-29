@@ -1,0 +1,17 @@
+x = int(input("Введите натуральное число x: "))
+n = int(input("Введите число n: "))
+nums = []
+for i in range(12):
+    num = int(input(f"Введите число a_{i + 1}: "))
+    nums.append(num)
+total = 0
+count = 0
+for num in nums:
+    if num > n:
+        total += num
+        count += 1
+if count == 0:
+    print("Среднее арифметическое не может быть вычислено, так как нет чисел, больших", n)
+else:
+    average = total / count
+    print("Среднее арифметическое чисел, больших", n, "равно", average)

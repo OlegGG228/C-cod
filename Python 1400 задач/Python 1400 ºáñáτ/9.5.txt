@@ -1,0 +1,21 @@
+# создаем список для хранения зарплат
+salary_table = []
+for i in range(12):
+    salary_table.append([])
+    for j in range(3):
+        salary = float(input("Введите зарплату работника {} за месяц {}: ".format(i+1, j+1)))
+        salary_table[i].append(salary)
+
+# определяем общую сумму зарплат за квартал
+total_salary = sum(sum(month) for month in salary_table)
+
+# определяем зарплату каждого работника за квартал
+employee_salary = [sum(month) for month in salary_table]
+
+# определяем общую зарплату всех работников за каждый месяц
+month_salary = [sum(salary_table[i][j] for i in range(12)) for j in range(3)]
+
+# выводим результаты
+print("Общая сумма зарплат за квартал: {}".format(total_salary))
+print("Зарплата каждого работника за квартал: {}".format(employee_salary))
+print("Общая зарплата всех работников за каждый месяц: {}".format(month_salary))

@@ -1,0 +1,8 @@
+sequence = [5, 3, 2, 9, 7, 4, 1, 11, 13, 8]
+sum_of_odd_numbers = 0
+for i in sequence:
+    if i % 2 == 1:
+        sum_of_odd_numbers += i
+    else:
+        break
+print(sum_of_odd_numbers)  # output: 17

@@ -1,0 +1,4 @@
+club_name = "Manchester United"
+for letter in club_name:
+    print(letter)
+

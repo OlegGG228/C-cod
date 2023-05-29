@@ -1,0 +1,15 @@
+a = [2123, 1875, 1987, 2043, 1945, 2178, 1809, 1902, 1957, 2112, 1999, 1820, 2041, 1973, 2105, 2001, 1905, 1958, 2099, 2016, 1942, 1918, 2062, 1892]
+best_sum = float('inf')
+best_team = []
+
+for i in range(len(a)-3):
+  for j in range(i+1, len(a)-2):
+    for k in range(j+1, len(a)-1):
+      for m in range(k+1, len(a)):
+        team = [a[i], a[j], a[k], a[m]]
+        team_sum = sum(team)
+        if team_sum < best_sum:
+          best_sum = team_sum
+          best_team = [i+1, j+1, k+1, m+1]
+
+print("Лучшая команда: ", best_team, "с суммой результатов ", best_sum)

@@ -1,0 +1,22 @@
+def letter_percentage(letter, sentence):
+    """Функция для расчета доли буквы в предложении"""
+    count = 0
+    for char in sentence:
+        if char == letter:
+            count += 1
+    percentage = (count / len(sentence)) * 100
+    return percentage
+
+sentence1 = "The quick brown fox jumps over the lazy dog"
+sentence2 = "Hello world, how are you?"
+
+letter = 'o'
+
+percentage1 = letter_percentage(letter, sentence1)
+percentage2 = letter_percentage(letter, sentence2)
+
+if percentage1 > percentage2:
+    print(f"В предложении 1 буква {letter} встречается чаще ({percentage1}%)")
+else:
+    print(f"В предложении 2 буква {letter} встречается чаще ({percentage2}%)")
+

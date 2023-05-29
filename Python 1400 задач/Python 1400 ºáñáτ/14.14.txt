@@ -1,0 +1,14 @@
+def calc_hypotenuse(cathet1, cathet2):
+    return (cathet1*cathet1 + cathet2*cathet2) ** 0.5
+
+AB = float(input("Введите сторону AB: "))
+AD = float(input("Введите сторону AD: "))
+CD = float(input("Введите сторону CD: "))
+
+BC = calc_hypotenuse(AB, CD)  # Гипотенуза прямоугольного треугольника BCD
+AC = calc_hypotenuse(AB, AD)  # Гипотенуза прямоугольного треугольника ABC
+
+perimeter = AB + BC + AC + AD
+
+print("Периметр фигуры ABCD равен: ", perimeter)
+

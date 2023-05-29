@@ -1,0 +1,6 @@
+sentence = input("Введите предложение: ")
+count = 0
+for letter in sentence:
+    if letter.lower() in ['о', 'в']:
+        count += 1
+print("Количество букв 'о' и 'в': ", count)

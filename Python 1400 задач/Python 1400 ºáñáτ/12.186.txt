@@ -1,0 +1,6 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+sorted_words = sorted(words, key=len)
+print("Слова в порядке неубывания их длин:")
+for word in sorted_words:
+    print(word)

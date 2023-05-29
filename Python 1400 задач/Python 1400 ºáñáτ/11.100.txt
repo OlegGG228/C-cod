@@ -1,0 +1,12 @@
+grades = [5, 4, 3, 2, 5, 4, 3, 2, 5, 4, 3, 2, 5, 4, 3, 2, 5, 4, 3, 2, 5, 4]
+average = sum(grades) / len(grades)
+
+less_than_average = []
+for i in range(len(grades)):
+    if grades[i] < average:
+        less_than_average.append(i)
+
+print("Средняя оценка по классу:", average)
+print("Количество учеников, оценка которых меньше средней оценки по классу:", len(less_than_average))
+print("Номера элементов массива, соответствующих таким ученикам:", less_than_average)
+

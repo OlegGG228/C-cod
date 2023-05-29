@@ -1,0 +1,14 @@
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+
+max_num = a
+max_num = b if b > max_num else max_num
+
+print(max_num)
+
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+
+max_num = a if a > b else b
+
+print(max_num)

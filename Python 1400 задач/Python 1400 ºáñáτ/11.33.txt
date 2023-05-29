@@ -1,0 +1,24 @@
+# a)
+```
+import math
+
+arr = [7.2, 15.6, 8.1, 12.3, 18.5, 5.6, 11.0]
+
+for i in range(len(arr)):
+  if arr[i] > 10:
+    arr[i] = math.sqrt(arr[i])
+
+print(arr)
+```
+
+# б)
+```
+arr = [7.2, 15.6, 8.1, 12.3, 18.5, 5.6, 11.0]
+
+for i in range(len(arr)):
+  if i % 2 == 0:
+    arr[i] = abs(arr[i])
+
+print(arr)
+```
+

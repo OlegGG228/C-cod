@@ -1,0 +1,8 @@
+# Ввод данных
+seat_number = int(input("Введите номер места: "))
+
+# Решение задачи
+coupe_number = (seat_number - 1) // 4 + 1
+
+# Вывод результатов
+print("Место", seat_number, "находится в", coupe_number, "купе")

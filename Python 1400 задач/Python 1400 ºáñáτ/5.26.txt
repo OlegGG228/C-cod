@@ -1,0 +1,11 @@
+n = 4
+i = 4
+while i <= 64:
+    print(i)
+    if n == 4:
+        i += 2
+        n = 6
+    else:
+        i += 4
+        n = 4
+

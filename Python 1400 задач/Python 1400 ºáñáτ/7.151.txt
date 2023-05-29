@@ -1,0 +1,5 @@
+sequence = input()  # вводим последовательность из нулей и единиц
+zeros_segments = sequence.split('1')  # делим последовательность на отрезки, состоящие только из нулей
+min_segment_length = min([len(segment) for segment in zeros_segments])  # ищем минимальную длину отрезка
+print(min_segment_length)  # выводим результат
+

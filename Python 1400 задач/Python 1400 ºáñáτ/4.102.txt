@@ -1,0 +1,21 @@
+a, b, c, d = 3, 6, 2, 8
+
+# наибольшее число
+max_num = a
+if b > max_num:
+    max_num = b
+if c > max_num:
+    max_num = c
+if d > max_num:
+    max_num = d
+print("Наибольшее число:", max_num)
+
+# наименьшее число
+min_num = a
+if b < min_num:
+    min_num = b
+if c < min_num:
+    min_num = c
+if d < min_num:
+    min_num = d
+print("Наименьшее число:", min_num)

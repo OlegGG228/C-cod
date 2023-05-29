@@ -1,0 +1,23 @@
+# 1. Вариант (используется функция для расчета суммы цифр трехзначного числа)
+def is_lucky(n):
+    first = n // 1000
+    last = n % 1000
+    return sum_of_digits(first) == sum_of_digits(last)
+
+count = 0
+for i in range(100000, 1000000):
+    if is_lucky(i):
+        count += 1
+print(count)
+
+# 2. Вариант (используется функция для расчета суммы цифр трехзначного числа и функция для проверки "счастливости" числа)
+def is_lucky(n):
+    first = n // 1000
+    last = n % 1000
+    return sum_of_digits(first) == sum_of_digits(last)
+
+count = 0
+for i in range(100000, 1000000):
+    if is_lucky(i):
+        count += 1
+print(count)

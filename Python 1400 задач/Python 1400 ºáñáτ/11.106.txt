@@ -1,0 +1,20 @@
+array = [1, 3, 4, 5, 1, 6]
+
+count_dict = {}
+
+for elem in array:
+  if elem in count_dict:
+    count_dict[elem] += 1
+  else:
+    count_dict[elem] = 1
+
+count = 0
+for key in count_dict:
+  if count_dict[key] == 2:
+    count += 1
+
+if count == 2:
+  print("Есть два одинаковых элемента")
+else:
+  print("Нет двух одинаковых элементов")
+

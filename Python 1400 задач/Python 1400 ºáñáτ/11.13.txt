@@ -1,0 +1,9 @@
+n = 21
+array = []
+
+while n <= 29:
+    array.append(2 ** n)
+    n += 1
+
+print(array)
+

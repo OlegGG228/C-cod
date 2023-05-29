@@ -1,0 +1,3 @@
+side = int(input('Введите длину стороны квадрата: '))
+perimeter = 4 * side
+print('Периметр квадрата равен:', perimeter)

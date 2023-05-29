@@ -1,0 +1,7 @@
+def calculate_expression(num):
+    if num == 1:
+        return 1
+    else:
+        return (num ** 2 - calculate_expression(num - 1)) ** 2
+
+print(calculate_expression(20))

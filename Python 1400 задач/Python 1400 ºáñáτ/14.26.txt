@@ -1,0 +1,19 @@
+def sum_of_digits(n):
+    total = 0
+    while n > 0:
+        total += n % 10
+        n //= 10
+    return total
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+sum_a = sum_of_digits(a)
+sum_b = sum_of_digits(b)
+
+if sum_a > sum_b:
+    print("Сумма цифр первого числа больше")
+elif sum_b > sum_a:
+    print("Сумма цифр второго числа больше")
+else:
+    print("Сумма цифр равна")

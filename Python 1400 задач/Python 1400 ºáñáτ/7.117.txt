@@ -1,0 +1,24 @@
+# Запрос количества учеников в классе
+n = int(input("Введите количество учеников в классе: "))
+
+# Создание пустых списков для хранения роста мальчиков и девочек
+boys_height = []
+girls_height = []
+
+# Заполнение списков ростом каждого ученика
+for i in range(n):
+    height = int(input(f"Введите рост ученика {i+1}: "))
+    if height < 0:  # Условие для определения, кто мальчик
+        boys_height.append(height)
+    else:
+        girls_height.append(height)
+
+# Вычисление среднего роста мальчиков и девочек
+boys_avg_height = sum(boys_height) / len(boys_height)
+girls_avg_height = sum(girls_height) / len(girls_height)
+
+# Сравнение разницы между средними ростами с порогом (10 см)
+if boys_avg_height - girls_avg_height > 10:
+    print("Средний рост мальчиков превышает средний рост девочек более чем на 10 см")
+else:
+    print("Средний рост мальчиков не превышает средний рост девочек более чем на 10 см")

@@ -1,0 +1,10 @@
+# Возрасты Мити и Васи
+age_mity = 25
+age_vasya = 30
+
+if age_mity > age_vasya:
+    print("Митя старше Васи")
+elif age_mity < age_vasya:
+    print("Вася старше Мити")
+else:
+    print("Митя и Вася одного возраста")

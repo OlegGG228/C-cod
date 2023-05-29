@@ -1,0 +1,14 @@
+num = input("Введите натуральное число: ")
+p = int(input("Введите количество последних цифр: "))
+
+sum_of_last_p = 0
+prod_of_last_p = 1
+
+for i in range(-1, -p-1, -1):
+    digit = int(num[i])
+    sum_of_last_p += digit
+    prod_of_last_p *= digit
+
+print("Сумма последних", p, "цифр:", sum_of_last_p)
+print("Произведение последних", p, "цифр:", prod_of_last_p)
+

@@ -1,0 +1,11 @@
+words = input("Введите три слова: ").split()
+unique_letters = set()
+
+for word in words:
+    unique_letters.update(set(word))
+
+print("Неповторяющиеся буквы:", end=" ")
+for letter in unique_letters:
+    if sum([1 for word in words if letter in word]) == 1:
+        print(letter, end=" ")
+

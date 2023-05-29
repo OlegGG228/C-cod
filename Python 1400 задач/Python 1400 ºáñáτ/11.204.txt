@@ -1,0 +1,18 @@
+
+arr = [10, 8, 5, 3, 1]
+a = 6
+flag = False # флаг для проверки наличия элементов, меньших a
+for i in range(len(arr)):
+    if arr[i] < a:
+        flag = True
+        for j in range(i+1, len(arr)):
+            print(arr[j], end=' ')
+        break
+if not flag:
+    print('В массиве нет элементов, меньших a')
+else:
+    print()
+    for i in range(len(arr)):
+        if arr[i] > a:
+            print(arr[i], end=' ')
+    print()

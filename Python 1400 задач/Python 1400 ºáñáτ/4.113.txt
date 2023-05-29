@@ -1,0 +1,20 @@
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+c = float(input("Введите третье число: "))
+d = float(input("Введите четвертое число: "))
+
+sum_greater_5 = 0
+
+if a > 5:
+    sum_greater_5 += a
+
+if b > 5:
+    sum_greater_5 += b
+
+if c > 5:
+    sum_greater_5 += c
+
+if d > 5:
+    sum_greater_5 += d
+
+print("Сумма чисел, больших пяти: ", sum_greater_5)

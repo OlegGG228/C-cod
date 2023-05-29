@@ -1,0 +1,9 @@
+arr = [1, 2, 3, 4, 4, 5, 6, 7]
+for i in range(len(arr)-1):
+    if arr[i] == arr[i+1]:
+        print("Find pair:", arr[i], arr[i+1])
+        print("Index:", i, i+1)
+        break
+else:
+    print("No pair found.")
+

@@ -1,0 +1,13 @@
+# Ввод данных
+flats_per_floor = 3
+flats_per_entrance = 15
+floors_per_entrance = flats_per_entrance // flats_per_floor
+entrance_number = 1  # Номер подъезда
+flat_number = int(input("Введите номер квартиры: "))
+
+# Решение задачи
+floor_number = ((flat_number - 1) // flats_per_entrance) * floors_per_entrance + \
+               ((flat_number - 1) % flats_per_entrance) // flats_per_floor + 1
+
+# Вывод результатов
+print("Квартира", flat_number, "находится на", floor_number, "этаже в подъезде №", entrance_number)

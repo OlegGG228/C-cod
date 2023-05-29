@@ -1,0 +1,6 @@
+students_per_class = [25, 30, 23, 27, 31, 28, 24, 29, 26, 22, 33, 21, 32, 34, 20, 35, 19, 18, 36, 37]
+max_students = max(students_per_class)
+min_students = min(students_per_class)
+difference = max_students - min_students
+print("The difference between the biggest and smallest class is:", difference)
+

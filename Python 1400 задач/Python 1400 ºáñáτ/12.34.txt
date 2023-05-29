@@ -1,0 +1,3 @@
+word = "тетрадь"
+dnevnik = word[3] + word[1] + word[4] + word[2] + word[5] + word[0] + word[6] + word[7]
+print(dnevnik)

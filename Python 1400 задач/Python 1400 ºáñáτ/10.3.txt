@@ -1,0 +1,23 @@
+import random
+
+a = int(input("Введите значение а: "))
+b = int(input("Введите значение b: "))
+n = random.randint(1, 20)
+
+print("n =", n)
+
+numbers = []
+for i in range(n):
+    numbers.append(random.randint(a, b))
+
+print("Числа в диапазоне от", a, "до", b, ":", numbers)
+
+m = random.randint(0, n)
+print("m =", m)
+
+real_numbers = []
+for i in range(m):
+    real_numbers.append(random.uniform(0, n))
+
+print("Случайные вещественные числа:", real_numbers)
+

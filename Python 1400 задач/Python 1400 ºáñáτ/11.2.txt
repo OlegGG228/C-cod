@@ -1,0 +1,6 @@
+arr = []
+for i in range(10):
+    num = int(input("Введите число: "))
+    arr.append(num)
+print(arr)
+

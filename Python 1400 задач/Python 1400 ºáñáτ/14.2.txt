@@ -1,0 +1,5 @@
+def print_char(char, count):
+    print(char * count)
+
+print_char("*", 10)
+print_char("-", 5)

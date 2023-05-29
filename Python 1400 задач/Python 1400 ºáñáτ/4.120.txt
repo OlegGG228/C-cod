@@ -1,0 +1,34 @@
+def first_line(x):
+    if x <= -1:
+        return 0
+    elif -1 < x < 0:
+        return x + 1
+    else:
+        return x
+
+def second_line(x):
+    if x <= -1:
+        return 1
+    elif -1 < x < 1:
+        return -x + 2
+    else:
+        return -1
+
+def third_line(x):
+    if x <= -1:
+        return 0
+    elif -1 < x < 0.5:
+        return 2 * x + 1
+    elif 0.5 <= x <= 1:
+        return -2 * x + 2
+    else:
+        return 0
+
+x = float(input("Введите значение x: "))
+y1 = first_line(x)
+y2 = second_line(x)
+y3 = third_line(x)
+
+print("Значение y для первой прямой/луча: ", y1)
+print("Значение y для второй прямой/луча: ", y2)
+print("Значение y для третьей прямой/луча: ", y3)

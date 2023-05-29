@@ -1,0 +1,11 @@
+prices = [1000, 2000, 3000, 4000, 6000] # стоимости мотоциклов
+car_prices = [7000, 8000, 9000, 10000] # стоимости автомобилей
+ 
+average_car_price = sum(car_prices) / len(car_prices)
+average_motorcycle_price = sum(prices) / len(prices)
+ 
+if average_car_price > 3 * average_motorcycle_price and min(prices) < 5000:
+    print("Средняя стоимость автомобилей превышает среднюю стоимость мотоциклов более чем в 3 раза и стоимость одного автомобиля превышает $5000.")
+else:
+    print("Условия не выполняются.")
+

@@ -1,0 +1,19 @@
+# Создаем списки для хранения данных
+masses = []
+volumes = []
+densities = []
+
+# Запрашиваем данные о массе и объеме тел
+for i in range(20):
+    mass = float(input(f"Введите массу {i+1}-го тела (в кг): "))
+    volume = float(input(f"Введите объем {i+1}-го тела (в см3): "))
+    masses.append(mass)
+    volumes.append(volume)
+    density = mass / volume
+    densities.append(density)
+
+# Выводим результаты
+print("Массы тел: ", masses)
+print("Объемы тел: ", volumes)
+print("Плотности материалов: ", densities)
+

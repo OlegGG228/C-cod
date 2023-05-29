@@ -1,0 +1,10 @@
+a = int(input('Введите первое число: '))
+b = int(input('Введите второе число: '))
+
+# Среднее арифметическое
+average_arithmetic = (a + b) / 2
+print('Среднее арифметическое равно', average_arithmetic)
+
+# Среднее геометрическое
+average_geometric = (a * b) ** 0.5
+print('Среднее геометрическое равно', average_geometric)

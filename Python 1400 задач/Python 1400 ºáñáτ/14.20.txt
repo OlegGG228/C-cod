@@ -1,0 +1,20 @@
+def has_real_roots(a, b, c):
+    # Функция для распознавания наличия вещественных корней в квадратном уравнении
+    discr = b**2 - 4*a*c
+    return discr >= 0
+
+eq1_a = 1
+eq1_b = 2
+eq1_c = 3
+
+eq2_a = 2
+eq2_b = 1
+eq2_c = 3
+
+eq3_a = 1
+eq3_b = 3
+eq3_c = 2
+
+print(has_real_roots(eq1_a, eq1_b, eq1_c))
+print(has_real_roots(eq2_a, eq2_b, eq2_c))
+print(has_real_roots(eq3_a, eq3_b, eq3_c))

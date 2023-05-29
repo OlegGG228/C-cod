@@ -1,0 +1,11 @@
+points = []
+for i in range(12):
+    points.append(int(input(f"Введите количество очков для команды {i + 1}: ")))
+
+sorted_points = sorted(points, reverse=True)
+first_place = sorted_points[0]
+second_place = sorted_points[1]
+third_place = sorted_points[2]
+
+print(f"Количество очков у команд, занявших первое, второе и третье места соответственно: {first_place}, {second_place}, {third_place}")
+

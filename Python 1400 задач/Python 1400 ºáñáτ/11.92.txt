@@ -1,0 +1,17 @@
+heights = [170, 165, -160, 172, -175, 168, 160, 164, -158, 173, -165, 171, 176, -163, 167, -159, 162, 169, 174, -166, 166, -161]
+
+male_heights = []
+female_heights = []
+
+for h in heights:
+    if h < 0:
+        male_heights.append(h * -1)
+    else:
+        female_heights.append(h)
+
+avg_male_height = sum(male_heights) / len(male_heights)
+avg_female_height = sum(female_heights) / len(female_heights)
+
+print("Average male height:", avg_male_height)
+print("Average female height:", avg_female_height)
+

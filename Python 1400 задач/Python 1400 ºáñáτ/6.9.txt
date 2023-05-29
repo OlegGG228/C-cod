@@ -1,0 +1,9 @@
+while True:
+    num = input("Введите четное число: ")
+    if num.isdigit() and int(num) % 2 == 0:
+        num = int(num)
+        break
+    print("Ошибка: необходимо ввести четное число")
+
+print(f"Вы ввели {num}")
+

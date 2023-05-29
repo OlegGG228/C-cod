@@ -1,0 +1,29 @@
+а)
+
+import math
+
+circle_area = 16 * math.pi  # площадь круга
+triangle_area = 15  # площадь равностороннего треугольника
+
+triangle_side = math.sqrt((4 * triangle_area) / math.sqrt(3))  # сторона равностороннего треугольника
+in_circle_radius = triangle_side / (2 * math.sqrt(3))  # радиус вписанной окружности
+
+if in_circle_radius <= math.sqrt(circle_area/math.pi):
+    print("Круг уместится в треугольнике")
+else:
+    print("Круг не уместится в треугольнике")
+
+б) 
+
+import math
+
+circle_area = 16 * math.pi  # площадь круга
+triangle_area = 15  # площадь равностороннего треугольника
+
+triangle_side = math.sqrt((4 * triangle_area) / math.sqrt(3))  # сторона равностороннего треугольника
+circumscribed_circle_radius = triangle_side / math.sqrt(3)  # радиус описанной окружности
+
+if circumscribed_circle_radius <= math.sqrt(circle_area/math.pi):
+    print("Треугольник уместится в круге")
+else:
+    print("Треугольник не уместится в круге")

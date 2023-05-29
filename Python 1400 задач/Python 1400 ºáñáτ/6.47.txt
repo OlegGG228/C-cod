@@ -1,0 +1,8 @@
+number = input("Введите натуральное число: ")
+digits = [int(d) for d in number]
+max_digit = max(digits)
+min_digit = min(digits)
+if digits.index(max_digit) < digits.index(min_digit):
+    print("Максимальная цифра расположена левее минимальной")
+else:
+    print("Минимальная цифра расположена левее максимальной")

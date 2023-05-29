@@ -1,0 +1,6 @@
+s = [int(input()) for i in range(12)]
+max_count = s.count(max(s))
+min_count = s.count(min(s))
+print(f"Количество максимальных элементов: {max_count}")
+print(f"Количество минимальных элементов: {min_count}")
+

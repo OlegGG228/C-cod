@@ -1,0 +1,11 @@
+array = [12, 9, 15, 3, 6, 18, 21, 4, 8, 11]
+min_val = min(array)
+max_val = max(array)
+avg_val = (min_val + max_val) / 2
+result = []
+for i, num in enumerate(array):
+    if num > avg_val:
+        result.append(i)
+print(f"Количество элементов: {len(result)}")
+print(f"Номера элементов: {result}")
+

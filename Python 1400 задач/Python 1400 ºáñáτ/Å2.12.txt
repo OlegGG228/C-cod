@@ -1,0 +1,14 @@
+a = 56
+b = 77
+
+while True:
+    if a == b:
+        print("Да")
+        break
+    elif a > b:
+        print("Нет")
+        a, b = b, a
+    else:
+        print("Нет")
+        b = b - a
+

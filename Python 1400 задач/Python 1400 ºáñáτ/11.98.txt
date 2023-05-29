@@ -1,0 +1,14 @@
+costs = [10, 5, 15, 8, 12, 20, 9, 6, 14, 11, 13, 18, 16, 7, 19, 22, 17, 25, 21, 24]
+
+# Вычисляем среднюю стоимость
+total_cost = sum(costs)
+avg_cost = total_cost / len(costs)
+
+# Находим количество видов товаров с ценой ниже средней
+count_below_avg = 0
+for cost in costs:
+    if cost < avg_cost:
+        count_below_avg += 1
+
+print("Средняя стоимость: ", avg_cost)
+print("Количество видов товаров с ценой ниже средней: ", count_below_avg)

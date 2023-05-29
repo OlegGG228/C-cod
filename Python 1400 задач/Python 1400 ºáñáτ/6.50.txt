@@ -1,0 +1,28 @@
+number = input("Введите натуральное число: ")
+a = 15
+b = 20
+digits = [int(d) for d in number]
+digit_sum = sum(digits)
+digit_product = 1
+for digit in digits:
+    digit_product *= digit
+is_sum_less_than_a = digit_sum < a
+is_product_greater_than_b = digit_product > b
+is_k_digit_number = len(digits) == 3
+is_first_digit_greater_than_t = digits[0] > t
+if is_sum_less_than_a:
+    print("Сумма цифр меньше", a)
+else:
+    print("Сумма цифр не меньше", a)
+if is_product_greater_than_b:
+    print("Произведение цифр больше", b)
+else:
+    print("Произведение цифр не больше", b)
+if is_k_digit_number:
+    print("Число трехзначное")
+else:
+    print("Число не трехзначное")
+if is_first_digit_greater_than_t:
+    print("Первая цифра больше", t)
+else:
+    print("Первая цифра не больше", t)

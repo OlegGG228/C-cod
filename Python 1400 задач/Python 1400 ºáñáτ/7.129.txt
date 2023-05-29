@@ -1,0 +1,12 @@
+num = int(input("Введите число: "))
+count = 0
+while num != -1:
+    if num % 7 == 0:
+        print("Число", num, "кратно семи")
+        print("Порядковый номер:", count+1)
+        break
+    count += 1
+    num = int(input("Введите число: "))
+else:
+    print("В последовательности нет чисел, кратных семи")
+

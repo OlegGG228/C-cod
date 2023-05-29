@@ -1,0 +1,8 @@
+a = float(input("Введите вещественное число: "))
+p = int(input("Введите целое число: "))
+result = a
+for i in range(abs(p) - 1):
+    result *= a
+if p < 0:
+    result = 1 / result
+print("Результат: ", result)

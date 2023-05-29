@@ -1,0 +1,18 @@
+arr = [48, 25, 37, 18, 42, 6, 9, 32, 14, 16, 
+       29, 52, 20, 36, 19, 8, 31, 22, 46, 41, 
+       50, 21, 28, 39, 35, 11, 27, 44, 24, 5, 
+       7, 33, 12, 38, 45, 51, 26, 49, 13, 17]
+
+
+min1 = min2 = float('inf')
+for i, val in enumerate(arr):
+    if val < min1:
+        min2 = min1
+        min1 = val
+        min_floor2 = min_floor1
+        min_floor1 = i+1
+    elif val < min2:
+        min2 = val
+        min_floor2 = i+1
+        
+print("Два этажа, на которых проживает меньше всего людей:", min_floor1, min_floor2)

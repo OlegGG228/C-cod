@@ -1,0 +1,35 @@
+# а)
+
+students_height = [176, 185, 170, 178, 165, 168, 183, 190, 155, 162, 173, 179, 169, 172, 180, 188, 171, 174, 166, 181, 177, 167, 175, 186, 189]
+names = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Смирнов', 'Михайлов', 'Федоров', 'Соколов', 'Попов', 'Лебедев', 'Козлов', 'Новиков', 'Морозов', 'Волков', 'Алексеев', 'Лебединский', 'Соловьев', 'Орлов', 'Терентьев', 'Белов', 'Карпов', 'Филиппов', 'Дмитриев', 'Ефимов', 'Тихонов']
+
+max_height = max(students_height)
+min_height = min(students_height)
+max_name = names[students_height.index(max_height)]
+min_name = names[students_height.index(min_height)]
+
+print('Самый высокий ученик -', max_name)
+print('Самый низкий ученик -', min_name)
+
+# б)
+
+second_max_height = sorted(students_height)[-2]
+second_max_names = []
+for i, height in enumerate(students_height):
+    if height == second_max_height:
+        second_max_names.append(names[i])
+        
+print('Фамилии двух учеников команды, являющихся самыми высокими:', second_max_names)
+
+# в)
+
+max_indexes = []
+for i, height in enumerate(students_height):
+    if height == max_height:
+        max_indexes.append(i)
+max_names = [names[i] for i in max_indexes]
+
+if len(max_names) > 2:
+  max_names = max_names[:2]
+
+print('Фамилии двух учеников команды, являющихся самыми высокими в классе:', max_names)

@@ -1,0 +1,28 @@
+number = int(input("Введите натуральное число: "))
+
+has_two = False
+has_five = False
+two_position = -1
+five_position = -1
+
+position = 0
+while number > 0:
+    digit = number % 10
+    if digit == 2 and not has_two:
+        has_two = True
+        two_position = position
+    elif digit == 5 and not has_five:
+        has_five = True
+        five_position = position
+    position += 1
+    number //= 10
+
+if has_two and has_five:
+    if two_position < five_position:
+        print("Цифра 2 расположена левее цифры 5")
+    elif five_position < two_position:
+        print("Цифра 5 расположена левее цифры 2")
+    else:
+        print("Цифры 2 и 5 находятся на одной позиции")
+else:
+    print("В числе нет обеих цифр 2 и 5")

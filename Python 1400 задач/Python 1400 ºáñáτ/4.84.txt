@@ -1,0 +1,23 @@
+p = int(input("Введите стоимость товара в копейках: "))
+
+rubles = p // 100
+kopeks = p % 100
+
+if rubles == 1:
+    if kopeks == 0:
+        print("1 рубль ровно")
+    elif kopeks == 1:
+        print("1 рубль 1 копейка")
+    elif kopeks <= 4:
+        print(f"1 рубль {kopeks} копейки")
+    else:
+        print(f"1 рубль {kopeks} копеек")
+else:
+    if kopeks == 0:
+        print(f"{rubles} рублей ровно")
+    elif kopeks == 1:
+        print(f"{rubles} рублей 1 копейка")
+    elif kopeks <= 4:
+        print(f"{rubles} рублей {kopeks} копейки")
+    else:
+        print(f"{rubles} рублей {kopeks} копеек")

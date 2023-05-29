@@ -1,0 +1,3 @@
+string = "Это строка с пробелами"
+new_string = string.replace(' ', '')
+print(new_string)

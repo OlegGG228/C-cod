@@ -1,0 +1,7 @@
+
+arr = [5, -3, 7, 2, -8, 1, -4, 6]
+pos_sum = sum([num for num in arr if num > 0])
+neg_sum = abs(sum([num for num in arr if num < 0]))
+result = pos_sum / neg_sum
+print(result)
+

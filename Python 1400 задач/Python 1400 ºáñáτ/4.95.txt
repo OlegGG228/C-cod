@@ -1,0 +1,6 @@
+sequence = "01234567891011121314151617181920"
+pos = int(input("Введите номер позиции: "))
+if pos <= 0 or pos > len(sequence):
+    print("Ошибка: неверный номер позиции")
+else:
+    print(sequence[pos-1])

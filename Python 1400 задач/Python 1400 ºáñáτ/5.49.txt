@@ -1,0 +1,16 @@
+deposit = 1000  # начальный вклад
+growth_rate = 0.02  # коэффициент роста
+months = 12  # количество месяцев
+
+# прирост суммы вклада за первый, второй,..., десятый месяц
+for i in range(months):
+    increase = deposit * growth_rate  # прирост за текущий месяц
+    deposit += increase  # увеличение вклада на прирост
+    print(f"Прирост за {i+1} месяц: {increase:.2f} руб.")
+   
+# сумма вклада через три, четыре, ..., двенадцать месяцев
+for i in range(3, months+1):
+    increase = deposit * growth_rate  # прирост за текущий месяц
+    deposit += increase  # увеличение вклада на прирост
+    print(f"Сумма вклада через {i} месяца: {deposit:.2f} руб.")
+

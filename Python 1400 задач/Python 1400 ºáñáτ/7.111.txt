@@ -1,0 +1,24 @@
+# вводим рост каждого ученика и записываем в список
+heights = []
+while True:
+  inp = input("Введите рост ученика (для окончания ввода нажмите Enter): ")
+  if inp == "":
+    break
+  heights.append(int(inp))
+
+# ищем средний рост мальчиков и девочек
+boys_heights = []
+girls_heights = []
+for height in heights:
+  if height < 0:
+    boys_heights.append(-height)
+  else:
+    girls_heights.append(height)
+
+average_boys_height = sum(boys_heights) / len(boys_heights)
+average_girls_height = sum(girls_heights) / len(girls_heights)
+
+# выводим результаты
+print(f"Средний рост мальчиков: {average_boys_height}")
+print(f"Средний рост девочек: {average_girls_height}")
+

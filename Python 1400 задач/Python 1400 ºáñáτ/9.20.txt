@@ -1,0 +1,45 @@
+from tkinter import *
+
+# Создаем класс окна
+class Divisibility(Frame):
+    # Конструктор класса
+    def __init__(self, parent=None):
+        # Вызываем конструктор родительского класса
+        Frame.__init__(self, parent)
+        # Создаем переменную n и устанавливаем значение по умолчанию 10
+        self.n = IntVar()
+        self.n.set(10)
+        # Создаем переменную для кнопки
+        self.button = None
+        # Создаем элементы управления и устанавливаем начальные значения
+        self.create_widgets()
+        # Размещаем элементы управления на окне
+        self.grid()
+
+    # Метод для создания элементов управления
+    def create_widgets(self):
+        # Создаем метку для ввода значения n
+        Label(self, text="Введите значение n:").grid(row=0, column=0)
+        # Создаем поле для ввода значения n и привязываем к переменной n
+        Entry(self, textvariable=self.n).grid(row=0, column=1)
+        # Создаем кнопку для запуска программы
+        self.button = Button(self, text="Показать", command=self.show_divisibility)
+        self.button.grid(row=1, column=1)
+
+    # Метод для отображения делителей чисел
+    def show_divisibility(self):
+        # Очищаем окно от предыдущих элементов
+        for widget in self.grid_slaves():
+            if int(widget.grid_info()["row"]) > 1:
+                widget.grid_forget()
+        # Выводим делители для чисел от 1 до n
+        for i in range(1, self.n.get() + 1):
+            # Находим делители числа i
+            divisors = [x for x in range(1, i + 1) if i % x == 0]
+            # Создаем метку с числом i
+            Label(self, text=str(i)).grid(row=i+1, column=0)
+            # Создаем метку для вывода делителей
+            Label(self, text="+"*len(divisors)).grid(row=i+1, column=1)
+
+# Создаем и запускаем окно
+Divisibility().mainloop()

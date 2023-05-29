@@ -1,0 +1,15 @@
+areas = [100, 150, 200, 50, 75, 120, 80, 90, 60, 70]
+yields = [25, 30, 28, 32, 29, 26, 31, 27, 33, 30]
+
+# Вычисляем общую площадь и общий урожай
+total_area = sum(areas)
+total_yield = sum(yields[i]*areas[i] for i in range(len(areas)))
+
+# Вычисляем среднюю урожайность по области
+average_yield = total_yield / total_area / 100
+
+# Вывод результатов
+print("Общая площадь: {} гектаров".format(total_area))
+print("Общий урожай: {} центнеров".format(total_yield))
+print("Средняя урожайность: {:.2f} ц/га".format(average_yield))
+

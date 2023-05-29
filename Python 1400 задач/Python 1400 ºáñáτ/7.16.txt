@@ -1,0 +1,8 @@
+p = int(input("Введите натуральное число p: "))
+b = [int(input("Введите целое число b{}: ".format(i))) for i in range(1, 11)]
+sum_b = sum(b)
+
+if sum_b < p:
+    print("Сумма чисел b меньше p")
+else:
+    print("Сумма чисел b больше или равна p")

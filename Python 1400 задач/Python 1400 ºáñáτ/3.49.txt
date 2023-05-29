@@ -1,0 +1,10 @@
+import math
+
+angle = float(input("Введите значение угла для часовой стрелки (в радианах): "))
+minute_angle = angle * 12 % (2 * math.pi)
+hour_count = int(angle / (2 * math.pi / 12))
+minute_count = int(minute_angle / (2 * math.pi / 60))
+
+print("Значение угла для минутной стрелки:", minute_angle)
+print("Количество полных часов:", hour_count)
+print("Количество полных минут:", minute_count)

@@ -1,0 +1,18 @@
+temp = {1: -15, 2: -13, 3: -10, 4: -11, 5: -9, 6: -8, 
+        7: -7, 8: -5, 9: -4, 10: -3, 11: -1, 12: 2, 
+        13: 0, 14: -2, 15: -6, 16: -7, 17: -8, 18: -5, 
+        19: -4, 20: -6, 21: -8, 22: -12, 23: -13, 24: -14, 
+        25: -12, 26: -9, 27: -11, 28: -10, 29: -7, 30: -5}
+
+min1 = min2 = float('inf')
+for day, temp in temp.items():
+    if temp < min1:
+        min2 = min1
+        min1 = temp
+        min_day2 = min_day1
+        min_day1 = day
+    elif temp < min2:
+        min2 = temp
+        min_day2 = day
+        
+print("Даты двух самых холодных дней:", min_day1, min_day2)

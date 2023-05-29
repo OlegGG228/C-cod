@@ -1,0 +1,23 @@
+a = input("Введите число: ")
+a_count = 0
+greater_sum = 0
+even_sum = 0
+xy_count = 0
+x = input("Введите цифру x: ")
+y = input("Введите цифру y: ")
+
+for digit in a:
+    if digit == x or digit == y:
+        xy_count += 1
+    if digit == a:
+        a_count += 1
+    if int(digit) > int(a):
+        greater_sum += int(digit)
+    if int(digit) % 2 == 0:
+        even_sum += int(digit)
+
+print("Количество цифр a в числе:", a_count)
+print("Сумма цифр, больших a:", greater_sum)
+print("Сумма четных цифр:", even_sum)
+print("Количество цифр x и y в числе:", xy_count)
+

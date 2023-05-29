@@ -1,0 +1,9 @@
+marks = []
+
+for i in range(10):
+    mark = int(input("Введите оценку по предмету: "))
+    marks.append(mark)
+
+average = sum(marks) / len(marks)
+
+print("Средняя оценка:", averag

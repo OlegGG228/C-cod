@@ -1,0 +1,6 @@
+text = input("Введите текст: ")
+digit_count = 0
+for char in text:
+    if char.isdigit():
+        digit_count += 1
+print("Количество цифр в тексте:", digit_count)

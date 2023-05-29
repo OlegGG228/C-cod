@@ -1,0 +1,33 @@
+# а)
+
+```python
+word = "прроцесор"
+word = word.replace("рр", "р")
+print(word)
+```
+
+# б)
+
+```python
+phrase = "теекстовыйфайл"
+phrase = phrase.replace("е",'')
+phrase = phrase[:4] + ' ' + phrase[4:]
+print(phrase)
+```
+
+# в)
+
+```python
+phrase = "програма и аллгоритм"
+phrase = phrase.replace("лл", "л")
+phrase = phrase.replace("а ", 'а')
+print(phrase)
+```
+
+# г)
+
+```python
+phrase = "процесор и паммять"
+phrase = phrase.replace("паммять", "память")
+phrase = phrase.replace("цо", "цессо")
+print(phrase)

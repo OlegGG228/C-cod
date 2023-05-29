@@ -1,0 +1,13 @@
+def find_closest_to_average(arr):
+    # вычисляем среднее значение массива
+    avg = sum(arr) / len(arr)
+    
+    # ищем элемент, который наиболее близок к среднему значению
+    closest = arr[0]
+    diff = abs(arr[0] - avg)
+    for num in arr:
+        if abs(num - avg) < diff:
+            closest = num
+            diff = abs(num - avg)
+    
+    return closest

@@ -1,0 +1,15 @@
+a = []
+
+for i in range(8):
+  a.append(int(input()))
+
+product = 1
+
+for num in a:
+  product *= num
+
+if product < 10000:
+  print("Да, произведение меньше 10000")
+else:
+  print("Нет, произведение больше или равно 10000")
+

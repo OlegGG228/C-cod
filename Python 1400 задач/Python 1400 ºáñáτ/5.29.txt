@@ -1,0 +1,32 @@
+# a)
+sum_a = 0
+for i in range(1, 751):
+    sum_a += i
+average_a = sum_a / 750
+print("Среднее арифметическое всех целых чисел от 1 до 750:", average_a)
+
+# б)
+b = int(input("Введите значение b: "))
+sum_b = 0
+for i in range(150, b + 1):
+    sum_b += i
+average_b = sum_b / (b - 149)
+print("Среднее арифметическое всех целых чисел от 150 до", b, ":", average_b)
+
+# в)
+a = int(input("Введите значение а: "))
+sum_c = 0
+for i in range(a, 201):
+    sum_c += i
+average_c = sum_c / (201 - a)
+print("Среднее арифметическое всех целых чисел от", a, "до 200:", average_c)
+
+# г)
+a = int(input("Введите значение а: "))
+b = int(input("Введите значение b: "))
+sum_d = 0
+for i in range(a, b + 1):
+    sum_d += i
+average_d = sum_d / (b - a + 1)
+print("Среднее арифметическое всех целых чисел от", a, "до", b, ":", average_d)
+

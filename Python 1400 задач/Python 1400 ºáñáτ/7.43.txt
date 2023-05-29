@@ -1,0 +1,9 @@
+numbers = [43, 27, 180, 56, 13, 390, 20, 101, 300, 50]
+summa = 0
+
+for num in numbers:
+    if num % 10 == 0:
+        summa += num
+
+print("Сумма чисел, оканчивающихся нулем:", summa)
+

@@ -1,0 +1,10 @@
+mport math
+
+def nested_sqrt_sum(start, end):
+    if start == end:
+        return math.sqrt(start)
+    else:
+        return math.sqrt(start + nested_sqrt_sum(start+1, end))
+
+result = nested_sqrt_sum(1, 50)
+print(result)

@@ -1,0 +1,10 @@
+x_coordinate = float(input("Введите x-координату точки: "))
+y_coordinate = float(input("Введите y-координату точки: "))
+
+if x_coordinate < -1 or x_coordinate > 5:
+    print("Точка находится в III области")
+elif x_coordinate > -1 and x_coordinate < 5:
+    print("Точка находится в II области")
+else:
+    print("Точка не попадает ни в одну из областей")
+

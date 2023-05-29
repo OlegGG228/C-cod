@@ -1,0 +1,23 @@
+# ввод результатов спортсменов
+result1 = []
+result2 = []
+
+print('Введите результаты первого спортсмена:')
+
+for i in range(5):
+    score = int(input(f'{i+1} вид спорта: '))
+    result1.append(score)
+
+print('\nВведите результаты второго спортсмена:')
+
+for i in range(5):
+    score = int(input(f'{i+1} вид спорта: '))
+    result2.append(score)
+
+# вычисление суммы баллов для каждого спортсмена
+sum1 = sum(result1)
+sum2 = sum(result2)
+
+# вывод результатов
+print(f'\nСумма баллов первого спортсмена: {sum1}')
+print(f'Сумма баллов второго спортсмена: {sum2}')

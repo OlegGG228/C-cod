@@ -1,0 +1,13 @@
+rainfall = [15, 20, 12, 10, 30, 18, 25, 22, 14, 28, 16, 20]
+# Создаем список для хранения количества осадков за каждую декаду
+decade_rainfall = [0, 0, 0]
+
+# Итерируемся по списку количества осадков за каждый день июня
+for index, amount in enumerate(rainfall):
+    # Вычисляем номер текущей декады и прибавляем количество осадков
+    decade_rainfall[index//10] += amount
+
+# Выводим результаты
+for index, amount in enumerate(decade_rainfall):
+    print(f"Количество осадков за {index+1}-ю декаду: {amount}")
+

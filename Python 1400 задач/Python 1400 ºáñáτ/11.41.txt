@@ -1,0 +1,22 @@
+
+array = [2, -5, 3, 8, 0, -1]
+s = 2
+k = 4
+
+if array[s] > 0:
+    print(f'{array[s]} is a positive number')
+else:
+    print(f'{array[s]} is not a positive number')
+    
+if array[k] % 2 == 0:
+    print(f'{array[k]} is an even number')
+else:
+    print(f'{array[k]} is not an even number')
+    
+if array[k] > array[s]:
+    print(f'{array[k]} is greater than {array[s]}')
+elif array[k] < array[s]:
+    print(f'{array[s]} is greater than {array[k]}')
+else:
+    print('Both elements are equal')
+

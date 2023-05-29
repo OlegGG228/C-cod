@@ -1,0 +1,9 @@
+sentence = input("Введите предложение: ")
+
+n_index = sentence.index('н')
+k_index = sentence.index('к')
+
+if n_index < k_index:
+    print("Буква 'н' встречается раньше")
+else:
+    print("Буква 'к' встречается раньше")

@@ -1,0 +1,16 @@
+# а)
+
+employees = [['Иванов', 40000, 'М'], ['Петров', 50000, 'М'], ['Сидорова', 35000, 'Ж'], ['Кузнецов', 60000, 'М'], ['Смирнова', 45000, 'Ж'], ['Михайлов', 55000, 'М'], ['Федорова', 42000, 'Ж'], ['Соколов', 48000, 'М'], ['Попова', 37000, 'Ж'], ['Лебедев', 58000, 'М'], ['Козлова', 39000, 'Ж'], ['Новиков', 42000, 'М'], ['Морозова', 46000, 'Ж'], ['Волков', 51000, 'М'], ['Алексеев', 43000, 'М'], ['Лебединская', 35000, 'Ж'], ['Соловьев', 58000, 'М'], ['Орлов', 53000, 'М'], ['Терентьев', 49000, 'М'], ['Белова', 36000, 'Ж']]
+
+male_employees = [emp for emp in employees if emp[2] == 'М']
+max_salary = max([emp[1] for emp in male_employees])
+max_salary_employee = [emp[0] for emp in male_employees if emp[1] == max_salary][0]
+
+print('Фамилия мужчины, имеющего самую большую зарплату:', max_salary_employee)
+
+# б)
+
+min_salary_employee = sorted(employees, key=lambda x: x[1])[0][0]
+max_salary_female_employee = sorted([emp for emp in employees if emp[2] == 'Ж'], key=lambda x: x[1])[-1][0]
+
+print('Фамилии мужчины и женщины, имеющих самую маленькую зарплату:', min_salary_employee, max_salary_female_employee)

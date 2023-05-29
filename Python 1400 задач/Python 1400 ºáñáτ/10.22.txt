@@ -1,0 +1,57 @@
+# Создаем список карт
+deck = ['6', '6', '6', '6', '7', '7', '7', '7', '8', '8', '8', '8', '9', '9', '9', '9', '10', '10', '10', '10', 'J', 'J', 'J', 'J', 'Q', 'Q', 'Q', 'Q', 'K', 'K', 'K', 'K', 'A', 'A', 'A', 'A']
+import random
+
+# Описываем функцию, которая будет выбирать карты
+def get_cards():
+  hand = []
+  while sum(hand) < 17:
+    card = random.choice(deck)
+    if card == 'J' or card == 'Q' or card == 'K':
+      hand.append(10)
+    elif card == 'A':
+      hand.append(11)
+    else:
+      hand.append(int(card))
+  return hand
+
+# Описываем функцию, которая будет проводить игру
+def play_game():
+  player_cards = get_cards()
+  dealer_cards = get_cards()
+
+  # Отображаем карты игрока
+  print('Ваши карты:', player_cards)
+
+  # Выбираем карты дилера
+  while sum(dealer_cards) < 17:
+    card = random.choice(deck)
+    if card == 'J' or card == 'Q' or card == 'K':
+      dealer_cards.append(10)
+    elif card == 'A':
+      dealer_cards.append(11)
+    else:
+      dealer_cards.append(int(card))
+
+  # Отображаем карты дилера
+  print('Карты дилера:', dealer_cards)
+
+  # Определяем выигрыш
+  if sum(player_cards) > 21:
+    print('Вы проиграли!')
+  elif sum(dealer_cards) > 21:
+    print('Вы выиграли!')
+  elif sum(player_cards) > sum(dealer_cards):
+    print('Вы выиграли!')
+  elif sum(player_cards) == sum(dealer_cards):
+    print('Ничья!')
+  else:
+    print('Вы проиграли!')
+
+# Запускаем игру несколько раз
+while True:
+  play_game()
+  answer = input('Хотите сыграть еще раз? (да/нет): ')
+  if answer == 'нет':
+    break
+

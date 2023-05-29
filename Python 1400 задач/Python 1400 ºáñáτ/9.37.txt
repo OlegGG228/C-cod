@@ -1,0 +1,12 @@
+v = int(input("Введите объем прямоугольного параллелепипеда: "))
+result = []
+for a in range(1, v+1):
+    if v % a == 0:
+        for b in range(1, v//a+1):
+            if v % (a*b) == 0:
+                c = v // (a*b)
+                result.append(sorted([a,b,c]))
+if input("Считать перестановки разными (y/n)? ") == 'n':
+    result = list(set([tuple(i) for i in result]))
+for i in result:
+    print("Прямоугольный параллелепипед размером", i[0], "x", i[1], "x", i[2])

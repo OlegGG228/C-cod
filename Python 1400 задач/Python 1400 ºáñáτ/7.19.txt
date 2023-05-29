@@ -1,0 +1,8 @@
+precipitations = [15, 20, 5, 10, 8, 25, 30, 18, 12, 10, 5, 10, 15, 10, 20, 25, 30, 30, 12, 8, 5, 2, 18, 25, 30, 20, 12, 10, 5, 2]
+total_precipitations = sum(precipitations)
+last_year_precipitations = [10, 15, 5, 8, 6, 20, 25, 15, 10, 8, 3, 8, 12, 8, 18, 20, 25, 30, 10, 6, 3, 1, 15, 20, 25, 12, 10, 8, 3, 1]
+last_year_total_precipitations = sum(last_year_precipitations)
+if total_precipitations > last_year_total_precipitations:
+    print("Общее количество осадков за февраль этого года превысило соответствующее количество прошлого года.")
+else:
+    print("Общее количество осадков за февраль этого года не превысило соответствующее количество прошлого года.")

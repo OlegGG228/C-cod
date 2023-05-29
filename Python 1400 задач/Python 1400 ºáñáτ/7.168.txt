@@ -1,0 +1,15 @@
+age_list = [25, 30, 18, 41, 25, 29, 18, 35]
+
+if age_list[0] == max(age_list):
+    print("Самый старший человек указан в списке первым.")
+elif age_list[0] == min(age_list):
+    print("Самый молодой человек указан в списке первым.")
+else:
+    for i in range(1, len(age_list)):
+        if age_list[i] == max(age_list):
+            print("Самый старший человек указан в списке раньше.")
+            break
+        elif age_list[i] == min(age_list):
+            print("Самый молодой человек указан в списке раньше.")
+            break
+

@@ -1,0 +1,15 @@
+# 1)
+for i in range(20):
+    print("*"*60)
+
+# 2)
+def draw_rectangle():
+    draw_line()
+    for i in range(18):
+        print("*" + " "*58 + "*")
+    draw_line()
+
+def draw_line():
+    print("*"*60)
+
+draw_rectangle()

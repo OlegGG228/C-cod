@@ -1,0 +1,14 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+print("Слова, начинающиеся и заканчивающиеся на одну и ту же букву:")
+for word in words:
+    if len(word) > 1 and word[0] == word[-1]:
+        print(word)
+print("Слова, содержащие три буквы 'е':")
+for word in words:
+    if word.count('е') == 3:
+        print(word)
+print("Слова, содержащие хотя бы одну букву 'о':")
+for word in words:
+    if 'о' in word:
+        print(word)

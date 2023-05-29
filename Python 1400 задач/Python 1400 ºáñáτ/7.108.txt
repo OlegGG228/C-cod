@@ -1,0 +1,18 @@
+t = int(input("Введите натуральное число t: "))
+p = int(input("Введите число p: "))
+b_list = []
+for i in range(t):
+    b = int(input("Введите число b: "))
+    b_list.append(b)
+sum_b = 0
+count_b = 0
+for b in b_list:
+    if b % p == 0:
+        sum_b += b
+        count_b += 1
+if count_b > 0:
+    average_b = sum_b / count_b
+    print("Среднее арифметическое чисел, кратных ", p, ": ", average_b)
+else:
+    print("Среднее арифметическое не определено, так как среди заданных чисел нет чисел, кратных ", p)
+

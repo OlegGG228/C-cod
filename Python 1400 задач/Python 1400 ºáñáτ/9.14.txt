@@ -1,0 +1,32 @@
+```python
+# Ввод доходов магазинов за 10 дней
+incomes = [[0 for i in range(10)] for j in range(3)]
+for i in range(3):
+    for j in range(10):
+        incomes[i][j] = int(input("Введите доход магазина %d за день %d: " % (i+1, j+1)))
+
+# a) Определение магазина с максимальным общим доходом
+total_incomes = [sum(incomes[i]) for i in range(3)]
+max_income_index = total_incomes.index(max(total_incomes))
+print("Магазин %d получил максимальный общий доход за 10 дней: %d" % (max_income_index+1, total_incomes[max_income_index]))
+
+# б) Определение дня с максимальным общим доходом фирмы
+total_incomes_per_day = [0 for i in range(10)]
+for i in range(3):
+    for j in range(10):
+        total_incomes_per_day[j] += incomes[i][j]
+max_day_index = total_incomes_per_day.index(max(total_incomes_per_day))
+print("Фирма получила максимальный общий доход %d рублей в день %d" % (total_incomes_per_day[max_day_index], max_day_index+1))
+
+# в) Определение магазина и дня с максимальным доходом
+max_income = 0
+max_income_day = 0
+max_income_shop = 0
+for i in range(3):
+    for j in range(10):
+        if incomes[i][j] > max_income:
+            max_income = incomes[i][j]
+            max_income_day = j+1
+            max_income_shop = i+1
+print("Магазин %d в день %d получил максимальный доход %d рублей" % (max_income_shop, max_income_day, max_income))
+```

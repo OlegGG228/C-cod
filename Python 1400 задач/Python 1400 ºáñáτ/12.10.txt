@@ -1,0 +1,24 @@
+# вариант а
+a = 'hello'
+b = 'world'
+c = 'python'
+
+temp = b
+b = c
+c = a
+a = temp
+
+print(a, b, c)
+
+# вариант б
+a = 'hello'
+b = 'world'
+c = 'python'
+
+temp = b
+b = a
+a = c
+c = temp
+
+print(a, b, c)
+

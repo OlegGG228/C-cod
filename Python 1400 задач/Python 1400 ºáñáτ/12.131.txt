@@ -1,0 +1,5 @@
+sentence = "предложение с и_"
+letter = "т"
+i = sentence.rindex("и")
+sentence_corrected = sentence[:i] + letter + sentence[i:]
+print(sentence_corrected)

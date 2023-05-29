@@ -1,0 +1,10 @@
+precipitations = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140]
+ 
+first_decade = sum(precipitations[:10])/10
+second_decade = sum(precipitations[10:20])/10
+third_decade = sum(precipitations[20:])/11  # последняя декада состоит из 11 дней
+ 
+print("Среднее количество осадков за первую декаду: {}".format(first_decade))
+print("Среднее количество осадков за вторую декаду: {}".format(second_decade))
+print("Среднее количество осадков за третью декаду: {}".format(third_decade))
+

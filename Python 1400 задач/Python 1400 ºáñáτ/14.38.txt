@@ -1,0 +1,20 @@
+def last_occurrence(letter, sentence):
+    """Функция для нахождения порядкового номера последнего вхождения буквы в предложение"""
+    index = -1
+    for i in range(len(sentence)):
+        if sentence[i] == letter:
+            index = i
+    return index
+
+sentence1 = "The quick brown fox jumps over the lazy dog"
+sentence2 = "Python is a high-level programming language"
+
+letter = 'y'
+
+index1 = last_occurrence(letter, sentence1)
+index2 = last_occurrence(letter, sentence2)
+
+if index1 > index2:
+    print(f"Буква {letter} имеет больший порядковый номер в предложении 1 ({index1})")
+else:
+    print(f"Буква {letter} имеет больший порядковый номер в предложении 2 ({index2})")

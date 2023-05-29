@@ -1,0 +1,5 @@
+grades = [5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2]
+
+count_of_fives = grades.count(5)
+print("Number of students with a 5 in geometry:", count_of_fives)
+

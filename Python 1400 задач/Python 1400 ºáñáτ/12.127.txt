@@ -1,0 +1,4 @@
+phrase = "ценая вещъ_"
+phrase_corrected = phrase[:7] + "е" + phrase[8:]
+print(phrase_corrected)
+

@@ -1,0 +1,5 @@
+word = "клоун"
+uklon = word[1] + word[2] + word[0] + word[3] + word[4]
+kulon = word[0] + word[2] + word[1] + word[3] + word[4]
+kolun = word[0] + word[4] + word[1] + word[2] + word[3]
+print(uklon, kulon, kolun)

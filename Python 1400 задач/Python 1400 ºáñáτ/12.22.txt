@@ -1,0 +1,4 @@
+word = "яблоко"
+result = word[2:5] + word[-1]
+print(result)
+

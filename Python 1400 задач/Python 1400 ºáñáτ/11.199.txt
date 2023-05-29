@@ -1,0 +1,16 @@
+numbers = [1.2, -3.4, 5.6, 7.8, -9.0, 2.4]
+
+if any(num < 0 for num in numbers):
+    first_negative_index = next(i for i, num in enumerate(numbers) if num < 0)
+    print("Ответ на задачу 11.199:\n")
+    print("Ответ на вопрос а):")
+    print("Первое отрицательное число найдено на индексе", first_negative_index, ":", numbers[first_negative_index])
+    print("Следующие за ним элементы:", numbers[first_negative_index + 1:])
+    
+    last_negative_index = len(numbers) - 1 - next(i for i, num in enumerate(reversed(numbers)) if num < 0)
+    print("\nОтвет на вопрос б):")
+    print("Последнее отрицательное число найдено на индексе", last_negative_index, ":", numbers[last_negative_index])
+    print("Элементы, расположенные слева от него:", numbers[:last_negative_index])
+else:
+    print("В массиве нет отрицательных чисел.")
+

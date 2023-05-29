@@ -1,0 +1,18 @@
+sequence = input("Введите последовательность чисел через пробел: ")
+seq_list = sequence.split()
+sign_changes = 0
+prev_sign = None
+
+for num in seq_list:
+    if int(num) < 0:
+        curr_sign = "-"
+    else:
+        curr_sign = "+"
+
+    if prev_sign and prev_sign != curr_sign:
+        sign_changes += 1
+
+    prev_sign = curr_sign
+
+print("Количество изменений знака в последовательности: ", sign_changes)
+

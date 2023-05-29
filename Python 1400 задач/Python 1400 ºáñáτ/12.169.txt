@@ -1,0 +1,11 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+checked_letters = set()
+for letter in word1:
+    if letter in checked_letters:
+        continue
+    checked_letters.add(letter)
+    if letter in word2:
+        print("Да", end=" ")
+    else:
+        print("Нет", end=" ")

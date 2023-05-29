@@ -1,0 +1,22 @@
+def count_letter(letter, sentence):
+    """Функция для расчета количества букв в предложении"""
+    count = 0
+    for char in sentence:
+        if char == letter:
+            count += 1
+    return count
+
+sentence1 = "The quick brown fox jumps over the lazy dog"
+sentence2 = "Hello world, how are you?"
+sentence3 = "Python is a high-level programming language"
+
+letter = 'o'
+
+count1 = count_letter(letter, sentence1)
+count2 = count_letter(letter, sentence2)
+count3 = count_letter(letter, sentence3)
+
+total_count = count1 + count2 + count3
+
+print(f"Буква {letter} встречается {total_count} раз.") 
+

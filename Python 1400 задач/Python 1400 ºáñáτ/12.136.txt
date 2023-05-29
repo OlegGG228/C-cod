@@ -1,0 +1,4 @@
+word = "слово"
+k = 3
+word = word[k-1] + word[1:k-1] + word[0] + word[k:]
+print(word)

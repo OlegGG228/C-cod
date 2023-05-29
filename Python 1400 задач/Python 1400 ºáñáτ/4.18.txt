@@ -1,0 +1,12 @@
+mport math
+
+square_area = 25  # площадь квадрата
+circle_area = 16 * math.pi  # площадь круга
+
+square_side = math.sqrt(square_area)  # сторона квадрата
+circle_radius = math.sqrt(circle_area/math.pi)  # радиус круга
+
+if square_side <= circle_radius * math.sqrt(2):
+    print("Квадрат уместится в круге")
+else:
+    print("Квадрат не уместится в круге")

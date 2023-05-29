@@ -1,0 +1,19 @@
+def count_digits(n):
+    count = 0
+    while n > 0:
+        count += 1
+        n //= 10
+    return count
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+count_a = count_digits(a)
+count_b = count_digits(b)
+
+if count_a > count_b:
+    print("Первое число имеет больше цифр")
+elif count_b > count_a:
+    print("Второе число имеет больше цифр")
+else:
+    print("Количество цифр равно")

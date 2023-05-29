@@ -1,0 +1,10 @@
+import random
+
+arr = []
+while len(arr) < 20: # заполняем массив пока не получим 20 элементов
+    num = random.randint(1, 100) # генерируем случайное число
+    if num not in arr: # если число еще не в массиве
+        arr.append(num) # добавляем его
+
+print(arr) # выводим результат на экран
+

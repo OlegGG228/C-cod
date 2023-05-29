@@ -1,0 +1,11 @@
+import math
+
+# a)
+y_a = ((2 + math.sin(2)**2) / (math.sin(5) + 5)) - ((6 + math.sin(6)**2) / (math.sin(3) + 3)) + ((1 + math.sin(1)**2) / (math.sin(4) + 4))
+
+# b)
+y_b = ((1 + math.sin(4)**2) /(4 + math.sin(1))) + ((7 + math.sin(5)**2) / ( 5 + math.sin(7))) + ((3 + math.sin(2)**2) / ( 2 + math.sin(3)))
+
+print("a) y =", y_a)
+print("b) y =", y_b)
+

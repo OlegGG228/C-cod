@@ -1,0 +1,20 @@
+n = int(input("Введите количество спортсменов: "))
+a = []
+
+for i in range(n):
+    a.append(int(input("Введите результат спортсмена: ")))
+
+best_team = (0, 1, 2, 3)
+min_sum = a[0] + a[1] + a[2] + a[3]
+
+for i in range(n):
+    for j in range(i + 1, n):
+        for k in range(j + 1, n):
+            for m in range(k + 1, n):
+                sum_ = a[i] + a[j] + a[k] + a[m]
+                if sum_ < min_sum:
+                    best_team = (i, j, k, m)
+                    min_sum = sum_
+
+print("Лучшая команда:", best_team)
+

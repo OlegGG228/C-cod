@@ -1,0 +1,6 @@
+sentence = "This is a sample sentence, with a comma." 
+ 
+if ',' in sentence: 
+    print("The sentence contains commas") 
+else: 
+    print("The sentence does not contain commas")

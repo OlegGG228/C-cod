@@ -1,0 +1,7 @@
+scores = input("Введите все оценки спортсмена через пробел: ").split()
+scores = [int(score) for score in scores]
+scores.sort()
+scores = scores[1:-1]
+average_score = sum(scores) / len(scores)
+print("Оценка, идущая в зачет:", average_score)
+

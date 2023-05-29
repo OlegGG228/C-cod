@@ -1,0 +1,9 @@
+num = int(input("Введите число k: "))
+if num <= 18:
+    print("Ошибка: число должно быть больше 18")
+else:
+    num -= 18
+    if num % 2 == 0:
+        print(num // 2 + 9)
+    else:
+        print((num // 2) % 10)

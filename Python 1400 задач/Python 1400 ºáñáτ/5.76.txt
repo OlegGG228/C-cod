@@ -1,0 +1,8 @@
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+c = int(input("Введите число c: "))
+
+for i in range(a, b+1):
+    if i % c == 0:
+        print(i)
+

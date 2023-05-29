@@ -1,0 +1,3 @@
+sentence = input("Введите предложение: ")
+count = len(sentence.split())
+print("Количество слов в предложении: ", count)

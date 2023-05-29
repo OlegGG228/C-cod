@@ -1,0 +1,12 @@
+a = int(input('Введите начало промежутка: '))
+b = int(input('Введите конец промежутка: '))
+
+if a > b:
+    a, b = b, a
+
+summa = 0
+for i in range(a, b+1):
+    if i % 4 == 0 and i > 0:
+        summa += i
+
+print('Сумма чисел, кратных 4: ', summa)

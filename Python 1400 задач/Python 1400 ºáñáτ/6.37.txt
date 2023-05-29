@@ -1,0 +1,12 @@
+number = int(input("Введите натуральное число: "))
+counter = 0
+while number > 0:
+    digit = number % 10
+    counter += 1
+    if digit == 8:
+        print("Номер цифры 8 с конца числа:", counter)
+        break
+    number //= 10
+else:
+    print("Цифры 8 в числе нет")
+

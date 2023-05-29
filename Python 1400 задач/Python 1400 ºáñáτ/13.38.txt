@@ -1,0 +1,16 @@
+# а)
+
+employees = [['Иванов', 30, True], ['Петров', 25, False], ['Сидоров', 22, True], ['Кузнецов', 20, True], ['Смирнов', 28, False], ['Михайлов', 27, True], ['Федоров', 31, False], ['Соколов', 29, False], ['Попов', 18, True], ['Лебедев', 32, True], ['Козлов', 21, True], ['Новиков', 24, False], ['Морозов', 35, False], ['Волков', 26, False], ['Алексеев', 34, True], ['Лебединский', 23, True]]
+
+youngest_army_employee = min([emp for emp in employees if emp[2]], key=lambda x: x[1])[0]
+
+print('Фамилия самого младшего по возрасту человека среди военнообязанных:', youngest_army_employee)
+
+# б)
+
+army_employees = [emp for emp in employees if emp[2]]
+non_army_employees = [emp for emp in employees if not emp[2]]
+oldest_army_employee = max(army_employees, key=lambda x: x[1])[0]
+oldest_non_army_employee = max(non_army_employees, key=lambda x: x[1])[0]
+
+print('Фамилии самых старших по возрасту людей среди военнообязанных и среди невоеннообязанных:', oldest_army_employee, oldest_non_army_employee)

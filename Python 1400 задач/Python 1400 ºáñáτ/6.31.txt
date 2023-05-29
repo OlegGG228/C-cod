@@ -1,0 +1,24 @@
+a)
+
+```python
+balance = 1000
+month = 1
+while True:
+    increase = balance * 0.02
+    if increase > 30:
+        print(f"Ежемесячное увеличение вклада превысит 30 руб. на {month} месяце")
+        break
+    balance += increase
+    month += 1
+```
+
+б)
+
+```python
+balance = 1000
+month = 1
+while balance <= 1200:
+    increase = balance * 0.02
+    balance += increase
+    month += 1
+print(f"Размер вклада превысит 1200 руб. через {month} месяцев")

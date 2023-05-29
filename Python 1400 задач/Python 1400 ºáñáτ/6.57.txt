@@ -1,0 +1,23 @@
+number = int(input("Введите натуральное число: "))
+a = int(input("Введите цифру a: "))
+b = int(input("Введите цифру b: "))
+
+a_pos = -1
+b_pos = -1
+
+while number > 0:
+    digit = number % 10
+    if digit == a:
+        a_pos = number % 10
+    elif digit == b:
+        b_pos = number % 10
+    if a_pos != -1 and b_pos != -1:
+        break
+    number //= 10
+
+if a_pos == -1 or b_pos == -1:
+    print("Цифры a и b не встречаются в числе")
+elif a_pos > b_pos:
+    print("Цифра a расположена правее цифры b")
+else:
+    print("Цифра b расположена правее цифры a")

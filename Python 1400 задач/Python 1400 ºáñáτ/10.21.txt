@@ -1,0 +1,26 @@
+import random
+
+cards = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+suits = ['Spades', 'Clubs', 'Hearts', 'Diamonds']
+
+player1 = random.choice(suits) + ' ' + random.choice(cards)
+player2 = random.choice(suits) + ' ' + random.choice(cards)
+
+print('Player 1 picked', player1)
+print('Player 2 picked', player2)
+
+card_rank = dict(zip(cards, range(len(cards))))
+suit_rank = dict(zip(suits, range(len(suits))))
+
+if suit_rank[player1.split()[0]] > suit_rank[player2.split()[0]]:
+    print('Player 1 wins')
+elif suit_rank[player1.split()[0]] < suit_rank[player2.split()[0]]:
+    print('Player 2 wins')
+else:
+    if card_rank[player1.split()[1]] > card_rank[player2.split()[1]]:
+        print('Player 1 wins')
+    elif card_rank[player1.split()[1]] < card_rank[player2.split()[1]]:
+        print('Player 2 wins')
+    else:
+        print('It is a tie')
+

@@ -1,0 +1,9 @@
+numbers = list(map(float, input("Введите последовательность чисел через пробел: ").split()))
+
+count = 0
+for num in numbers:
+    if num == 0:
+        break
+    count += 1
+
+print("Количество чисел, предшествующих первому числу 0:", count)

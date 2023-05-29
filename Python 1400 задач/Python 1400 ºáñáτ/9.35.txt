@@ -1,0 +1,36 @@
+one = 0
+two = 0
+four = 0
+eight = 0
+sixteen = 0
+thirty_two = 0
+sixty_four = 0
+
+for p in range(11):
+    # Выплата суммы p путем минимального количества купюр
+    money = p
+    sixty_four = money // 64
+    money -= sixty_four * 64
+    thirty_two = money // 32
+    money -= thirty_two * 32
+    sixteen = money // 16
+    money -= sixteen * 16
+    eight = money // 8
+    money -= eight * 8
+    four = money // 4
+    money -= four * 4
+    two = money // 2
+    money -= two * 2
+    one = money
+    
+    # Вывод результатов
+    print("Сумма:", p)
+    print("Количество купюр:")
+    print("64: ", sixty_four)
+    print("32: ", thirty_two)
+    print("16: ", sixteen)
+    print("8: ", eight)
+    print("4: ", four)
+    print("2: ", two)
+    print("1: ", one)
+    print()

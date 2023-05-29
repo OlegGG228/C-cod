@@ -1,0 +1,26 @@
+array = [10, 15, 20, 8, 12, 39, 16, 13, 27, 5]
+
+# поиск первого нечетного элемента
+odd_index = -1
+for i in range(len(array)):
+    if array[i] % 2 != 0:
+        odd_index = i
+        break
+
+if odd_index == -1:
+    print("Нечетных элементов в массиве нет")
+else:
+    print("Первый нечетный элемент находится под индексом", odd_index)
+
+# поиск первого элемента, кратного 13
+multiple_index = -1
+for i in range(len(array)):
+    if array[i] % 13 == 0:
+        multiple_index = i
+        break
+
+if multiple_index == -1:
+    print("Элементов, кратных 13, в массиве нет")
+else:
+    print("Первый элемент, кратный 13, находится под индексом", multiple_index)
+

@@ -1,0 +1,15 @@
+lst = []
+num = int(input("Введите число: "))
+while num != 0:
+  lst.append(num)
+  num = int(input("Введите число: "))
+
+mult = 1
+for i in range(len(lst)):
+  mult *= lst[i]
+  if lst[i] == 0:
+    break
+  print(mult)
+
+print(0)
+

@@ -1,0 +1,16 @@
+arr = [1, 2, 3, 4, 5]
+last_elem = arr[-1]
+B = 10
+
+# уменьшить на 20
+arr = [elem - 20 for elem in arr]
+print(arr)  # [ -19, -18, -17, -16, -15]
+
+# умножить на последний элемент
+arr = [elem * last_elem for elem in arr]
+print(arr)  # [ -285, -270, -255, -240, -225]
+
+# увеличить на число B
+arr = [elem + B for elem in arr]
+print(arr)  # [ -275, -260, -245, -230, -215]
+

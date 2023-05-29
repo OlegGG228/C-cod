@@ -1,0 +1,6 @@
+import math
+
+for i in range(16):
+    x = i / 10
+    sin_value = math.sin(x)
+    print(sin_value)

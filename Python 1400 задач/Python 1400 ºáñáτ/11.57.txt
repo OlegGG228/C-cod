@@ -1,0 +1,8 @@
+rainfall = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150]
+first_half = sum(rainfall[:len(rainfall) // 2])
+second_half = sum(rainfall[len(rainfall) // 2:])
+print("a) Больше осадков выпало в", "первой половине июня" if first_half > second_half else "во второй половине июня")
+decades = [sum(rainfall[0:10]), sum(rainfall[10:20]), sum(rainfall[20:])]
+max_decade = decades.index(max(decades)) + 1
+print("б) Больше всего осадков выпало в", max_decade, "декаде месяца")
+

@@ -1,0 +1,13 @@
+num_list = []
+num = float(input('Введите первое число последовательности: '))
+while num != 1000:
+    num_list.append(num)
+    num = float(input('Введите следующее число последовательности (для окончания введите 1000): '))
+
+count = 0
+for i in range(len(num_list)-1):
+    if num_list[i] == num_list[i+1]:
+        count += 1
+
+print('Количество чисел, идущих подряд и равных между собой: ', count)
+

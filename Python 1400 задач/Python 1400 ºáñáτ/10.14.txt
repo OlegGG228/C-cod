@@ -1,0 +1,22 @@
+import random
+
+# функция, которая бросает кубик K раз и возвращает сумму очков
+def roll_dice(K):
+    result = 0
+    for i in range(K):
+        result += random.randint(1, 6)
+    return result
+
+# бросаем кубики каждым из трех игроков
+player1_score = roll_dice(6)
+player2_score = roll_dice(6)
+player3_score = roll_dice(6)
+
+# определяем, кто из игроков получил наибольшую сумму очков
+if player1_score > player2_score and player1_score > player3_score:
+    print("Победил игрок 1 со счетом", player1_score)
+elif player2_score > player1_score and player2_score > player3_score:
+    print("Победил игрок 2 со счетом", player2_score)
+else:
+    print("Победил игрок 3 со счетом", player3_score)
+

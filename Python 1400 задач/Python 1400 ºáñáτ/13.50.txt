@@ -1,0 +1,103 @@
+# a)
+teams = ["Team1", "Team2", "Team3", "Team4", "Team5", "Team6", "Team7", "Team8", "Team9", "Team10", 
+         "Team11", "Team12", "Team13", "Team14", "Team15", "Team16", "Team17", "Team18", "Team19", "Team20"]
+
+scores = [[0, 3, 0, 0, 0, 0, 3, 0, 1, 3, 0, 3, 3, 0, 1, 1, 3, 1, 1, 3],
+          [0, 0, 0, 1, 0, 3, 3, 3, 0, 0, 3, 1, 0, 3, 3, 3, 3, 3, 3, 0],
+          [1, 3, 0, 1, 3, 3, 0, 3, 0, 3, 0, 1, 0, 3, 3, 1, 0, 3, 1, 0],
+          [1, 1, 1, 0, 0, 3, 1, 1, 0, 1, 0, 3, 0, 0, 0, 3, 3, 0, 1, 1],
+          [0, 1, 3, 1, 0, 3, 0, 3, 3, 1, 3, 3, 3, 0, 3, 0, 3, 1, 3, 3],
+          [3, 1, 1, 1, 3, 0, 3, 1, 3, 0, 1, 3, 3, 0, 3, 1, 3, 3, 3, 3],
+          [0, 1, 3, 3, 0, 0, 0, 1, 1, 3, 0, 3, 3, 1, 3, 0, 3, 0, 0, 1],
+          [0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 3, 3, 1, 3, 3, 0, 0, 3, 0, 0],
+          [1, 3, 3, 3, 0, 0, 0, 1, 0, 1, 1, 1, 3, 3, 0, 3, 1, 1, 1, 1],
+          [0, 1, 3, 0, 1, 3, 3, 1, 1, 0, 1, 0, 3, 3, 3, 0, 3, 3, 1, 1],
+          [1, 0, 3, 3, 1, 0, 0, 0, 0, 1, 0, 3, 1, 0, 0, 0, 3, 3, 1, 3],
+          [0, 1, 1, 0, 0, 3, 1, 0, 3, 3, 0, 0, 3, 3, 1, 0, 0, 0, 0, 1],
+          [0, 3, 0, 3, 1, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 1, 3, 1, 1, 3],
+          [3, 3, 0, 3, 3, 0, 3, 0, 0, 0, 3, 0, 3, 0, 1, 1, 0, 1, 0, 1],
+          [1, 3, 0, 3, 0, 0, 0, 0, 1, 0, 3, 0, 1, 3, 0, 3, 0, 3, 0, 0],
+          [3, 1, 1, 0, 1, 1, 1, 1, 3, 0, 1, 3, 0, 0, 0, 0, 0, 1, 3, 1],
+          [1, 3, 1, 0, 0, 0, 3, 1, 0, 3, 3, 3, 0, 1, 0, 1, 0, 3, 0, 1],
+          [3, 1, 1, 3, 3, 0, 1, 3, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 3, 3],
+          [3, 0, 0, 1, 0, 0, 3, 0, 0, 1, 0, 0, 1, 3, 0, 1, 1, 0, 0, 0],
+          [0, 3, 1, 1, 0, 0, 1, 3, 0, 1, 3, 1, 0, 1, 1, 0, 1, 3, 0, 0]]
+
+# Определяем команды, имеющие больше побед, чем проигрышей
+winning_teams = []
+for i in range(20):
+    wins = 0
+    losses = 0
+    for j in range(20):
+        if scores[i][j] == 3:
+            wins += 1
+        elif scores[i][j] == 0:
+            losses += 1
+    if wins > losses:
+        winning_teams.append(teams[i])
+
+print("Команды, имеющие больше побед, чем проигрышей:", winning_teams)
+
+# b)
+# Определяем команды, которые не проиграли ни одного матча
+undefeated_teams = []
+for i in range(20):
+    losses = 0
+    for j in range(20):
+        if scores[i][j] == 0:
+            losses += 1
+    if losses == 0:
+        undefeated_teams.append(teams[i])
+
+print("Команды, которые не проиграли ни одного матча:", undefeated_teams)
+
+# c)
+# Определяем команду-чемпиона
+max_points = 0
+champion = ""
+for i in range(20):
+    points = 0
+    for j in range(20):
+        points += scores[i][j]
+    if points > max_points:
+        max_points = points
+        champion = teams[i]
+
+print("Команда-чемпион:", champion)
+
+# d)
+# Проверяем, расположены ли команды в соответствии с их местами в чемпионате
+correct_order = True
+for i in range(20):
+    points_i = 0
+    for j in range(20):
+        points_i += scores[i][j]
+    for k in range(i+1, 20):
+        points_k = 0
+        for l in range(20):
+            points_k += scores[k][l]
+        if points_i < points_k:
+            correct_order = False
+            print("Команда", teams[i], "расположена на месте ниже, чем команда", teams[k], "в соответствии"
+                  " с их результатами в таблице.")
+            break
+    if not correct_order:
+        break
+
+if correct_order:
+    print("Команды расположены в соответствии с их местами в чемпионате.")
+
+# e)
+# Получаем последовательность названий команд в порядке их мест
+ranking = []
+for i in range(20):
+    points_i = 0
+    for j in range(20):
+        points_i += scores[i][j]
+    team = (teams[i], points_i)
+    ranking.append(team)
+
+ranking_sorted = sorted(ranking, key=lambda x: x[1], reverse=True)
+print("Последовательность названий команд в соответствии с их местами:")
+for i in range(20):
+    print(i+1, ".", ranking_sorted[i][0])

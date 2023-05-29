@@ -1,0 +1,23 @@
+def is_in_array(n, arr):
+    return n in arr
+
+ml = [1, 2, 3, 4, 5]
+m2 = [6, 7, 8, 9, 10]
+m3 = [2, 4, 6, 8, 12]
+
+count_ml = 0
+for i in ml:
+    if is_in_array(i, m3):
+        count_ml += 1
+
+count_m2 = 0
+for i in m2:
+    if is_in_array(i, m3):
+        count_m2 += 1
+
+if count_ml > count_m2:
+    print("Массив ml содержит больше чисел из массива m3")
+elif count_m2 > count_ml:
+    print("Массив m2 содержит больше чисел из массива m3")
+else:
+    print("Количество чисел в массивах ml и m2 равно")

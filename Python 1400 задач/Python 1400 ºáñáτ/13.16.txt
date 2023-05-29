@@ -1,0 +1,11 @@
+students = [{"Фамилия": "Иванов", "Имя": "Иван", "День рождения": [1999, 5, 25]}, 
+            {"Фамилия": "Петров", "Имя": "Петр", "День рождения": [2000, 7, 15]}] # и т.д.
+
+import datetime
+
+today = datetime.date.today()
+
+for student in students:
+  if student["День рождения"][1] == today.month and student["День рождения"][2] == today.day:
+    print(student["Имя"], student["Фамилия"])
+

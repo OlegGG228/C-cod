@@ -1,0 +1,15 @@
+n = int(input("Введите количество домов: "))
+odd_sum = 0
+even_sum = 0
+for i in range(1, n + 1):
+    residents = int(input(f"Введите количество жителей в доме {i}: "))
+    if i % 2 == 0:
+        even_sum += residents
+    else:
+        odd_sum += residents
+if odd_sum > even_sum:
+    print("Больше жителей живет на стороне с нечетными домами")
+elif even_sum > odd_sum:
+    print("Больше жителей живет на стороне с четными домами")
+else:
+    print("Количество жителей на обеих сторонах улицы равно")

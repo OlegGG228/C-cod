@@ -1,0 +1,10 @@
+heights = [170, 175, 180, 185, 190]
+
+# Проверка на убывание роста
+is_descending = all(heights[i] >= heights[i+1] for i in range(len(heights)-1))
+
+if is_descending:
+    print("Ученики перечислены в порядке убывания их роста")
+else:
+    print("Ученики не перечислены в порядке убывания их роста")
+

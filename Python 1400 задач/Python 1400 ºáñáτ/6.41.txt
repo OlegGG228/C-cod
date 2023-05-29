@@ -1,0 +1,13 @@
+number = input('Введите натуральное число: ')
+max_num = '0'
+min_num = '9'
+
+for digit in number:
+    if digit > max_num:
+        max_num = digit
+    if digit < min_num:
+        min_num = digit
+
+print(f'Максимальная цифра в числе: {max_num}')
+print(f'Минимальная цифра в числе: {min_num}')
+

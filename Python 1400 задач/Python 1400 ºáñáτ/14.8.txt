@@ -1,0 +1,29 @@
+def triangle_perimeter(side1, side2, side3):
+    return side1 + side2 + side3
+
+def triangle_area(side1, side2, side3):
+    s = (side1 + side2 + side3) / 2
+    area = (s*(s-side1)*(s-side2)*(s-side3)) ** 0.5
+    return area
+
+side1_1 = 5
+side2_1 = 4
+side3_1 = 3
+perimeter1 = triangle_perimeter(side1_1, side2_1, side3_1)
+area1 = triangle_area(side1_1, side2_1, side3_1)
+
+side1_2 = 6
+side2_2 = 5
+side3_2 = 4
+perimeter2 = triangle_perimeter(side1_2, side2_2, side3_2)
+area2 = triangle_area(side1_2, side2_2, side3_2)
+
+total_perimeter = perimeter1 + perimeter2
+total_area = area1 + area2
+
+print("Perimeter 1:", perimeter1)
+print("Area 1:", area1)
+print("Perimeter 2:", perimeter2)
+print("Area 2:", area2)
+print("Total perimeter:", total_perimeter)
+print("Total area:", total_area)

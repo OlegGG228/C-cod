@@ -1,0 +1,17 @@
+n = int(input("Введите число n (от 1 до 4): "))
+v1 = v2 = 0
+v3 = 5
+if n == 1:
+    print(v1)
+elif n == 2:
+    print(v2)
+elif n == 3:
+    print(v3)
+else:
+    for i in range(4, n+1):
+        vn = ((i-1)/((i**2)+1)) * v3 - v2 + v1
+        v1 = v2
+        v2 = v3
+        v3 = vn
+    print(vn)
+

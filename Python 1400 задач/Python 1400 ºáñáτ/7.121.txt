@@ -1,0 +1,10 @@
+k = int(input("Введите количество чисел: "))
+numbers = []
+for i in range(k):
+  number = int(input("Введите число: "))
+  numbers.append(number)
+last_negative_number_index = -1
+for i in range(k):
+  if numbers[i] < 0:
+    last_negative_number_index = i
+print("Номер последнего отрицательного числа:", last_negative_number_index)

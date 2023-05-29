@@ -1,0 +1,15 @@
+A = True
+B = False
+C = False
+
+# а) А или В
+result1 = A or B
+print("Результат выражения A или B:", result1)
+
+# б) А и В
+result2 = A and B
+print("Результат выражения A и B:", result2)
+
+# в) В или С
+result3 = B or C
+print("Результат выражения B или C:", result3)

@@ -1,0 +1,28 @@
+month_num = int(input("Введите порядковый номер месяца (1-12): "))
+
+if month_num == 1:
+    print("Январь")
+elif month_num == 2:
+    print("Февраль")
+elif month_num == 3:
+    print("Март")
+elif month_num == 4:
+    print("Апрель")
+elif month_num == 5:
+    print("Май")
+elif month_num == 6:
+    print("Июнь")
+elif month_num == 7:
+    print("Июль")
+elif month_num == 8:
+    print("Август")
+elif month_num == 9:
+    print("Сентябрь")
+elif month_num == 10:
+    print("Октябрь")
+elif month_num == 11:
+    print("Ноябрь")
+elif month_num == 12:
+    print("Декабрь")
+else:
+    print("Ошибка: введите число от 1 до 12")

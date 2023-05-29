@@ -1,0 +1,5 @@
+x = [int(i) for i in input("Введите последовательность через пробел: ").split()]
+if all(elem == x[0] for elem in x):
+    print("Все элементы равны")
+else:
+    print("Не все элементы равны")

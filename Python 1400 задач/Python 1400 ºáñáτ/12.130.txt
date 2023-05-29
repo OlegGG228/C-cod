@@ -1,0 +1,5 @@
+word = "слово_"
+letter = "т"
+i = word.index("и")
+word_corrected = word[:i+1] + letter + word[i+1:]
+print(word_corrected)

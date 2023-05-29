@@ -1,0 +1,41 @@
+number = input("Введите натуральное число: ")
+digits = [int(d) for d in number]
+digit_sum = sum(digits)
+digit_product = 1
+for digit in digits:
+    digit_product *= digit
+is_sum_greater_than_10 = digit_sum > 10
+is_product_less_than_50 = digit_product < 50
+is_number_of_digits_even = len(digits) % 2 == 0
+is_four_digit_number = len(digits) == 4
+is_first_digit_not_greater_than_6 = digits[0] <= 6
+is_starts_and_ends_with_same_digit = digits[0] == digits[-1]
+is_first_digit_greater_than_last_digit = digits[0] > digits[-1]
+if is_sum_greater_than_10:
+    print("Сумма цифр больше 10")
+else:
+    print("Сумма цифр не больше 10")
+if is_product_less_than_50:
+    print("Произведение цифр меньше 50")
+else:
+    print("Произведение цифр не меньше 50")
+if is_number_of_digits_even:
+    print("Количество цифр четное")
+else:
+    print("Количество цифр нечетное")
+if is_four_digit_number:
+    print("Число четырехзначное")
+else:
+    print("Число не четырехзначное")
+if is_first_digit_not_greater_than_6:
+    print("Первая цифра не превышает 6")
+else:
+    print("Первая цифра превышает 6")
+if is_starts_and_ends_with_same_digit:
+    print("Число начинается и заканчивается одной и той же цифрой")
+else:
+    print("Число не начинается и не заканчивается одной и той же цифрой")
+if is_first_digit_greater_than_last_digit:
+    print("Первая цифра больше последней")
+else:
+    print("Первая цифра не больше последней")

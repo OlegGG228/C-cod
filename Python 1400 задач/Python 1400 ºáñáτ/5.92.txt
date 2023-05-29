@@ -1,0 +1,12 @@
+number = int(input("Введите натуральное число: "))
+
+if number > 1:
+    for i in range(2, number):
+        if number % i == 0:
+            print(number, "не является простым числом")
+            break
+    else:
+        print(number, "является простым числом")
+else:
+    print(number, "не является простым числом")
+

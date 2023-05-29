@@ -1,0 +1,18 @@
+sequence = []
+while True:
+    num = int(input("Введите число (для окончания введите 100): "))
+    if num == 100:
+        break
+    sequence.append(num)
+
+found_index = -1
+for i in range(len(sequence)):
+    if sequence[i] == 666:
+        found_index = i + 1
+        break
+
+if found_index == -1:
+    print("Число 666 не найдено в последовательности")
+else:
+    print(f"Первое вхождение числа 666 находится под номером {found_index}")
+

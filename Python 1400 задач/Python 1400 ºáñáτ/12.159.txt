@@ -1,0 +1,14 @@
+text = "abc123 + 45=6789gh"
+numbers = []
+current_number = ''
+for char in text:
+    if char.isdigit():
+        current_number += char
+    else:
+        if current_number:
+            numbers.append(int(current_number))
+            current_number = ''
+if current_number:
+    numbers.append(int(current_number))
+print(sum(numbers))
+

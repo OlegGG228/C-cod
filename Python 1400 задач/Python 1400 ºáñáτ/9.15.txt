@@ -1,0 +1,17 @@
+income = [
+    [100, 200, 150, 300, 250, 175, 225, 175, 200, 250],
+    [150, 175, 200, 150, 300, 225, 250, 200, 175, 150],
+    [250, 300, 175, 200, 150, 250, 225, 175, 200, 150]
+]
+
+# а) для каждого магазина - какого числа этот магазин получил максимальный доход
+for i in range(len(income)):
+    max_income = max(income[i])
+    max_day = income[i].index(max_income) + 1
+    print(f"Магазин {i+1} получил максимальный доход {max_income} в {max_day} день")
+
+# б) для каждого из 10 дней - какой магазин получил в этот день максимальный доход
+for i in range(10):
+    max_income = max(income[j][i] for j in range(3))
+    max_shop = [j+1 for j in range(3) if income[j][i] == max_income]
+    print(f"В {i+1} день максимальный доход получили магазины {max_shop} ({max_income})")

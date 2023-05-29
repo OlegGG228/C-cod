@@ -1,0 +1,25 @@
+array = [2, 5, 8, 14, 27, 34, 49, 50, 63, 78]
+a = 6
+b = 3
+
+# a) уменьшить элементы, оканчивающиеся на 4 вдвое
+for i in range(len(array)):
+    if str(array[i])[-1] == '4':
+        array[i] = array[i] / 2
+
+# б) заменить четные элементы на их квадраты, нечетные удвоить
+for i in range(len(array)):
+    if array[i] % 2 == 0:
+        array[i] = array[i] ** 2
+    else:
+        array[i] = array[i] * 2
+
+# в) увеличить четные элементы на а, из четных номеров вычесть b
+for i in range(len(array)):
+    if i % 2 == 0:
+        array[i] = array[i] + a
+    if array[i] % 2 == 0:
+        array[i] = array[i] - b
+
+print(array)
+

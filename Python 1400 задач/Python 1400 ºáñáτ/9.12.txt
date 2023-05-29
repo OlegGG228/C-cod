@@ -1,0 +1,33 @@
+```
+# создаем список списков для хранения количества учеников
+students = [
+    [23, 25, 27, 22],
+    [24, 26, 25, 23],
+    [22, 21, 25, 24],
+    [23, 25, 21, 26],
+    [22, 24, 26, 23],
+    [21, 23, 24, 22],
+    [22, 21, 23, 25],
+    [23, 25, 24, 22],
+    [24, 23, 25, 21],
+    [23, 26, 24, 22],
+    [20, 25, 21, 26]
+]
+
+# а) определяем самый малочисленный класс
+min_students = min(min(parallel) for parallel in students)
+print("Самый малочисленный класс:", min_students)
+
+# б) определяем минимальное значение общего количества учеников в классах одной параллели
+min_parallel = min(sum(parallel) for parallel in students)
+print("Минимальное количество учеников в классах одной параллели:", min_parallel)
+
+# в) определяем минимальное значение общего количества учеников в классах А, Б, В и Г
+sum_a = sum(parallel[0] for parallel in students)
+sum_b = sum(parallel[1] for parallel in students)
+sum_c = sum(parallel[2] for parallel in students)
+sum_d = sum(parallel[3] for parallel in students)
+min_abcd = min(sum_a, sum_b, sum_c, sum_d)
+print("Минимальное количество учеников в классах А, Б, В и Г:", min_abcd)
+```
+

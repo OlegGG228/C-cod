@@ -1,0 +1,26 @@
+array = [5, 10, -2, -8, 7, -4, 3, -6]
+pos_sum = 0
+pos_count = 0
+neg_sum = 0
+neg_count = 0
+
+for i in array:
+    if i > 0:
+        pos_sum += i
+        pos_count += 1
+    elif i < 0:
+        neg_sum += i
+        neg_count += 1
+
+if pos_count > 0:
+    pos_avg = pos_sum / pos_count
+    print("Среднее арифметическое положительных элементов массива:", pos_avg)
+else:
+    print("Нет положительных элементов в массиве")
+
+if neg_count > 0:
+    neg_avg = neg_sum / neg_count
+    print("Среднее арифметическое отрицательных элементов массива:", neg_avg)
+else:
+    print("Нет отрицательных элементов в массиве")
+

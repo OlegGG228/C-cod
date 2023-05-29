@@ -1,0 +1,9 @@
+word = input("Enter a 12-letter word: ")
+new_word = ""
+pairs = [(0,11), (1,10), (2,9), (3,8), (4,7), (5,6)]
+for i, j in pairs:
+    new_word += word[i] + word[j]
+if len(word)%2 != 0:
+    new_word += word[len(word)//2]
+print(new_word)
+

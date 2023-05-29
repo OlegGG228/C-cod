@@ -1,0 +1,4 @@
+for i in range(2, 21):
+    cost = i * 20.4
+    print(f"{i} шт. стоят {cost} руб.")
+

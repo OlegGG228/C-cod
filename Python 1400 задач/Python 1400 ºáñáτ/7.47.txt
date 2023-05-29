@@ -1,0 +1,9 @@
+prices = [500, 1200, 800, 1500, 900, 1100, 2000, 600]
+
+total_cost = 0
+for price in prices:
+    if price > 1000:
+        total_cost += price
+
+print("Общая стоимость товаров, которые стоят дороже 1000 рублей:", total_cost)
+

@@ -1,0 +1,20 @@
+#а) Решение:
+
+sum = 0
+f1 = 1
+f2 = 1
+while f2 <= 1000:
+    if f2 % 2 == 0:
+        sum += f2
+    f1, f2 = f2, f1 + f2
+print(sum)
+
+#б) Решение:
+
+p = int(input("Введите число: "))
+f1 = 1
+f2 = 1
+while f2 <= p:
+    f1, f2 = f2, f1 + f2
+print(f2)
+

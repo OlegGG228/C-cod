@@ -1,0 +1,32 @@
+words = ['apple', 'banana', 'cherry', 'kiwi', 'orange', 'watermelon']
+
+# а) средняя длина слова
+avg_word_len = sum(len(word) for word in words) / len(words)
+print("Средняя длина слова:", avg_word_len)
+
+# б) количество слов, в которых больше пяти символов
+words_gt_5 = len([word for word in words if len(word) > 5])
+print("Количество слов, в которых больше пяти символов:", words_gt_5)
+
+# в) количество символов в самом длинном слове
+max_word_len = max(len(word) for word in words)
+print("Количество символов в самом длинном слове:", max_word_len)
+
+# г) номер первого самого короткого слова
+min_word_len = min(len(word) for word in words)
+first_min_word = [i for i, word in enumerate(words) if len(word) == min_word_len][0]
+print("Номер первого самого короткого слова:", first_min_word)
+
+# д) количество символов в слове, больше которого только в самом длинном слове
+words_lt_max = [word for word in words if len(word) < max_word_len]
+max_diff_len = max_word_len - max(len(word) for word in words_lt_max)
+print("Количество символов в слове, больше которого только в самом длинном слове:", max_diff_len)
+
+# е) количество слов, начинающихся на букву «к» или «К»
+words_k = len([word for word in words if word.startswith('k') or word.startswith('K')])
+print("Количество слов, начинающихся на букву «к» или «К»:", words_k)
+
+# получить массив слов заданного массива, расположенных в алфавитном порядке
+words_sorted = sorted(words)
+print("Массив слов заданного массива, расположенных в алфавитном порядке:", words_sorted)
+

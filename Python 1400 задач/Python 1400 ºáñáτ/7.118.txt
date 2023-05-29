@@ -1,0 +1,21 @@
+# вариант с оператором цикла с условием в задаче (а)
+p = int(input("Введите натуральное число p: "))
+a = []
+for i in range(p):
+  a.append(int(input(f"Введите {i+1}-е целое число: ")))
+last_index = 0
+for i in range(len(a)):
+  if a[i] == 10:
+    last_index = i
+print("Номер последнего числа равного 10:", last_index+1)
+
+# вариант с оператором цикла while в задаче (б)
+first_index = 0
+i = 0
+while i < len(a):
+  if a[i] == 10:
+    first_index = i
+    break
+  i += 1
+print("Номер первого числа равного 10:", first_index+1)
+

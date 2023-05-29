@@ -1,0 +1,24 @@
+salary = []
+for i in range(12):
+    x = list(map(int, input("Введите зарплаты работника " + str(i+1) + " за первый квартал: ").split()))
+    salary.append(x)
+
+max_salary_month = []
+for i in range(12):
+    max_salary_month.append(salary[i].index(max(salary[i])) + 1)
+
+print("Для каждого работника - в какой из месяцев он получил наибольшую зарплату: ")
+for i in range(12):
+    print("Работник", i+1, "наибольшую зарплату получил в", max_salary_month[i], "месяце")
+
+max_salary_employee = []
+for i in range(3):
+    month_salary = []
+    for j in range(12):
+        month_salary.append(salary[j][i])
+    max_salary_employee.append(month_salary.index(max(month_salary)) + 1)
+    
+print("Для каждого месяца - кто из работников получил наибольшую зарплату за этот месяц: ")
+for i in range(3):
+    print("В", i+1, "месяце наибольшую зарплату получил работник", max_salary_employee[i])
+

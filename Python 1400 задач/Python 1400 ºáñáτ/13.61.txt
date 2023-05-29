@@ -1,0 +1,77 @@
+countries = [
+    {"name": "Россия", "capital": "Москва", "region": "Европа", "population": 144.5, "area": 17.1},
+    {"name": "Германия", "capital": "Берлин", "region": "Европа", "population": 83.2, "area": 357.4},
+    {"name": "Китай", "capital": "Пекин", "region": "Азия", "population": 1380.0, "area": 9596.9},
+    {"name": "Италия", "capital": "Рим", "region": "Европа", "population": 60.6, "area": 301.3},
+    {"name": "Япония", "capital": "Токио", "region": "Азия", "population": 126.5, "area": 377.9},
+    {"name": "Испания", "capital": "Мадрид", "region": "Европа", "population": 46.5, "area": 505.9},
+    {"name": "Индия", "capital": "Нью-Дели", "region": "Азия", "population": 1324.2, "area": 3287},
+]
+
+# Определение столицы по названию государства
+def find_capital_by_country(countries, country_name):
+    for country in countries:
+        if country["name"] == country_name:
+            return country["capital"]
+    return None
+
+# Определение названия государства по городу-столице
+def find_country_by_capital(countries, capital):
+    for country in countries:
+        if country["capital"] == capital:
+            return country["name"]
+    return None
+
+# Вывод всей информации о заданном государстве
+def print_country_info(countries, country_name):
+    for country in countries:
+        if country["name"] == country_name:
+            print("Страна:", country["name"])
+            print("Столица:", country["capital"])
+            print("Часть света:", country["region"])
+            print("Население (млн чел.):", country["population"])
+            print("Площадь территории (тыс. кв. км):", country["area"])
+            return
+    print("Страна не найдена.")
+
+# Вывод названий всех стран, расположенных в заданной части света
+def print_countries_by_region(countries, region):
+    found_countries = []
+    for country in countries:
+        if country["region"] == region:
+            found_countries.append(country["name"])
+    if found_countries:
+        print("Страны в регионе", region, ":", found_countries)
+    else:
+        print("Стран в регионе", region, "не найдено.")
+
+# Расчет плотности населения для каждого государства
+def print_population_density(countries):
+    for country in countries:
+        density = country["population"] / country["area"]
+        print("Плотность населения в стране", country["name"], ":", round(density, 2), "тыс. чел. на 1 кв. км")
+
+# Определение количества государств, расположенных в заданной части света
+def count_countries_by_region(countries, region):
+    count = 0
+    for country in countries:
+        if country["region"] == region:
+            count += 1
+    print("Количество стран в регионе", region, ":", count)
+
+# Расчет общей площади государств, расположенных в заданной части света
+def calculate_area_by_region(countries, region):
+    total_area = 0
+    for country in countries:
+        if country["region"] == region:
+            total_area += country["area"]
+    print("Общая площадь стран в регионе", region, ":", total_area)
+
+# Пример использования функций
+print(find_capital_by_country(countries, "Италия")) # Рим
+print(find_country_by_capital(countries, "Москва")) # Россия
+print_country_info(countries, "Германия")
+print_countries_by_region(countries, "Азия")
+print_population_density(countries)
+count_countries_by_region(countries, "Европа")
+calculate_area_by_region(countries, "Азия")

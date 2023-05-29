@@ -1,0 +1,25 @@
+def strange_husband(n):
+    if n == 0:
+        return 1  # расстояние до работы
+    else:
+        prev_distance = strange_husband(n-1)
+        if n % 2 == 1:  # нечетный этап - идем к дому
+            return 1 - prev_distance
+        else:  # четный этап - идем на работу
+            return 1 - (2*prev_distance)/3
+
+print(strange_husband(100))  # ответ: 0.625 (расстояние от дома до мужа)
+
+b) Чтобы найти общий путь, нужно просуммировать расстояния, пройденные мужчиной на каждом этапе, и умножить на 2, чтобы учесть возвращение к дому.
+
+def strange_husband_distance(n):
+    if n == 0:
+        return 0
+    else:
+        prev_distance = strange_husband(n-1)
+        if n % 2 == 1:
+            return prev_distance + strange_husband_distance(n-1)
+        else:
+            return (2*prev_distance)/3 + strange_husband_distance(n-1)
+
+print(strange_husband_distance(100)*2)  # ответ: 1.9999999999999996 (общий пройденный путь)

@@ -1,0 +1,10 @@
+rainfall = [10, 5, 8, 6, 12, 7, 4, 3, 9, 11, 6, 2]
+
+total_rainfall = 0
+
+for i in range(len(rainfall)):
+    if (i + 1) % 2 == 0: # проверяем, является ли число четным
+        total_rainfall += rainfall[i] # если да, то добавляем количество осадков к общему числу
+
+print("Общее число осадков по четным числам месяца:", total_rainfall)
+

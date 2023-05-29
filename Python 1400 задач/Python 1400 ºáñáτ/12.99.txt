@@ -1,0 +1,5 @@
+sentence = input("Введите предложение: ")
+
+sentence = sentence.replace(' ', '_')
+
+print("Исправленное предложение:", sentence)

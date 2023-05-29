@@ -1,0 +1,10 @@
+sentence1 = input("Введите первое предложение: ")
+sentence2 = input("Введите второе предложение: ")
+words1 = sentence1.split()
+words2 = sentence2.split()
+unique_words = set(words1) | set(words2)
+for word in unique_words:
+    if word in words1 and word in words2:
+        print(word, "- повторяется в обоих предложениях")
+    else:
+        print(word)

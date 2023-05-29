@@ -1,0 +1,12 @@
+num = int(input("Введите натуральное число: "))
+position = 0
+while num > 0:
+    position += 1
+    if num % 10 == 3:
+        digit_position = position
+    num //= 10
+if digit_position > 0:
+    print(f"Номер цифры 3, считая от конца числа: {position - digit_position + 1}")
+else:
+    print(0)
+

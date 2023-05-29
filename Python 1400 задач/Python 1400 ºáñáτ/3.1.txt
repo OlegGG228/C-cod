@@ -1,0 +1,3 @@
+distance_cm = 1530
+distance_m = distance_cm // 100
+print(distance_m) # выводит 15

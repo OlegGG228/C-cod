@@ -1,0 +1,12 @@
+array1 = [1, -2, 3, -4, 5]
+array2 = [-1, -2, 3, 4, 5]
+array3 = []
+
+for i in range(len(array1)):
+    if array1[i] * array2[i] > 0:
+        array3.append(1)
+    else:
+        array3.append(0)
+
+print(array3) # [0, 1, 1, 0, 1]
+

@@ -1,0 +1,8 @@
+ = range(2, 18)
+z_values = []
+for a_value in a:
+    t = a_value * a_value
+    z = 4.312 - 8 * t + 13 * a_value
+    z_values.append(z)
+
+print(z_values)

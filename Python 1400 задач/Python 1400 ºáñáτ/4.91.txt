@@ -1,0 +1,60 @@
+python
+# функция для определения количества дней в месяце с учетом високосного года
+def days_in_month(month, year):
+    if month == 2:
+        if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+            return 29 # високосный год
+        else:
+            return 28
+    elif month in [4, 6, 9, 11]:
+        return 30
+    else:
+        return 31
+
+# функция для определения предыдущей даты
+def previous_date(day, month, year):
+    if day == 1:
+        # если день первый, то нужно вернуть последний день предыдущего месяца
+        if month == 1:
+            # если месяц январь, то предыдущий месяц - декабрь предыдущего года
+            prev_month = 12
+            prev_year = year - 1
+        else:
+            prev_month = month - 1
+            prev_year = year
+        prev_day = days_in_month(prev_month, prev_year)
+    else:
+        prev_day = day - 1
+        prev_month = month
+        prev_year = year
+    return prev_day, prev_month, prev_year
+
+# функция для определения следующей даты
+def next_date(day, month, year):
+    if day == days_in_month(month, year):
+        # если день последний, то нужно вернуть первый день следующего месяца
+        if month == 12:
+            # если месяц декабрь, то следующий месяц - январь следующего года
+            next_month = 1
+            next_year = year + 1
+        else:
+            next_month = month + 1
+            next_year = year
+        next_day = 1
+    else:
+        next_day = day + 1
+        next_month = month
+        next_year = year
+    return next_day, next_month, next_year
+
+# пример использования функций
+day = 15
+month = 3
+year = 2021
+
+prev_day, prev_month, prev_year = previous_date(day, month, year)
+next_day, next_month, next_year = next_date(day, month, year)
+
+print("Предыдущая дата:", prev_day, prev_month, prev_year)
+print("Следующая дата:", next_day, next_month, next_year)
+

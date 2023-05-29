@@ -1,0 +1,11 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+k_word = ""
+for word in words:
+    if word[0] == 'к':
+        k_word = word
+        break
+if k_word != "":
+    print("Слово, начинающееся на 'к':", k_word)
+else:
+    print("В предложении нет слов, начинающихся на 'к'")

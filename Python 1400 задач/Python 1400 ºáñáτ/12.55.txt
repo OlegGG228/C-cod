@@ -1,0 +1,5 @@
+sentence = input("Введите предложение: ")
+for index, letter in enumerate(sentence):
+    if index % 2 == 0: # проверяем, является ли индекс четным
+        print(letter) # выводим букву в новой строке
+

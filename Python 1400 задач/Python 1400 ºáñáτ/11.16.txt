@@ -1,0 +1,24 @@
+# a) 
+
+a = int(input("Введите первый член прогрессии "))
+r = int(input("Введите разность арифметической прогрессии "))
+array = []
+
+for i in range(10):
+    array.append(a)
+    a += r
+
+print(array)
+
+# б) 
+
+y = int(input("Введите первый член прогрессии "))
+z = int(input("Введите знаменатель геометрической прогрессии "))
+array = []
+
+for i in range(20):
+    array.append(y)
+    y *= z
+
+print(array)
+

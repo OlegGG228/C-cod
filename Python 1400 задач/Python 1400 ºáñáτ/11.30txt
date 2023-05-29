@@ -1,0 +1,10 @@
+wins = [3, 4, 1, 5, 0, 2, 2, 3, 1, 2, 1, 4, 1, 2, 0, 4, 3, 2, 5, 1]
+
+teams_with_less_than_3_wins = []
+
+for i in range(len(wins)):
+    if wins[i] < 3:
+        teams_with_less_than_3_wins.append(i)
+
+print("Teams with less than 3 wins:", teams_with_less_than_3_wins)
+

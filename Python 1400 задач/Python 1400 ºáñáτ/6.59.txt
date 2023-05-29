@@ -1,0 +1,40 @@
+# Решение задачи с двумя операторами цикла
+
+num = int(input("Введите натуральное число: "))
+
+min_digit = 9
+while num > 0:
+    digit = num % 10
+    if digit < min_digit:
+        min_digit = digit
+    num //= 10
+
+count = 0
+num = int(input("Введите натуральное число: "))
+while num > 0:
+    digit = num % 10
+    if digit == min_digit:
+        count += 1
+    num //= 10
+
+print("Минимальная цифра:", min_digit)
+print("Количество вхождений:", count)
+
+
+# Решение задачи с одним оператором цикла
+
+num = int(input("Введите натуральное число: "))
+
+min_digit = 9
+count = 0
+while num > 0:
+    digit = num % 10
+    if digit < min_digit:
+        min_digit = digit
+        count = 1
+    elif digit == min_digit:
+        count += 1
+    num //= 10
+
+print("Минимальная цифра:", min_digit)
+print("Количество вхождений:", count)

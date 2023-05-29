@@ -1,0 +1,5 @@
+temperatures = {'01.07': 23, '02.07': 21, '03.07': 25, '04.07': 26, '05.07': 24, '06.07': 22, '07.07': 20, '08.07': 19, '09.07': 18, '10.07': 20, '11.07': 21, '12.07': 23, '13.07': 24, '14.07': 25, '15.07': 22, '16.07': 21, '17.07': 20, '18.07': 19, '19.07': 18, '20.07': 19, '21.07': 22, '22.07': 25, '23.07': 24, '24.07': 23, '25.07': 22, '26.07': 21, '27.07': 20, '28.07': 19, '29.07': 18, '30.07': 17, '31.07': 20}
+
+sorted_temperatures = sorted(temperatures.items(), key=lambda x: x[1])
+print(f"The coolest days were on {sorted_temperatures[0][0]} and {sorted_temperatures[1][0]} with temperatures of {sorted_temperatures[0][1]} and {sorted_temperatures[1][1]} degrees Celsius.")
+

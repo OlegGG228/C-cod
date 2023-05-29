@@ -1,0 +1,4 @@
+number = int(input("Введите натуральное число больше 9: "))
+second_digit = int(str(number)[1])
+print("Вторая цифра числа", number, ":", second_digit)
+

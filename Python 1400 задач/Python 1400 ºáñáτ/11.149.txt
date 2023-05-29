@@ -1,0 +1,28 @@
+array = [1, 2, 3, 4, 5]
+A = 3
+B = 2
+
+# а) увеличить в 2 раза
+array = [x*2 for x in array]
+print(array)
+
+# б) уменьшить на число А
+array = [x-A for x in array]
+print(array)
+
+# в) разделить на первый элемент
+array = [x/array[0] for x in array]
+print(array)
+
+# а) уменьшить на 20
+array = [x-20 for x in array]
+print(array)
+
+# б) умножить на последний элемент
+array = [x*array[-1] for x in array]
+print(array)
+
+# в) увеличить на число В
+array = [x+B for x in array]
+print(array)
+

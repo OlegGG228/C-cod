@@ -1,0 +1,17 @@
+# Создаем списки с оценками каждой группы
+group1 = [[4, 5, 3] for i in range(20)]
+group2 = [[5, 5, 4] for i in range(20)]
+group3 = [[3, 4, 5] for i in range(20)]
+
+# Функция для определения среднего балла группы
+def avg_score(group):
+    return sum(sum(exam) for exam in group) / (20 * 3)
+
+# Сравниваем средние баллы каждой группы с помощью функции avg_score
+if avg_score(group1) > avg_score(group2) and avg_score(group1) > avg_score(group3):
+    print("Лучшая группа - группа 1 со средним баллом:", avg_score(group1))
+elif avg_score(group2) > avg_score(group1) and avg_score(group2) > avg_score(group3):
+    print("Лучшая группа - группа 2 со средним баллом:", avg_score(group2))
+else:
+    print("Лучшая группа - группа 3 со средним баллом:", avg_score(group3))
+

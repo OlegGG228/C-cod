@@ -1,0 +1,12 @@
+newspaper_pages = [8, 12, 16, 6, 10]
+magazine_pages = [20, 28, 16, 30, 24, 18, 26, 32]
+
+total_magazine_pages = 0
+
+for pages in magazine_pages:
+    total_magazine_pages += pages
+    
+print("Total pages in magazines:", total_magazine_pages) 
+
+# Output: Total pages in magazines: 164
+

@@ -1,0 +1,8 @@
+array = [11, 7, 5, 9, 13]
+for i in range(len(array)-1):
+    if array[i+1] < array[i]:
+        temp = array[i]
+        array[i] = array[i+1]
+        array[i+1] = temp
+print(array[-1]) #выводим последний элемент массива после сортировки
+

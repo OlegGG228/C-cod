@@ -1,0 +1,21 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+new_words = []
+for word in words:
+    new_word = ""
+    if 'а' in word:
+        new_word = word.replace('а', 'о', 1)
+elif len(word) > 1 and word[-1] == word[-2]:
+        new_word = word.replace(word[-1], "", word.count(word[-1])-1)
+    elif len(set(word)) != len(word):
+        continue
+    elif len(word) % 2 == 1:
+        middle_index = len(word) // 2
+        new_word = word[:middle_index] + word[middle_index+1:]
+    else:
+        middle_index = len(word) // 2
+        new_word = word[:middle_index-1] + word[middle_index+1:]
+    new_words.append(new_word)
+print("Преобразованные слова в предложении:")
+for new_word in new_words:
+    print(new_word)

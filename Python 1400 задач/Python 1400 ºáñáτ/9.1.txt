@@ -1,0 +1,155 @@
+#а)
+for i in range(3):      # цикл по строкам
+    for j in range(3):  # цикл по столбцам
+        print(8, end=' ')  # выводим значение и пробел после него
+    print()  # переводим строку
+
+#б)
+for i in range(1, 8):      # цикл по строкам, значения от 1 до 7
+    for j in range(5):     # цикл по столбцам, 5 значений в каждой строке
+        print(i, end=' ')  # выводим значение и пробел после него
+    print()  # переводим строку
+#в) 
+
+for i in range(4):
+    print("10")
+
+#г) 
+
+for i in range(4):
+    for j in range(4):
+        print(str(10 + i*2) + "\t", end="")
+    print()
+    for j in range(4):
+        print(str(80 + i*2) + "\t", end="")
+    print()
+
+#Д) 
+
+for i in range(2, 21+1):
+    print(str(i))
+
+#е) 
+
+for i in range(15, 2-1, -1):
+    print(str(i))
+for i in range(3, 21+1):
+    print(str(i))
+for i in range(15, 2-1, -1):
+    print(str(i))
+
+#Ж) 
+
+for i in range(6):
+    print("0")
+
+#3) 
+
+for i in range(8, -1, -1):
+    print(str(i))
+for i in range(1, 6):
+    print(str(i))
+
+8 5 4 3 2 0 0 0 0 
+8 7 6 5 4 3 0 0 0 
+8 7 6 5 4 3 2 0 0 
+8 7 6 5 4 3 2 1 0 
+
+#и) 
+
+for i in range(2, 11):
+    print(str(i))
+
+#Й) 
+
+for i in range(2, 11):
+    print(str(i))
+for i in range(2, 11):
+    print(str(i))
+for i in range(2, 5):
+    print(str(i))
+    for j in range(2, 11):
+        if j != 5 and j != 6:
+            print(str(j))
+for i in range(10, 1, -1):
+    print(str(i))
+
+#К) 
+
+for i in range(4):
+    print("3")
+
+#Л) 
+
+for i in range(4):
+    print(str(21 + i) + "\t", end="")
+print()
+for i in range(4):
+    print("4\t", end="")
+for i in range(2):
+    print(str(22 + i) + "\t", end="")
+print()
+for i in range(4):
+    print("5\t", end="")
+for i in range(3):
+    print(str(23 + i) + "\t", end="")
+print()
+for i in range(5):
+    print(str(6+i) + "\t", end="")
+for i in range(3):
+    print(str(24 + i) + "\t", end="")
+print()
+for i in range(5):
+    print(str(25) + "\t", end="")
+for i in range(4):
+    print(str(26 + i) + "\t", end="")
+print()
+
+#м) 
+
+for i in range(8):
+    print("1")
+
+#н) 
+
+for i in range (10, 1, -1):
+    if i % 10 == 0:
+        print(str(i) + "\t")
+    else:
+        print(str(i) + "\t", end="")
+for i in range(2, 6):
+    for j in range(7):
+        if j % 6 == 0:
+            print(str(i*10) + "\t")
+        else:
+            print(str(i*10) + "\t", end="")
+for i in range(3, 7):
+    for j in range(6):
+        if j % 5 == 0:
+            print(str(i*10) + "\t")
+        else:
+            print(str(i*10) + "\t", end="")
+for i in range(4, 8):
+    for j in range(5):
+        if j % 4 == 0:
+            print(str(i*10) + "\t")
+        else:
+            print(str(i*10) + "\t", end="")
+for i in range(5, 9):
+    for j in range(4):
+        if j % 3 == 0:
+            print(str(i*10) + "\t")
+        else:
+            print(str(i*10) + "\t", end="")
+for i in range(6, 10):
+    for j in range(3):
+        if j % 2 == 0:
+            print(str(i*10) + "\t")
+        else:
+            print(str(i*10) + "\t", end="")
+for i in range(7, 11):
+    if i == 10:
+        print(str(i*10) + "\t")
+    else:
+        print(str(i*10) + "\t", end="")
+

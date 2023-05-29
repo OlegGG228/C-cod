@@ -1,0 +1,14 @@
+array = [1, 2, 3, 4, 5, 6, 7]
+k = 3
+
+#Переставляем последний элемент массива на место к-го элемента
+last_element = array.pop()
+array.insert(k, last_element)
+
+#Сдвигаем элементы справа от k-го элемента на 1 позицию
+for i in range(len(array)-2, k, -1):
+    array[i+1] = array[i]
+array[k+1] = last_element
+
+print(array) # [1, 2, 3, 7, 4, 5, 6]
+

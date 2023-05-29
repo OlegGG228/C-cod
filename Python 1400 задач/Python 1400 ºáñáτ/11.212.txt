@@ -1,0 +1,10 @@
+array = [1, 2, 3, 4, 5, 7, 6, 8, 9, 10]
+
+if all(array[i] <= array[i+1] for i in range(len(array)-1)):
+    print("Массив упорядочен по возрастанию")
+else:
+    for i in range(len(array)-1):
+        if array[i] > array[i+1]:
+            print(f"Массив не упорядочен по возрастанию. Номер первого нарушения: {i}")
+            break
+

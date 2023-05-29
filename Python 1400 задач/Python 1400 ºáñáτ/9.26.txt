@@ -1,0 +1,14 @@
+def eratosthenes(n):
+    sieve = list(range(n + 1))
+    sieve[1] = 0
+    for i in sieve:
+        if sieve[i] != 0:
+            j = i * 2
+            while j <= n:
+                sieve[j] = 0
+                j += i
+    return [x for x in sieve if x != 0]
+
+primes = eratosthenes(541)
+
+print(primes[:100])

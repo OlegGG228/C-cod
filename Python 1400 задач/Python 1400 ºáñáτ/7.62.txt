@@ -1,0 +1,29 @@
+p = int(input("Введите p: ")) # вводим натуральное число p
+n = int(input("Введите n: ")) # вводим количество чисел
+a = [] # создаем пустой список для хранения чисел а_i
+for i in range(n): # заполняем список числами
+    a_i = int(input("Введите число a_{}: ".format(i+1)))
+    a.append(a_i)
+
+# а) находим количество чисел a_i, которые больше p
+count_greater_than_p = 0
+for i in a:
+    if i > p:
+        count_greater_than_p += 1
+print("а) Количество чисел a_i, которые больше {}:".format(p), count_greater_than_p)
+
+# б) находим количество чисел a_i, которые оканчиваются на 5
+count_ends_with_5 = 0
+for i in a:
+    if i % 10 == 5:
+        count_ends_with_5 += 1
+print("б) Количество чисел a_i, которые оканчиваются на 5:", count_ends_with_5)
+
+# в) находим количество чисел a_i, которые кратны k
+k = int(input("Введите k: ")) # вводим число k
+count_divisible_by_k = 0
+for i in a:
+    if i % k == 0:
+        count_divisible_by_k += 1
+print("в) Количество чисел a_i, которые кратны", k, ":", count_divisible_by_k)
+

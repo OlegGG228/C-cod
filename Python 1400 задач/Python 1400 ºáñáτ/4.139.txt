@@ -1,0 +1,14 @@
+card_num = int(input("Введите номер карты: "))
+if card_num == 11:
+    print("Валет")
+elif card_num == 12:
+    print("Дама")
+elif card_num == 13:
+    print("Король")
+elif card_num == 17:
+    print("Туз")
+elif card_num > 17:
+    print("Карта не существует")
+else:
+    print(str(card_num))
+

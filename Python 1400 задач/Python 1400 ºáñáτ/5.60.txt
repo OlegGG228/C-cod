@@ -1,0 +1,12 @@
+p = int(input("Введите целое число p: "))
+a = float(input("Введите вещественное число a: "))
+
+product = 0   # переменная для хранения произведения
+
+for i in range(abs(p)):
+    product += abs(a)
+
+if p < 0:
+    product = -product
+
+print("Произведение p и a равно", product)

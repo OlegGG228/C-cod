@@ -1,0 +1,5 @@
+text = input("Введите текст: ")
+plus_count = text.count("+")
+mult_count = text.count("*")
+print("Количество символов '+' в тексте: ", plus_count)
+print("Количество символов '*' в тексте: ", mult_count)

@@ -1,0 +1,4 @@
+for num in range(102, 999):
+    digits = set(str(num))
+    if len(digits) == 3:
+        print(num)

@@ -1,0 +1,9 @@
+sentence = input("Введите предложение: ")
+first_e, last_e = -1, -1
+for i in range(len(sentence)):
+    if sentence[i] == 'е':
+        if first_e == -1:
+            first_e = i
+        last_e = i
+print("Порядковый номер первой буквы е:", first_e)
+print("Порядковый номер последней буквы е:", last_e)

@@ -1,0 +1,2 @@
+print(list(str(2**100)))
+

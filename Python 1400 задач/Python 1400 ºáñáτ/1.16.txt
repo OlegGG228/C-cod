@@ -1,0 +1,10 @@
+print("5 10")
+print("7 см")
+t = int(input("Введите значение t: "))
+v = int(input("Введите значение v: "))
+print(100, t, sep=" ")
+print(1949, v, sep=" ")
+x = int(input("Введите значение x: "))
+y = 25
+print(x, y, sep=" ")
+

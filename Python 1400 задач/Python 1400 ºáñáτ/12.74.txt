@@ -1,0 +1,7 @@
+sentence = "This is a sample sentence, with a comma." 
+ 
+if ',' in sentence: 
+    index = sentence.index(',') 
+    print(sentence[:index]) 
+else: 
+    print(sentence)

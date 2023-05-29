@@ -1,0 +1,10 @@
+sentence = input("Введите предложение: ")
+a_index = -1
+for i in range(len(sentence)):
+    if sentence[i] == 'а':
+        a_index = i
+        break
+if a_index == -1:
+    print("Буквы а в предложении нет")
+else:
+    print("Порядковый номер первой буквы а:", a_index)

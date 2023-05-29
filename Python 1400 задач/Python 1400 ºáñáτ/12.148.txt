@@ -1,0 +1,7 @@
+text = input("Введите текст: ")
+digits = []
+for char in text:
+    if char.isdigit():
+        digits.append(char)
+print("Цифры в тексте: " + ", ".join(digits))
+

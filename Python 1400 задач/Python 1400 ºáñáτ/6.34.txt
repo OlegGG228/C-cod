@@ -1,0 +1,16 @@
+# считываем т и п
+t = int(input("Введите натуральное число t: "))
+p = int(input("Введите натуральное число p: "))
+
+# находим наименьшее общее кратное
+nok = t
+while nok % p != 0:
+    nok += t
+
+# выводим все кратные числа
+for i in range(t, t-p, -1):
+    print(i, end=" ")
+print()
+for i in range(t, nok+1, t):
+    if i % p != 0:
+        print(i, end=" ")

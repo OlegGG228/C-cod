@@ -1,0 +1,6 @@
+n = int(input("Введите натуральное число n: "))
+sum_squares = 0
+for i in range(n):
+    a = float(input("Введите вещественное число a: "))
+    sum_squares += a**2
+print("Сумма квадратов вещественных чисел равна:", sum_squares)

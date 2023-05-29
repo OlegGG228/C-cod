@@ -1,0 +1,25 @@
+p = int(input("Введите кол-во чисел: "))
+a = []
+for i in range(p):
+    a.append(int(input(f"Введите числа номер {i+1}: ")))
+    
+count_pairs_equal = 0
+count_pairs_zero = 0
+count_pairs_even = 0
+count_pairs_ending_5 = 0
+
+for i in range(p-1):
+    if a[i] == a[i+1]:
+        count_pairs_equal += 1
+    if a[i] == 0 and a[i+1] == 0:
+        count_pairs_zero += 1
+    if a[i] % 2 == 0 and a[i+1] % 2 == 0:
+        count_pairs_even += 1
+    if a[i] % 10 == 5 and a[i+1] % 10 == 5:
+        count_pairs_ending_5 += 1
+
+print(f"Количество пар 'соседних' чисел, равных между собой: {count_pairs_equal}")
+print(f"Количество пар 'соседних' чисел, равных нулю: {count_pairs_zero}")
+print(f"Количество пар 'соседних' чисел, являющихся четными числами: {count_pairs_even}")
+print(f"Количество пар 'соседних' чисел, оканчивающихся на цифру 5: {count_pairs_ending_5}")
+

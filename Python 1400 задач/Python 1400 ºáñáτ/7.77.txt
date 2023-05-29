@@ -1,0 +1,20 @@
+minutes = {"2":0, "5":0, "10":0} # словарь для подсчета минут удаления
+total_penalties = 0 # общее число удалений
+total_penalty_time = 0 # общее штрафное время
+
+while True:
+    penalty = input("Введите количество минут удаления (2, 5 или 10) или 0 для окончания игры: ")
+    if penalty == "0":
+        print("Игра окончена")
+        break
+    elif penalty in minutes:
+        minutes[penalty] += 1
+        total_penalties += 1
+        total_penalty_time += int(penalty)
+    else:
+        print("Некорректный ввод. Введите 2, 5 или 10 минут.")
+
+print("Команда получила", total_penalties, "удалений")
+print("Общее штрафное время команды составляет", total_penalty_time, "минут")
+print("Из них", minutes["2"], "за 2 минуты удаления,", minutes["5"], "за 5 минут удаления и", minutes["10"], "за 10 минут удаления")
+

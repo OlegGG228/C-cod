@@ -1,0 +1,8 @@
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+arithmetic_mean = (abs(a) + abs(b)) / 2
+geometric_mean = (abs(a) * abs(b)) ** 0.5
+
+print("Среднее арифметическое модулей чисел:", arithmetic_mean)
+print("Среднее геометрическое модулей чисел:", geometric_mean)

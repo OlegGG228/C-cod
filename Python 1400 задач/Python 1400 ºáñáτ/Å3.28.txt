@@ -1,0 +1,18 @@
+for A in range(1, 201):
+    for B in range(1, 201):
+        for C in range(1, 201):
+            result_a = A > 100 and B > 100
+            result_b = (A % 2 == 0) != (B % 2 == 0)
+            result_c = A > 0 or B > 0
+            result_d = A % 3 == 0 and B % 3 == 0 and C % 3 == 0
+            result_e = (A < 50) != (B < 50) != (C < 50)
+            result_f = A < 0 or B < 0 or C < 0
+            print(f"A={A}, B={B}, C={C}")
+            print(f"a) {result_a}")
+            print(f"б) {result_b}")
+            print(f"в) {result_c}")
+            print(f"г) {result_d}")
+            print(f"д) {result_e}")
+            print(f"е) {result_f}")
+            print()
+

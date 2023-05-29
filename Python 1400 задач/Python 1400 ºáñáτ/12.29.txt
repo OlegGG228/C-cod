@@ -1,0 +1,3 @@
+word = "вирус"
+fokus = word[3] + word[0] + word[2] + word[1] + word[4]
+print(fokus)

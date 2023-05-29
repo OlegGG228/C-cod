@@ -1,0 +1,16 @@
+arr = [int(x) for x in input().split()]
+
+first_negative_index = None
+last_positive_index = None
+
+for i in range(len(arr)):
+    if arr[i] < 0 and first_negative_index is None:
+        first_negative_index = i
+    elif arr[i] > 0:
+        last_positive_index = i
+
+if first_negative_index is not None and last_positive_index is not None:
+    arr[first_negative_index], arr[last_positive_index] = arr[last_positive_index], arr[first_negative_index]
+
+print(arr)
+

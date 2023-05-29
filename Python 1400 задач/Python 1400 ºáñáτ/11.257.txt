@@ -1,0 +1,23 @@
+# создаем списки для хранения результатов исследователей
+table1 = []
+table2 = []
+
+# запрашиваем данные у первого исследователя
+print("Введите данные для таблицы 1:")
+for i in range(1, 31):
+    direction = int(input(f"День {i}. Направление ветра (1-8): "))
+    table1.append(direction)
+
+# запрашиваем данные у второго исследователя
+print("\nВведите данные для таблицы 2:")
+for i in range(1, 31):
+    direction = int(input(f"День {i}. Направление ветра (1-8): "))
+    table2.append(direction)
+
+# объединяем списки и сохраняем результаты в файл
+data = table1 + table2
+with open("wind_directions_june.txt", "w") as file:
+    for direction in data:
+        file.write(str(direction) + "\n")
+
+print("\nРезультаты сохранены в файле wind_directions_june.txt")

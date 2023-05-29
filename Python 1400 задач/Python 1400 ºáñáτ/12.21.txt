@@ -1,0 +1,6 @@
+word = "examplestring"
+start = 2
+end = 7
+result = word[start:end]
+print(result)
+

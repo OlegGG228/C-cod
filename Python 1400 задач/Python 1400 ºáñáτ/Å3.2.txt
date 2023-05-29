@@ -1,0 +1,15 @@
+X = False
+Y = True
+Z = False
+
+# а) X или Z
+result4 = X or Z
+print("Результат выражения X или Z:", result4)
+
+# б) X и У
+result5 = X and Y
+print("Результат выражения X и Y:", result5)
+
+# в) X и Z
+result6 = X and Z
+print("Результат выражения X и Z:", result6)

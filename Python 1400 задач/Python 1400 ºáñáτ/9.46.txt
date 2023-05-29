@@ -1,0 +1,7 @@
+m = int(input('Введите число m: '))
+n = int(input('Введите число n: '))
+for i in range(1,n):
+    digits_sum = sum(map(int,str(i))) # считаем сумму цифр числа i
+    if digits_sum**2 == m and i < n:
+        print(i) # выводим число, удовлетворяющее условию
+

@@ -1,0 +1,69 @@
+# а) 2х
+x = 5
+result_a = 2 * x
+print(result_a)
+
+# б) sinx
+import math
+x = math.pi/4
+result_b = math.sin(x)
+print(result_b)
+
+# в) а^2
+a = 3
+result_c = a ** 2
+print(result_c)
+
+# г) sqrt(x)
+x = 16
+result_d = math.sqrt(x)
+print(result_d)
+
+# д) |n|
+n = -2
+result_e = abs(n)
+print(result_e)
+
+# е) 5 cosy
+import math
+x = math.pi/3
+result_f = 5 * math.cos(x)
+print(result_f)
+
+# ж) 9,5а^2
+a = 2
+result_g = 9.5 * a ** 2
+print(result_g)
+
+# з) 3sqrt(x)
+x = 25
+result_h = 3 * math.sqrt(x)
+print(result_h)
+
+# и) sin a cos B + cos а sin B
+import math
+a = math.pi/6
+B = math.pi/4
+result_i = math.sin(a) * math.cos(B) + math.cos(a) * math.sin(B)
+print(result_i)
+
+# к) аsqrt(2b)
+import math
+a = 4
+b = 9
+result_k = a * math.sqrt(2 * b)
+print(result_k)
+
+# л) 4sin2acosB
+import math
+a = math.pi/6
+B = math.pi/4
+result_l = 4 * math.sin(2*a) * math.cos(B)
+print(result_l)
+
+# м) - 5sqrt(x+ sqrt(y))
+import math
+x = 16
+y = 9
+result_m = -5 * math.sqrt(x + math.sqrt(y))
+print(result_m)

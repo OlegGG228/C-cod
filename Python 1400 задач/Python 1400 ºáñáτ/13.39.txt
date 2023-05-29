@@ -1,0 +1,13 @@
+trains = [['743А', 'Москва-Омск', 7, 30, 8, 45], ['157М', 'Тверь-Санкт-Петербург', 8, 15, 10, 25], ['241Б', 'Москва-Казань', 9, 0, 14, 10], ['56А', 'Москва-Санкт-Петербург', 11, 0, 12, 20], ['942В', 'Минск-Москва', 14, 0, 21, 5], ['11К', 'Санкт-Петербург-Калининград', 15, 30, 20, 40], ['143Ж', 'Новосибирск-Омск', 17, 0, 18, 10], ['87В', 'Москва-Ростов', 18, 30, 23, 5], ['36А', 'Краснодар-Москва', 21, 0, 6, 25]]
+
+hour = 8
+minute = 30
+
+for train in trains:
+    arr_hour = train[2]
+    arr_minute = train[3]
+    dep_hour = train[4]
+    dep_minute = train[5]
+    if hour > arr_hour or (hour == arr_hour and minute >= arr_minute):
+        if hour < dep_hour or (hour == dep_hour and minute < dep_minute):
+            print(train[0], train[1])

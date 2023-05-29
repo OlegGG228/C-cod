@@ -1,0 +1,11 @@
+a = False
+b = False
+c = True
+
+a1 = (not a or not b) and not c
+b1 = (not a or not b) and (a or b)
+c1 = (a and b) or (a and c) or not c
+
+print(a1)  # True
+print(b1)  # True
+print(c1)  # False

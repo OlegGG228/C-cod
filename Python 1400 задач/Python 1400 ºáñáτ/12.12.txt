@@ -1,0 +1,4 @@
+word = input("Введите слово: ")
+last_char = word[-1]
+print("Последний символ слова: ", last_char)
+

@@ -1,0 +1,41 @@
+# а) import math
+   result = math.sqrt((x_1**2) + (x_2**2))
+
+# ж) import math
+   result = 2*math.pi*R
+
+# б) result = (x_1*x_2) + (x_1*x_3) + (x_2*x_3)
+
+# з) result = (b**2) - (4*a*c)
+
+# в) result = v_0*t + ((a*t)**2) / 2
+
+# и) result = Y*((m_1*m_2) / (r**2))
+
+# н) result = (a*d + b*c) / (a*d)
+
+# о) import math
+   result = math.sqrt(1 - math.sin(x)**2)
+
+# п) result = 1 / math.sqrt((a*x**2) + (b*x) + c)
+
+# г) result = ((m*v**2) / 2) + (m*g*h)
+
+# д) result = (1 / R1) + (1 / R2)
+
+# е) result = m*g*math.cos(a)
+
+к) result = (I**2)*R
+
+# л) import math
+   result = a*b*math.sin(math.radians(c))
+
+# м) import math
+   result = math.sqrt((a**2) + (b**2) - (2*a*b*math.cos(math.radians(c))))
+
+# р) import math
+   result = (math.sqrt(x+1) + math.sqrt(x-1)) / (2*math.sqrt(x))
+
+# с) result = abs(x) + abs(x+1)
+
+# т) result = abs(1 - abs(x+1))

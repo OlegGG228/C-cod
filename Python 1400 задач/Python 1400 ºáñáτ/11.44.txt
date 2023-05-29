@@ -1,0 +1,6 @@
+rainfall = [2, 4, 3, 1, 5, 6, 7, 3, 2, 1, 4, 5]
+
+total_rainfall = sum(rainfall)
+
+print("Общее количество осадков за январь:", total_rainfall)
+

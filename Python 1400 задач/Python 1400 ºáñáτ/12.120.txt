@@ -1,0 +1,5 @@
+sentence = "Это предложение для удаления символов"
+l1 = 9
+l2 = 18
+new_sentence = sentence[:l1-1] + sentence[l2:]
+print(new_sentence)

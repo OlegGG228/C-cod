@@ -1,0 +1,97 @@
+a) 
+
+```python
+for i in range(20):
+    goals_scored, goals_conceded = input().split() # вводим данные о забитых и пропущенных мячах
+    goals_scored, goals_conceded = int(goals_scored), int(goals_conceded) # преобразуем в целые числа
+    
+    if goals_scored > goals_conceded:
+        print("Выигрыш")
+    elif goals_scored == goals_conceded:
+        print("Ничья")
+    else:
+        print("Проигрыш")
+```
+
+б)
+
+```python
+wins = 0 # создаем счетчик выигрышей
+for i in range(20):
+    goals_scored, goals_conceded = input().split()
+    goals_scored, goals_conceded = int(goals_scored), int(goals_conceded)
+    
+    if goals_scored > goals_conceded:
+        wins += 1 # увеличиваем счетчик выигрышей на 1
+    
+print("Количество выигрышей: ", wins)
+```
+
+в)
+
+```python
+wins = 0
+losses = 0 # создаем счетчик проигрышей
+for i in range(20):
+    goals_scored, goals_conceded = input().split()
+    goals_scored, goals_conceded = int(goals_scored), int(goals_conceded)
+    
+    if goals_scored > goals_conceded:
+        wins += 1
+    elif goals_scored < goals_conceded: # добавляем проверку на проигрыш
+        losses += 1
+    
+print("Количество выигрышей: ", wins)
+print("Количество проигрышей: ", losses)
+```
+
+г)
+
+```python
+wins = 0
+draws = 0 # создаем счетчик ничьих
+losses = 0
+for i in range(20):
+    goals_scored, goals_conceded = input().split()
+    goals_scored, goals_conceded = int(goals_scored), int(goals_conceded)
+    
+    if goals_scored > goals_conceded:
+        wins += 1
+    elif goals_scored == goals_conceded: # добавляем проверку на ничью
+        draws += 1
+    else:
+        losses += 1
+    
+print("Количество выигрышей: ", wins)
+print("Количество ничьих: ", draws)
+print("Количество проигрышей: ", losses)
+```
+
+д)
+
+```python
+count = 0 # создаем счетчик игр с разностью забитых и пропущенных мячей больше либо равной трем
+for i in range(20):
+    goals_scored, goals_conceded = input().split()
+    goals_scored, goals_conceded = int(goals_scored), int(goals_conceded)
+    
+    if abs(goals_scored - goals_conceded) >= 3: # проверяем, больше ли разность забитых и пропущенных мячей либо равна трем
+        count += 1 # увеличиваем счетчик на 1
+        
+print("Количество игр с разностью забитых и пропущенных мячей большей или равной трем: ", count)
+```
+
+е)
+
+```python
+points = 0 # создаем переменную для хранения общего количества очков
+for i in range(20):
+    goals_scored, goals_conceded = input().split()
+    goals_scored, goals_conceded = int(goals_scored), int(goals_conceded)
+    
+    if goals_scored > goals_conceded:
+        points += 3 # за выигрыш добавляем 3 очка
+    elif goals_scored == goals_conceded:
+        points += 1 # за ничью добавляем 1 очко
+        
+print("Общее количество очков: ", points)

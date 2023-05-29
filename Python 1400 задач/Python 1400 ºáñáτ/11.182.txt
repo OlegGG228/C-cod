@@ -1,0 +1,16 @@
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+s = 7
+k = 4
+
+# Get the value of the s-th element
+s_value = array[s - 1]
+
+# Shift elements from k to s-1 one position to the right
+for i in range(s - 1, k, -1):
+    array[i] = array[i - 1]
+
+# Set the value of the k-th element to the s-th element
+array[k] = s_value
+
+print(array) # Output: [1, 2, 3, 4, 7, 5, 6, 8, 9, 10]
+

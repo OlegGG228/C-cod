@@ -1,0 +1,37 @@
+# Вариант 1: каждый простой множитель будет напечатан только один раз
+
+def prime_factors(number):
+    factors = []
+    i = 2
+    while i * i <= number:
+        if number % i:
+            i += 1
+        else:
+            number //= i
+            if i not in factors:
+                factors.append(i)
+    if number > 1:
+        if number not in factors:
+            factors.append(number)
+    return factors
+
+n = int(input("Введите натуральное число: "))
+print("Простые множители числа", n, ":", prime_factors(n))
+
+# Вариант 2: каждый простой множитель будет напечатан столько раз, сколько раз он входит в разложение
+
+def prime_factors_repeated(number):
+    factors = []
+    i = 2
+    while i * i <= number:
+        if number % i:
+            i += 1
+        else:
+            number //= i
+            factors.append(i)
+    if number > 1:
+        factors.append(number)
+    return factors
+
+n = int(input("Введите натуральное число: "))
+print("Простые множители числа", n, ":", prime_factors_repeated(n))

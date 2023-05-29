@@ -1,0 +1,20 @@
+players = {} # словарь для хранения информации об игроках
+
+for i in range(24): # цикл по количеству удалений
+    team = int(input("Введите номер команды удаленного игрока (1 или 2): "))
+    duration = int(input("Введите продолжительность удаления (2, 5 или 10 минут): "))
+
+    # проверяем, есть ли игрок в словаре
+    if team not in players:
+        players[team] = {"count": 0, "total_duration": 0} # добавляем игрока в словарь
+
+    # обновляем информацию об игроке
+    players[team]["count"] += 1
+    players[team]["total_duration"] += duration
+
+# выводим информацию об игроках
+for team in players:
+    print(f"Команда {team}:")
+    print(f"Общее число удалений: {players[team]['count']}")
+    print(f"Общая продолжительность всех удалений: {players[team]['total_duration']} минут")
+    print()

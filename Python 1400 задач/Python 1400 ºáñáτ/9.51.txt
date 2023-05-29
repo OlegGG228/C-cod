@@ -1,0 +1,15 @@
+p = int(input("Введите целое число p: "))
+t = int(input("Введите целое число t: "))
+result = []
+
+for i in range(2, p):
+  if i % t != 0:
+    prime = True
+    for j in range(2, i):
+      if i % j == 0:
+        prime = False
+        break
+    if prime == True:
+      result.append(i)
+
+print("Натуральные числа, меньшие п и взаимно простые с р:", result)

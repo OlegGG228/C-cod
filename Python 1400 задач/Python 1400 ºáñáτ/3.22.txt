@@ -1,0 +1,5 @@
+num = int(input("Введите трехзначное число: "))
+first_digit = num // 100
+rest_of_num = num % 100
+new_num = rest_of_num * 10 + first_digit
+print("Полученное число:", new_num)

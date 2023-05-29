@@ -1,0 +1,13 @@
+number = input("Введите натуральное число: ")
+digits = [int(d) for d in number]
+max_odd = 0
+min_digit = 9
+min_index = 0
+for i, digit in enumerate(digits):
+    if digit % 2 != 0 and digit > max_odd:
+        max_odd = digit
+    if digit < min_digit:
+        min_digit = digit
+        min_index = i+1
+print(f"Максимальная нечетная цифра: {max_odd}")
+print(f"Номер минимальной цифры: {min_index}")

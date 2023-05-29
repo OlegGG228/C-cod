@@ -1,0 +1,7 @@
+num = int(input("Введите число: "))
+if num > 99:
+    third_digit = (num // 100) % 10
+    print("Третья цифра числа:", third_digit)
+else:
+    print("Число должно быть больше 99")
+

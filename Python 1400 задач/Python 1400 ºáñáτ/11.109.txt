@@ -1,0 +1,9 @@
+numbers = [int(input(f"Введите число №{i+1}: ")) for i in range(20)]
+count = 0
+diff = set(numbers)
+for i in range(len(numbers)-1):
+    if numbers[i] == numbers[i+1]:
+        count += 1
+print(f"Количество повторяющихся чисел: {count}")
+print(f"Количество разных чисел в массиве: {len(diff)}")
+

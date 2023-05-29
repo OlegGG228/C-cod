@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+count = 0
+for letter in sentence:
+    if letter.lower() == 'я':
+        count += 1
+percent = round((count/len(sentence))*100, 2)
+print("Доля букв 'я': {}%".format(percent))

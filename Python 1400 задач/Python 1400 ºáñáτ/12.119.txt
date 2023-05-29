@@ -1,0 +1,8 @@
+word = "последовательность"
+length = len(word)
+if length % 2 == 1:
+    new_word = word[:length//2] + word[length//2+1:]
+else:
+    new_word = word[:length//2-1] + word[length//2+1:]
+print(new_word)
+

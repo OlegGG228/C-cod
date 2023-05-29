@@ -1,0 +1,13 @@
+temps = input("Введите температуры воздуха за месяц через пробел: ")
+temps = temps.split()
+min_temp = int(temps[0])
+count_min = 1
+for t in temps[1:]:
+    temp = int(t)
+    if temp < min_temp:
+        min_temp = temp
+        count_min = 1
+    elif temp == min_temp:
+        count_min += 1
+print("Количество дней, когда была самая низкая температура:", count_min)
+

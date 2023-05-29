@@ -1,0 +1,11 @@
+num_classes = 11 # количество классов в школе
+students_per_class = [25, 28, 30, 27, 33, 29, 26, 35, 31, 32, 24] # количество учеников в каждом классе
+
+sum_of_students = 0 # общее количество учеников
+
+# цикл по нечетным классам
+for i in range(0, num_classes, 2):
+    sum_of_students += students_per_class[i]
+
+print("Общее количество учеников в нечетных классах:", sum_of_students)
+

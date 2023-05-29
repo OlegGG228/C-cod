@@ -1,0 +1,7 @@
+n = int(input("Введите n от 2 до 9: "))
+sum = 1
+factorial = 1
+for i in range(n):
+    factorial *= (i+1)
+    sum += (1/factorial)
+print("Сумма равна", sum)

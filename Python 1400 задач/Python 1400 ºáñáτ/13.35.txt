@@ -1,0 +1,37 @@
+scores = {
+    "Manchester United": 82,
+    "Manchester City": 78,
+    "Liverpool": 76,
+    "Chelsea": 72,
+    "Leicester City": 66,
+    "Tottenham Hotspur": 62,
+    "Wolverhampton Wanderers": 59,
+    "Arsenal": 56,
+    "Sheffield United": 54,
+    "Burnley": 54,
+    "Southampton": 52,
+    "Everton": 49,
+    "Newcastle United": 44,
+    "Crystal Palace": 43,
+    "Brighton & Hove Albion": 41,
+    "West Ham United": 39,
+    "Aston Villa": 35,
+    "Bournemouth": 34,
+    "Watford": 34,
+    "Norwich City": 21
+}
+
+# а) название команды, ставшей чемпионом
+champion = max(scores, key=scores.get)
+print(f"Название команды, ставшей чемпионом: {champion}")
+
+# б) названия команд, занявших второе и третье места
+sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+second_place = sorted_scores[1][0]
+third_place = sorted_scores[2][0]
+print(f"Название команд, занявших второе и третье места: {second_place} и {third_place}")
+
+# в) названия команд, занявших первое и второе места
+sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+top_two = [sorted_scores[0][0], sorted_scores[1][0]]
+print(f"Название команд, занявших первое и второе места: {top_two}")

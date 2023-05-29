@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+penultimate_word = words[-2]
+last_word = words[-1]
+print("Предпоследнее слово в предложении: ", penultimate_word)
+print("Последнее слово в предложении: ", last_word)
+

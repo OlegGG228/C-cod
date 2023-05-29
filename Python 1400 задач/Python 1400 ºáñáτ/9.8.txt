@@ -1,0 +1,29 @@
+# создаем список для хранения оценок студентов по предметам
+grades = [[0]*3 for i in range(14)]
+
+# заполняем список оценками, вводимыми с клавиатуры
+for i in range(14):
+    for j in range(3):
+        grades[i][j] = int(input(f"Введите оценку для студента {i+1} по предмету {j+1}: "))
+
+# подсчитываем количество студентов без двоек
+passed_all = 0
+for i in range(14):
+    if 2 not in grades[i]:
+        passed_all += 1
+print(f"Количество студентов, сдавших сессию без двоек: {passed_all}")
+
+# подсчитываем количество предметов с оценками 4 и 5
+passed_subjects = 0
+for j in range(3):
+    if 4 in [grades[i][j] for i in range(14)] and 5 in [grades[i][j] for i in range(14)]:
+        passed_subjects += 1
+print(f"Количество предметов с оценками 4 и 5: {passed_subjects}")
+
+# подсчитываем количество двоек по каждому предмету
+for j in range(3):
+    twos = 0
+    for i in range(14):
+        if grades[i][j] == 2:
+            twos += 1
+    print(f"Количество двоек по предмету {j+1}: {twos}")

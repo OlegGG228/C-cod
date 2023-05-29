@@ -1,0 +1,8 @@
+sentence = input("Введите предложение: ")
+comma1 = sentence.find(',')
+comma2 = sentence.find(',', comma1+1)
+
+if comma2 == -1:
+    print("Символы между первой и единственной запятой:", sentence[comma1+1:])
+else:
+    print("Символы между первой и второй запятыми:", sentence[comma1+1:comma2])

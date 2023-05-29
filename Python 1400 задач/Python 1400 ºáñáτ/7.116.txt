@@ -1,0 +1,19 @@
+prices = [7000, 8000, 9000, 10000, 15000, 2000, 3000, 4000]
+
+car_prices = []
+motorcycle_prices = []
+
+for price in prices:
+    if price > 5000:
+        car_prices.append(price)
+    else:
+        motorcycle_prices.append(price)
+
+average_car_price = sum(car_prices) / len(car_prices)
+average_motorcycle_price = sum(motorcycle_prices) / len(motorcycle_prices)
+
+if average_car_price > average_motorcycle_price * 3:
+    print("Средняя стоимость автомобилей превышает среднюю стоимость мотоциклов более чем в 3 раза")
+else:
+    print("Средняя стоимость автомобилей не превышает среднюю стоимость мотоциклов более чем в 3 раза")
+

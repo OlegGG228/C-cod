@@ -1,0 +1,15 @@
+cows = 0 # количество коров
+bulls = 0 # количество быков
+calves = 0 # количество телят
+
+for i in range(101):
+    for j in range(201):
+        for k in range(201):
+            if i + j + k == 100 and 5 * i + 10 * j + 0.5 * k == 100:
+                cows = i
+                bulls = j
+                calves = k
+
+print(f"Количество коров: {cows}")
+print(f"Количество быков: {bulls}")
+print(f"Количество телят: {calves}")

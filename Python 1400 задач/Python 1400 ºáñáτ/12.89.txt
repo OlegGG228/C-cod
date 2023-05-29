@@ -1,0 +1,15 @@
+# Первый вариант решения:
+
+sent = input("Введите предложение: ")
+if ',' in sent:
+    print(sent[:sent.index(',')].count('н'))
+else:
+    print("В предложении нет запятых")
+
+# Второй вариант решения:
+
+sent = input("Введите предложение: ")
+if ',' in sent:
+    print(sent[:sent.index(',')].count('н'))
+else:
+    print(sent.count('н'))

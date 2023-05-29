@@ -1,0 +1,16 @@
+# a)
+def draw_pyramid(n):
+    for i in range(n):
+        print("* "*(i+1))
+
+draw_pyramid(10)
+
+# b)
+def draw_inverted_pyramid(n):
+    for i in range(n):
+        print("* "*(n-i))
+    for i in range(n-1):
+        print("* "*(i+2))
+
+draw_inverted_pyramid(5)
+

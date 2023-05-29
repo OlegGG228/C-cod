@@ -1,0 +1,8 @@
+age = int(input("Введите возраст: "))
+
+if age % 10 == 1 and age != 11:
+    print(f"Мне {age} год")
+elif 2 <= age % 10 <= 4 and (age < 10 or age > 20):
+    print(f"Мне {age} года")
+else:
+    print(f"Мне {age} лет")

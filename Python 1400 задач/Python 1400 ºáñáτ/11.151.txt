@@ -1,0 +1,22 @@
+# а) второй и пятый элементы
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr[1], arr[4] = arr[4], arr[1]
+print(arr)
+
+# б) m-й и n-й элементы
+m = 3
+n = 7
+arr[m-1], arr[n-1] = arr[n-1], arr[m-1]
+print(arr)
+
+# в) третий и максимальный элементы
+max_index = arr.index(max(arr))
+arr[2], arr[max_index] = arr[max_index], arr[2]
+print(arr)
+
+# г) первый и минимальный элементы
+min_value = min(arr)
+min_index = len(arr) - arr[::-1].index(min_value) - 1
+arr[0], arr[min_index] = arr[min_index], arr[0]
+print(arr)
+

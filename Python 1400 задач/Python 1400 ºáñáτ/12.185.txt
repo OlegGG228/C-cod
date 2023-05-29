@@ -1,0 +1,10 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+longest_word = words[0]
+for word in words:
+    if len(word) > len(longest_word):
+        longest_word = word
+if len(longest_word) > 10:
+    print("Самое длинное слово имеет больше 10 символов")
+else:
+    print("Самое длинное слово не имеет больше 10 символов")

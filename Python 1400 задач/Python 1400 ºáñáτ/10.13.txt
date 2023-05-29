@@ -1,0 +1,49 @@
+#Первый вариант программы:
+
+import random
+
+print("Игрок 1: ", end="")
+p1 = sum([random.randint(1,6) for i in range(2)])
+print(p1)
+
+print("Игрок 2: ", end="")
+p2 = sum([random.randint(1,6) for i in range(2)])
+print(p2)
+
+if p1 > p2:
+    print("Выиграл игрок 1")
+elif p2 > p1:
+    print("Выиграл игрок 2")
+else:
+    print("Ничья")
+
+#Второй вариант программы:
+
+import random
+
+NUM_ROUNDS = 10
+wins_p1 = 0
+wins_p2 = 0
+ties = 0
+
+for i in range(NUM_ROUNDS):
+    p1 = sum([random.randint(1,6) for i in range(2)])
+    p2 = sum([random.randint(1,6) for i in range(2)])
+    if p1 > p2:
+        wins_p1 += 1
+    elif p2 > p1:
+        wins_p2 += 1
+    else:
+        ties += 1
+
+print(f"Игрок 1 выиграл {wins_p1} раз(а)")
+print(f"Игрок 2 выиграл {wins_p2} раз(а)")
+print(f"Ничья была {ties} раз(а)")
+
+if wins_p1 > wins_p2:
+    print("Победил игрок 1")
+elif wins_p2 > wins_p1:
+    print("Победил игрок 2")
+else:
+    print("Игра закончилась в ничью")
+

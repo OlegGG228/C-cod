@@ -1,0 +1,15 @@
+def count_bills(p):
+    bills = [64, 32, 16, 8, 4, 2, 1]
+    count = [0, 0, 0, 0, 0, 0, 0]
+    for i in range(len(bills)):
+        while p >= bills[i]:
+            p -= bills[i]
+            count[i] += 1
+    return count
+
+p = int(input("Введите сумму: "))
+count = count_bills(p)
+print("Количество купюр: ")
+for i in range(len(count)):
+    if count[i] > 0:
+        print("{} - {}".format(2**i, count[i]))

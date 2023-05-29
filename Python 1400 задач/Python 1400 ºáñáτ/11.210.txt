@@ -1,0 +1,10 @@
+array = [5,2,4,5,7,8,9,1,3]
+
+for i in range(len(array)-2):
+    if array[i+1] > array[i] and array[i+1] > array[i+2]:
+        print("There is a triplet with middle element greater than its neighbors: ", array[i:i+3])
+        print("The triplet begins at index ", i)
+        break
+else:
+    print("There is no triplet with middle element greater than its neighbors.")
+

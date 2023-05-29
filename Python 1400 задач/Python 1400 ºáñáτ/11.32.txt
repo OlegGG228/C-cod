@@ -1,0 +1,20 @@
+# a) 
+
+```python
+array = [-1.2, 2.3, 4.5, -6.7, 8.9]
+for i in range(len(array)):
+    if array[i] < 0:
+        array[i] = abs(array[i])
+print(array)
+```
+
+# b) 
+
+```python
+array = [1.2, 2.3, 4.5, 6.7, 8.9]
+for i in range(len(array)):
+    if i % 2 == 1: # проверяем, что номер элемента нечетный
+        array[i] = pow(array[i], 0.5)
+print(array)
+```
+

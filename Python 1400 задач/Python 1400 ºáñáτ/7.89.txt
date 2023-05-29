@@ -1,0 +1,13 @@
+m = int(input("Введите натуральное число m: "))
+p = int(input("Введите целое число p: "))
+count = 0
+
+for i in range(m):
+    a = int(input("Введите целое число a: "))
+    if a > m and a % p == 0:
+        count += 1
+
+if count > 0:
+    print("Количество чисел больше m и кратных p: ", count)
+else:
+    print("Таких чисел нет.")

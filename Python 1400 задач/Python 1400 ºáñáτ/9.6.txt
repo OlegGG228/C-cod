@@ -1,0 +1,25 @@
+results = []
+for i in range(15):
+    print('Введите результаты спортсмена', i+1)
+    ob = float(input('Обязательная программа: '))
+    kor = float(input('Короткая программа: '))
+    proizv = float(input('Произвольная программа: '))
+    results.append([ob, kor, proizv])
+
+# считаем среднее по каждому спортсмену и выводим на экран
+for i in range(len(results)):
+    avg = sum(results[i]) / len(results[i])
+    print('Средний балл для спортсмена', i+1, ':', avg)
+
+# считаем среднее по каждой программе и выводим на экран
+ob_total, kor_total, proizv_total = 0, 0, 0
+for i in range(len(results)):
+    ob_total += results[i][0]
+    kor_total += results[i][1]
+    proizv_total += results[i][2]
+ob_avg = ob_total / len(results)
+kor_avg = kor_total / len(results)
+proizv_avg = proizv_total / len(results)
+print('Средний балл по обязательной программе:', ob_avg)
+print('Средний балл по короткой программе:', kor_avg)
+print('Средний балл по произвольной программе:', proizv_avg)

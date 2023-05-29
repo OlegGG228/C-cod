@@ -1,0 +1,17 @@
+capitals = {"Russia": "Moscow", "USA": "Washington D.C.", "UK": "London"}
+
+def get_capital(country):
+    if country in capitals:
+        print(f"The capital of {country} is {capitals[country]}")
+    else:
+        print(f"Sorry, we don\'t have information about {country}")
+
+def get_country(city):
+    for country, capital in capitals.items():
+        if capital == city:
+            print(f"{city} is the capital of {country}")
+            return
+    print(f"Sorry, we don\'t have information about a country with {city} as its capital")
+
+get_capital("Russia") # Output: The capital of Russia is Moscow
+get_country("London") # Output: London is the capital of UK

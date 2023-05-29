@@ -1,0 +1,18 @@
+rainy_days = [] # список для хранения дней, когда шел дождь
+precipitations = [3, 0, 1, 4, 2, 0, 1, 1, 0, 5, 2, 6, 0, 1, 2, 1, 0, 2, 2, 3, 0, 2, 1, 7, 0, 3, 1, 0, 1, 4, 2] # массив с количеством осадков каждого дня августа
+sum_precipitations = 0 # переменная для хранения суммы количества осадков
+count_rainy_days = 0 # переменная для хранения количества дней, когда шел дождь
+
+for i in range(len(precipitations)):
+    if precipitations[i] > 0:
+        rainy_days.append(i + 1) # добавляем номер дня в список, если был дождь
+        sum_precipitations += precipitations[i] # увеличиваем сумму количества осадков
+        count_rainy_days += 1 # увеличиваем количество дней, когда шел дождь
+
+if count_rainy_days > 0:
+    average_precipitations = sum_precipitations / count_rainy_days # вычисляем среднее количество осадков
+    print("Среднее количество осадков в дни, когда шел дождь:", average_precipitations)
+    print("Дни, когда шел дождь:", rainy_days)
+else:
+    print("В августе не было дождей")
+

@@ -1,0 +1,40 @@
+#а) Решение:
+
+def f(x):
+    return x**4 + 2*x**3 - x - 1
+
+a = 0
+b = 1
+tolerance = 0.001
+
+while (b-a) > tolerance:
+    c = (a+b)/2
+    if f(c) == 0:
+        break
+    elif f(a)*f(c) < 0:
+        b = c
+    else:
+        a = c
+
+print("Approximate root of f(x) = 0:", c)
+#
+б) Решение:
+
+def f(x):
+    return x**3 - 0.2*x**2 - 0.2*x - 1.2
+
+a = 1
+b = 1.5
+tolerance = 0.001
+
+while (b-a) > tolerance:
+    c = (a+b)/2
+    if f(c) == 0:
+        break
+    elif f(a)*f(c) < 0:
+        b = c
+    else:
+        a = c
+
+print("Approximate root of f(x) = 0:", c)
+

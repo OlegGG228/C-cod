@@ -1,0 +1,7 @@
+array = [1,2,3,4,5]
+last = array.pop()
+array.insert(0,last)
+for i in range(len(array)-1,0,-1):
+  array[i], array[i-1] = array[i-1], array[i]
+print(array)
+

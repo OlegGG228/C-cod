@@ -1,0 +1,16 @@
+text = input("Введите текст: ")
+digits = "0123456789"
+freq_dict = {}
+
+# Считаем количество вхождений каждой цифры в текст
+for digit in digits:
+    count = text.count(digit)
+    freq_dict[digit] = count
+print("Словарь с частотой вхождения цифр в текст: ", freq_dict)
+
+# Добавляем в словарь отсутствующие цифры
+for digit in digits:
+    if digit not in freq_dict:
+        freq_dict[digit] = 0
+print("Словарь со всеми цифрами: ", freq_dict)
+

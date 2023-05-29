@@ -1,0 +1,6 @@
+sentence = input("Введите предложение, в котором только два слова одинаковых: ")
+words = sentence.split()
+for i in range(len(words)):
+    if words.count(words[i]) == 2:
+        print("Два одинаковых слова:", words[i])
+        break

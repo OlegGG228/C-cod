@@ -1,0 +1,31 @@
+# а) 
+```
+arr = [20, 15, 10, 35, 40, 25]
+for i in range(len(arr)):
+    if arr[i] % 10 == 0:
+        arr[i] = 0
+print(arr)
+```
+# б)
+```
+arr = [20, 15, 10, 35, 40, 25]
+for i in range(len(arr)):
+    if arr[i] % 2 == 0:
+        arr[i] //= 2
+    else:
+        arr[i] *= 2
+print(arr)
+```
+# в)
+```
+arr = [20, 15, 10, 35, 40, 25]
+n = 5
+t = 10
+for i in range(len(arr)):
+    if arr[i] % 2 != 0:
+        arr[i] -= t
+    if i % 2 != 0:
+        arr[i] += n
+print(arr)
+```
+

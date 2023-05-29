@@ -1,0 +1,21 @@
+# задаем стоимость элементов
+monitor_price = 100
+system_unit_price = 200
+keyboard_price = 50
+mouse_price = 20
+
+# вычисляем стоимость одного компьютера
+one_pc_price = monitor_price + system_unit_price + keyboard_price + mouse_price
+
+# вычисляем стоимость трех компьютеров
+three_pc_price = one_pc_price * 3
+
+# выводим результат
+print("Стоимость трех компьютеров:", three_pc_price)
+
+# вычисляем стоимость N компьютеров
+n = 5 # задаем количество компьютеров
+n_pc_price = one_pc_price * n
+
+# выводим результат
+print("Стоимость", n, "компьютеров:", n_pc_price)

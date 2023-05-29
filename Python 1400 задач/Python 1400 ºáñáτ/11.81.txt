@@ -1,0 +1,9 @@
+arr = [2, 5, 10, 8, 4, 6, 7, 12, 9, 11, 14]
+
+count = 0
+for i in range(len(arr)-1):
+    if arr[i] % 2 == 0 and arr[i+1] % 2 == 0:
+        count += 1
+        
+print("Число пар соседних четных элементов:", count)
+

@@ -1,0 +1,10 @@
+heights = [175, 180, 165, 170, 185, 190, 160, 155, 170, 175, 180, 185, 190, 195, 200, 160, 165, 170, 175, 180, 185, 190, 195, 200, 155]
+
+max_height = max(heights)
+min_height = min(heights)
+
+difference = max_height - min_height
+
+print("The tallest person is {} cm tall and the shortest person is {} cm tall".format(max_height, min_height))
+print("The difference in height between them is {} cm".format(difference))
+

@@ -1,0 +1,12 @@
+word = "abcdefghijkl"
+len_word = len(word)
+third = len_word // 3
+
+# а) первую треть слова разместить на месте третьей, вторую треть - на месте первой, третью треть - на месте второй
+new_word_a = word[2 * third:] + word[:third] + word[third:2 * third]
+print(new_word_a)
+
+# б) первую треть слова разместить на^Йедте второй, вторую треть - на месте третьей, третью тре'Ръ1"1- на месте первой
+new_word_b = word[third:] + word[:third] 
+print(new_word_b + new_word_b[:third])
+

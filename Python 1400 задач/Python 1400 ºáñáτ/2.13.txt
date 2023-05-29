@@ -1,0 +1,11 @@
+a = float(input("Введите значение a: "))
+b = float(input("Введите значение b: "))
+
+if a == 0:
+  if b == 0:
+    print("Решений бесконечно много")
+  else:
+    print("Решений нет")
+else:
+  x = -b / a
+  print("x =", x)

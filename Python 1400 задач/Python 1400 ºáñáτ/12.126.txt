@@ -1,0 +1,4 @@
+word = "стекляный_"
+word_corrected = word[:6] + "о" + word[7:]
+print(word_corrected)
+

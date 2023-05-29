@@ -1,0 +1,21 @@
+array = [1, -2, 3, -4, 5, 6, -7]
+helper = []
+result = []
+
+# Заполняем helper массив отрицательными элементами
+for i in range(len(array)):
+    if array[i] < 0:
+        helper.append(array[i])
+
+# Добавляем остальные элементы в конец result массива
+for i in range(len(array)):
+    if array[i] >= 0:
+        helper.append(array[i])
+
+# Заполняем result массив элементами из helper массива
+for i in range(len(helper)):
+    result.append(helper[i])
+
+# Выводим результат
+print(result)
+

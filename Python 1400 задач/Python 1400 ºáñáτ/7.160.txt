@@ -1,0 +1,8 @@
+times = [] # список результатов
+n = int(input("Введите количество участников: "))
+for i in range(n):
+    time = float(input(f"Введите время {i+1}-го участника: "))
+    times.append(time)
+best_time = min(times) # находим лучший результат
+best_index = times.index(best_time) # находим индекс лучшего результата
+print(f"Первым по порядку стартовал лыжник под номером {best_index+1}, показавший лучший результат {best_time} минут(ы).")

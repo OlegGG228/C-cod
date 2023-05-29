@@ -1,0 +1,7 @@
+array = [1, 2, 3, 4, 5, 5, 6, 6, 6, 7, 8, 9]
+
+for i in range(len(array)-1):
+    if array[i] == array[i+1]:
+        for j in range(i+2, len(array)):
+            print(array[j], end=" ")  # печать всех элементов, следующих за первой парой одинаковых элементов
+        break  # завершаем поиск после первой пары элементов

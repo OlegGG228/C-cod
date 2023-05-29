@@ -1,0 +1,15 @@
+array = [3, 15, 7, 9, 23, 5, 11, 12, 8, 14]
+total = 0
+count = 0
+
+for num in array:
+    if num > 10:
+        total += num
+        count += 1
+
+if count > 0:
+    average = total / count
+    print("Среднее арифметическое элементов массива, больших числа 10, равно:", average)
+else:
+    print("В массиве нет элементов больше числа 10")
+

@@ -1,0 +1,17 @@
+sentence = "This is a sample sentence with s and t." 
+ 
+s_index = -1 
+t_index = -1 
+ 
+for i in range(len(sentence)): 
+    if sentence[i] == 's': 
+        s_index = i 
+    elif sentence[i] == 't': 
+        t_index = i 
+ 
+if s_index > t_index: 
+    print("The letter 's' appears later") 
+elif t_index > s_index: 
+    print("The letter 't' appears later") 
+else: 
+    print("The letters 's' and 't' do not appear in the sentence")

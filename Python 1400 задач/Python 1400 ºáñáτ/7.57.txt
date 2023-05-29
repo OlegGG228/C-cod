@@ -1,0 +1,15 @@
+rainfall = [12, 8, 4, 5, 10, 6, 7, 3, 6, 9, 11, 13]
+
+even_rainfall = 0
+odd_rainfall = 0
+
+for i in range(len(rainfall)):
+    if i % 2 == 0:
+        even_rainfall += rainfall[i]
+    else:
+        odd_rainfall += rainfall[i]
+
+if even_rainfall > odd_rainfall:
+    print("По четным числам выпало больше осадков, чем по нечетным")
+else:
+    print("По четным числам выпало меньше осадков, чем по нечетным")

@@ -1,0 +1,13 @@
+import math
+
+length = 4.5
+distance = 3
+
+for i in range(0, int(length*10), 2):
+  slided = i/10
+  hypotenuse = math.sqrt(slided**2 + distance**2)
+  angle_rad = math.atan(slided/distance)
+  angle_deg = math.degrees(angle_rad)
+  total_angle_deg = angle_deg + math.degrees(math.asin(slided/hypotenuse))
+  print(f"Угол между палкой и полом на расстоянии {slided} метров от стены: {round(total_angle_deg, 2)} градусов")
+

@@ -1,0 +1,14 @@
+lst = [12, 20, 15, 7, 23, 35, 17, 8]
+
+total_sum = 0
+for i in lst:
+    total_sum += i
+
+count = 0
+for i in range(len(lst)):
+    if lst[i] > total_sum:
+        print("Index:", i, ", Value:", lst[i])
+        count += 1
+
+print("Total count:", count)
+

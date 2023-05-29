@@ -1,0 +1,5 @@
+word = "слово_"
+k = 3
+word_corrected = word[:k] + "т" + word[k:]
+print(word_corrected)
+

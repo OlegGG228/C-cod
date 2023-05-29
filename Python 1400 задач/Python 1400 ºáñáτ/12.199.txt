@@ -1,0 +1,91 @@
+ONES = {
+    0: "",
+    1: "один",
+    2: "два",
+    3: "три",
+    4: "четыре",
+    5: "пять",
+    6: "шесть",
+    7: "семь",
+    8: "восемь",
+    9: "девять"
+}
+
+TEENS = {
+    10: "десять",
+    11: "одиннадцать",
+    12: "двенадцать",
+    13: "тринадцать",
+    14: "четырнадцать",
+    15: "пятнадцать",
+    16: "шестнадцать",
+    17: "семнадцать",
+    18: "восемнадцать",
+    19: "девятнадцать"
+}
+
+TENS = {
+    2: "двадцать",
+    3: "тридцать",
+    4: "сорок",
+    5: "пятьдесят",
+    6: "шестьдесят",
+    7: "семьдесят",
+    8: "восемьдесят",
+    9: "девяносто"
+}
+
+HUNDREDS = {
+    1: "сто",
+    2: "двести",
+    3: "триста",
+    4: "четыреста",
+    5: "пятьсот",
+    6: "шестьсот",
+    7: "семьсот",
+    8: "восемьсот",
+    9: "девятьсот"
+}
+
+THOUSANDS = {
+    1: "одна тысяча",
+    2: "две тысячи",
+    3: "три тысячи",
+    4: "четыре тысячи",
+    5: "пять тысяч",
+    6: "шесть тысяч",
+    7: "семь тысяч",
+    8: "восемь тысяч",
+    9: "девять тысяч"
+}
+
+def number_to_words(num):
+    if num < 10:
+        return ONES[num]
+    elif 10 <= num < 20:
+        return TEENS[num]
+    elif 20 <= num < 100:
+        tens = TENS[num // 10]
+        ones = ONES[num % 10]
+        if ones:
+            return tens + " " + ones
+        else:
+            return tens
+    elif 100 <= num < 1000:
+        hundreds = HUNDREDS[num // 100]
+        remainder = num % 100
+        if remainder:
+            return hundreds + " " + number_to_words(remainder)
+        else:
+            return hundreds
+    else:
+        thousands = THOUSANDS[num // 1000]
+        remainder = num % 1000
+        if remainder:
+            return thousands + " " + number_to_words(remainder)
+        else:
+            return thousands
+
+num = int(input("Введите число: "))
+result = number_to_words(num)
+print(result)

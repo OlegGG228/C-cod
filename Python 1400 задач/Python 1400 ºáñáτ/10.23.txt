@@ -1,0 +1,36 @@
+import random
+
+# создаем список из всех возможных комбинаций карт
+cards = []
+for suit in ["черви", "бубны", "трефы", "пики"]:
+    for rank in ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Валет", "Дама", "Король", "Туз"]:
+        cards.append(rank + " " + suit)
+
+# выбираем случайным образом козырную масть и выводим ее название на экран
+trump_suit = random.choice(["черви", "бубны", "трефы", "пики"])
+print("Козырная масть:", trump_suit)
+
+# пересобираем список карт, учитывая козырную масть
+trump_cards = []
+for card in cards:
+    if trump_suit in card:
+        trump_cards.append(card)
+    else:
+        if "валет" in card:
+            if "бубны" in card:
+                trump_cards.append(card)
+        if "дама" in card:
+            if "черви" in card:
+                trump_cards.append(card)
+        if "король" in card:
+            if "пики" in card:
+                trump_cards.append(card)
+        if "туз" in card:
+            if "трефы" in card:
+                trump_cards.append(card)
+
+# выводим список карт, отсортированный по возрастанию (за исключением козырных карт, которые всегда идут в начале)
+trump_cards.sort(key=lambda card: (not trump_suit in card, card.split()[0]))
+print("Все карты, учитывая козырную масть:")
+print(trump_cards)
+

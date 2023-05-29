@@ -1,0 +1,17 @@
+arr = [1, 5, 8, 11, 12, 14, 16, 18, 20]
+
+even_neighbors = []
+last_even_neighbor = None
+
+for i in range(len(arr)-1):
+    if arr[i] % 2 == 0 and arr[i+1] % 2 == 0:
+        even_neighbors.append(i)
+        last_even_neighbor = i+1
+
+if len(even_neighbors) == 0:
+    print("В массиве нет соседних четных чисел")
+else:
+    print("Элементы, предшествующие последней паре соседних четных чисел:")
+    for i in range(last_even_neighbor):
+        print(arr[i], end=' ')
+

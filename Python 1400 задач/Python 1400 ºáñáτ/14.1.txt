@@ -1,0 +1,5 @@
+def draw_line():
+    print("*" * 60)
+
+draw_line()
+

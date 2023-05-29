@@ -1,0 +1,19 @@
+heights = [170, 165, 175, -160, -165, -155, 170, -163, 180, -159]
+
+male_heights = []
+female_heights = []
+
+for height in heights:
+    if height < 0:
+        male_heights.append(-height)
+    else:
+        female_heights.append(height)
+
+male_avg = sum(male_heights) / len(male_heights)
+female_avg = sum(female_heights) / len(female_heights)
+
+if male_avg - female_avg > 10:
+    print("Средний рост мальчиков превышает средний рост девочек более чем на 10 см")
+else:
+    print("Средний рост мальчиков не превышает средний рост девочек более чем на 10 см")
+

@@ -1,0 +1,7 @@
+sentence = "This is a sample sentence with six words." 
+ 
+words = sentence.split() 
+if len(words) > 3: 
+    print("The sentence contains more than three words") 
+else: 
+    print("The sentence contains three or fewer words")

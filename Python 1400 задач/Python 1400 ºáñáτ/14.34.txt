@@ -1,0 +1,18 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+n = int(input("Введите количество чисел: "))
+nums = []
+
+for i in range(n):
+    num = int(input("Введите число {}: ".format(i+1)))
+    nums.append(num)
+
+gcd_ab = gcd(nums[0], nums[1])
+for i in range(2, n):
+    gcd_ab = gcd(gcd_ab, nums[i])
+
+print("Наибольший общий делитель:", gcd_ab)
+```

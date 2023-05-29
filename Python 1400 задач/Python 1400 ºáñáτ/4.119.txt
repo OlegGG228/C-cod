@@ -1,0 +1,11 @@
+y = float(input("Введите значение y: "))
+
+if y > 2:
+    f = 2
+elif y > 0 and y < 2:
+    f = 0
+else:
+    f = -y
+
+print("Значение функции f({}) = {}".format(y, f))
+

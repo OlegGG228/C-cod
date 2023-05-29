@@ -1,0 +1,9 @@
+import random
+
+arr = []
+
+for i in range(12):
+    arr.append(random.randint(163, 190))
+
+print(arr)
+

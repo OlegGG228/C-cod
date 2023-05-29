@@ -1,0 +1,33 @@
+m = int(input("Введите значение m: "))
+n = int(input("Введите количество чисел d: "))
+d = []
+
+for i in range(n):
+    d.append(int(input("Введите значение d_" + str(i+1) + ": ")))
+
+a = []
+for i in range(1, m+1):
+    a_i = sum(d[max(0, i-n):i])
+    a.append(a_i)
+
+max_index = -1
+max_value = float('-inf')
+for i in range(m):
+    if a[i] > max_value:
+        max_index = i
+        max_value = a[i]
+    elif a[i] == max_value:
+        max_index = i
+
+min_index = -1
+min_value = float('inf')
+for i in range(m):
+    if a[i] < min_value:
+        min_index = i
+        min_value = a[i]
+    elif a[i] == min_value:
+        min_index = i
+
+print("Номер максимального числа среди a_1:", max_index+1)
+print("Номер минимального числа среди a_1:", min_index+1)
+

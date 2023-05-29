@@ -1,0 +1,4 @@
+array = ['#'] * 20
+
+print(array)
+

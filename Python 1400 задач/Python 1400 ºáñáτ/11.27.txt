@@ -1,0 +1,14 @@
+array = [4, 5, 2, 7, 1, 9, 14, 6]
+
+even_array = []
+odd_array = []
+
+for i in array:
+    if i % 2 == 0:
+        even_array.append(i)
+    else:
+        odd_array.append(i)
+
+print("Четные элементы:", even_array)
+print("Нечетные элементы:", odd_array)
+

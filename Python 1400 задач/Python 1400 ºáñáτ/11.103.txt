@@ -1,0 +1,14 @@
+array = [4, 1, 6, 2, 8, 3, 7, 4, 9, 2, 5, 6, 3, 1, 8, 7, 2, 3, 6, 4]
+
+max_sum = 0
+max_seq = []
+
+for i in range(len(array)-4):
+    seq_sum = sum(array[i:i+5])
+    if seq_sum > max_sum:
+        max_sum = seq_sum
+        max_seq = array[i:i+5]
+
+print("Максимальная сумма элементов:", max_sum)
+print("Элементы, образующие последовательность:", max_seq)
+

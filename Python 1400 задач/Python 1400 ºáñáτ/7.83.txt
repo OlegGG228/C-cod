@@ -1,0 +1,7 @@
+numbers = {1, 3, 5, 7, 9}
+
+if any(x % 2 == 0 for x in numbers):
+    print("There is at least one even number.")
+else:
+    print("There are no even numbers.")
+

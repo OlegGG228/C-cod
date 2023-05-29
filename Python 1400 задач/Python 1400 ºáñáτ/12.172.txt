@@ -1,0 +1,10 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+is_possible = True
+for letter in word2:
+    if letter not in word1:
+        is_possible = False
+if is_possible:
+    print("Второе слово можно получить из букв первого")
+else:
+    print("Второе слово нельзя получить из букв первого")

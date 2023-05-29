@@ -1,0 +1,10 @@
+X = int(input("Введите возраст Тани: "))
+Y = int(input("Введите возраст Мити: "))
+
+average_age = (X + Y) / 2
+diff_Tanya = average_age - X
+diff_Mitya = average_age - Y
+
+print("Средний возраст: ", average_age)
+print("Отличие возраста Тани от среднего значения: ", diff_Tanya)
+print("Отличие возраста Мити от среднего значения: ", diff_Mitya)

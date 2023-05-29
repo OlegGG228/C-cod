@@ -1,0 +1,44 @@
+# создаем пустой список для зарплат работников
+salaries = []
+
+# заполняем список данными о зарплатах
+for i in range(12):
+    # запрашиваем зарплату для каждого месяца квартала
+    print("Введите зарплату работника номер", i+1, "за каждый месяц первого квартала:")
+    salary = []
+    for j in range(3):
+        salary.append(int(input()))
+    # добавляем список зарплат работника в общий список
+    salaries.append(salary)
+
+# находим максимальную зарплату из списка
+max_salary = max([max(salary) for salary in salaries])
+
+# выводим результат
+print("Максимальная зарплата равна:", max_salary)
+
+# находим порядковый номер работника с наибольшей суммой за квартал
+max_sum = 0
+max_sum_index = 0
+for i in range(12):
+    # считаем сумму зарплат за квартал
+    total = sum(salaries[i])
+    if total > max_sum:
+        max_sum = total
+        max_sum_index = i
+
+# выводим результат
+print("Работник с номером", max_sum_index+1, "получил за квартал наибольшую сумму:", max_sum)
+
+# находим месяц с максимальной общей зарплатой
+max_total = 0
+max_total_month = 1
+for j in range(3):
+    # считаем общую зарплату за месяц
+    total = sum([salary[j] for salary in salaries])
+    if total > max_total:
+        max_total = total
+        max_total_month = j+1
+
+# выводим результат
+print("Максимальная общая зарплата была получена в", max_total_month, "месяце")

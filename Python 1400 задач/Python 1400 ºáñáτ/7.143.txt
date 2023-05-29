@@ -1,0 +1,8 @@
+population = [11, 25, 3, 9, 1, 13, 17, 4, 7, 2, 6, 8, 30, 5, 23, 14]
+area = [1.1, 2.5, 0.3, 0.9, 0.1, 1.3, 1.7, 0.4, 0.7, 0.2, 0.6, 0.8, 3.0, 0.5, 2.3, 1.4]
+
+density = [population[i] / (area[i] * 1000) for i in range(len(population))]
+min_density = min(density)
+
+print(f"Minimum population density: {min_density} people/km²")
+

@@ -1,0 +1,28 @@
+import random
+
+# генерируем случайные множители
+multiplier_1 = random.randint(2, 9)
+multiplier_2 = random.randint(2, 9)
+
+# задаем количество вопросов
+num_questions = 20
+
+# создаем массив для сохранения ответов пользователя
+user_answers = []
+
+# цикл для задания вопросов
+for i in range(num_questions):
+    # генерируем случайные множители
+    multiplier_1 = random.randint(2, 9)
+    multiplier_2 = random.randint(2, 9)
+    
+    # выводим вопрос на экран и запрашиваем ответ у пользователя
+    answer = int(input(f'Чему равно произведение {multiplier_1} на {multiplier_2}? '))
+    
+    # сохраняем ответ пользователя в массив
+    user_answers.append(answer)
+    
+# выводим результаты
+print('Ваши ответы:')
+for i in user_answers:
+    print(i)

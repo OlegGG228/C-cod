@@ -1,0 +1,14 @@
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+def gcd_of_three(a, b, c):
+    return gcd(gcd(a, b), c)
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+
+print("Наибольший общий делитель трех чисел:", gcd_of_three(a, b, c))

@@ -1,0 +1,10 @@
+distances = { 'Город 1': 100, 'Город 2': 200, 'Город 3': 150, 'Город 4': 300 }
+
+max_distance = 0
+
+for distance in distances.values():
+    if distance > max_distance:
+        max_distance = distance
+
+print(f'Расстояние от Москвы до самого удаленного города составляет {max_distance} км')
+

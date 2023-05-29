@@ -1,0 +1,5 @@
+sentence = 'Пример предложения.'
+
+for i in range(len(sentence)):
+    if sentence[i:i+2] == 'нн':
+        print('нн')

@@ -1,0 +1,17 @@
+phonebook = {"Фамилия1": "номер телефона 1", "Фамилия2": "номер телефона 2", "Фамилия3": "номер телефона 3"} # и т.д.
+
+# поиск номера телефона по фамилии
+name = input("Введите фамилию: ")
+
+if name in phonebook:
+  print(phonebook[name])
+else:
+  print("Такой фамилии нет в записной книжке")
+
+# поиск фамилии по номеру телефона
+number = input("Введите номер телефона: ")
+
+for key, value in phonebook.items():
+  if value == number:
+    print(key)
+    break

@@ -1,0 +1,13 @@
+p = int(input("Введите натуральное число p: "))
+s = [int(input(f"Введите c{i}: ")) for i in range(1, p+1)]
+
+last_index = -1
+
+for i in range(len(s)):
+    if s[i] == 25:
+        last_index = i
+    elif s[i] == 100:
+        continue
+
+print(f"Номер последнего числа, равного 25: {last_index}")
+

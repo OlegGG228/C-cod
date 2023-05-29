@@ -1,0 +1,54 @@
+# ввод информации
+prices = []
+quantities = []
+
+for i in range(5):
+    price = float(input(f"Введите стоимость товара {i+1}: "))
+    prices.append(price)
+
+    quantity = []
+    for j in range(6):
+        sold = int(input(f"Введите количество проданного товара {i+1} в день {j+1}: "))
+        quantity.append(sold)
+    quantities.append(quantity)
+
+# а) общий доход, полученный от продажи каждого вида товара
+total_income_per_item = []
+for i in range(5):
+    income = 0
+    for j in range(6):
+        income += prices[i] * quantities[i][j]
+    total_income_per_item.append(income)
+    print(f"Общий доход от продажи товара {i+1}: {income}")
+
+# б) общий доход, полученный за каждый день
+total_income_per_day = []
+for j in range(6):
+    income = 0
+    for i in range(5):
+        income += prices[i] * quantities[i][j]
+    total_income_per_day.append(income)
+    print(f"Общий доход за день {j+1}: {income}")
+
+# в) общий доход магазина за 6 дней
+total_income = sum(total_income_per_day)
+print(f"Общий доход магазина за 6 дней: {total_income}")
+
+# г) по какому виду товара был получен максимальный общий доход за 6 дней
+max_income_index = total_income_per_item.index(max(total_income_per_item))
+print(f"Максимальный доход получен от продажи товара {max_income_index+1}")
+
+# д) в какой день был получен максимальный общий доход от продажи всех видов товара
+max_income_day = total_income_per_day.index(max(total_income_per_day))
+print(f"Максимальный доход был получен в день {max_income_day+1}")
+
+# е) количество дней, в которые общий доход от продажи всех видов товара превысил а рублей
+a = float(input("Введите значение а: "))
+days_exceeding_a_income = 0
+for j in range(6):
+    income = 0
+    for i in range(5):
+        income += prices[i] * quantities[i][j]
+    if income > a:
+        days_exceeding_a_income += 1
+print(f"Количество дней, в которые общий доход превысил {a} рублей: {days_exceeding_a_income}")

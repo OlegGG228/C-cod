@@ -1,0 +1,9 @@
+words = input("Введите последовательность слов: ").split()
+
+for i in range(len(words)):
+    if 'ча' in words[i]:
+        words[i] = words[i].replace('ча', 'ща')
+    elif 'ща' in words[i]:
+        words[i] = words[i].replace('ща', 'ча')
+
+print("Исправленная последовательность слов:", ' '.join(words))

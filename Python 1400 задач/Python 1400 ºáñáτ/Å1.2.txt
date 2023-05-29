@@ -1,0 +1,72 @@
+# a) 
+
+x = float(input("Введите число x: "))
+result = -1/(x**2)
+print("Результат:", result)
+
+# б) 
+
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+c = float(input("Введите число c: "))
+result = a/(b*c)
+print("Результат:", result)
+
+# в) 
+
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+c = float(input("Введите число c: "))
+result = (a/b)*c
+print("Результат:", result)
+
+# г) 
+
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+result = (a + b)/2
+print("Результат:", result)
+
+# д) 
+
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+result = 5.45*((a + (2*b))/(2-b))
+print("Результат:", result)
+
+# е) 
+
+import math
+
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+c = float(input("Введите число c: "))
+result = (-b + math.sqrt((b**2) - (4*a*c)))/(2*a)
+print("Результат:", result)
+
+# ж) 
+
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+c = float(input("Введите число c: "))
+result = (-b + (1/a))/(2/c)
+print("Результат:", result)
+
+# з) 
+
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+result = 1/(1+((a+b)/2))
+print("Результат:", result)
+
+# и) 
+
+result = 1/(1+(1/(2+(1/(2+(3/5)))))) 
+print("Результат:", result)
+
+# й) 
+
+m = int(input("Введите число m: "))
+n = int(input("Введите число n: "))
+result = 2**(m**n)
+print("Результат:", result)

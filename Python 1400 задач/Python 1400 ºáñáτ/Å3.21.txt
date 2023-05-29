@@ -1,0 +1,6 @@
+print("Задание 3.21")
+for a in [True, False]:
+    for b in [True, False]:
+        for c in [True, False]:
+            print(f"а) {not(a or not b and c)}, б) {a and not(b or not c)}, в) {not(not a or b and c)}")
+print("--------------------")

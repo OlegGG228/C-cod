@@ -1,0 +1,16 @@
+num_list = [12, 54, 33, 6, 90, 8, 3]
+
+max_num = num_list[0]
+min_num = num_list[0]
+
+for num in num_list:
+    if num > max_num:
+        max_num = num
+    elif num < min_num:
+        min_num = num
+
+if num_list.index(max_num) < num_list.index(min_num):
+    print("Максимальное число встретится раньше")
+else:
+    print("Минимальное число встретится раньше")
+

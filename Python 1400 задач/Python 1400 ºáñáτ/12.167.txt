@@ -1,0 +1,5 @@
+word = input("Введите слово с двумя одинаковыми буквами: ")
+for i in range(len(word)):
+    if word.count(word[i]) == 2:
+        print("Одинаковые буквы:", word[i])
+        break

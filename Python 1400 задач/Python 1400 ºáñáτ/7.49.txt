@@ -1,0 +1,15 @@
+rainfalls = []
+
+while True:
+    rainfall = input('Введите количество осадков (или "стоп" для завершения ввода): ')
+    if rainfall.lower() == 'стоп':
+        break
+    else:
+        rainfalls.append(float(rainfall))
+
+total_rainfall = 0
+
+for i in range(1, len(rainfalls), 2):
+    total_rainfall += rainfalls[i]
+
+print('Общее количество осадков, выпавших второго, четвертого, шестого и т. д. числа месяца:', total_rainfall)

@@ -1,0 +1,11 @@
+grades = [5, 5, 5, 5, 5, 4, 4, 4, 3, 3, 2, 2, 1]
+
+count = 0
+for grade in grades:
+    if grade == 5:
+        count += 1
+    elif grade < 5:
+        break
+        
+print(count)
+

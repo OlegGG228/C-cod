@@ -1,0 +1,21 @@
+def add_spaces(text, length):
+    words = text.split()
+    num_spaces = len(words) - 1
+    total_length = sum(len(word) for word in words)
+    if total_length + num_spaces > length:
+        return "Ошибка: требуемая длина меньше, чем длина исходной строки"
+    avg_spaces = (length - total_length) // num_spaces
+    remainder = (length - total_length) % num_spaces
+    spaces = [avg_spaces] * num_spaces
+    for i in range(remainder):
+        spaces[i] += 1
+    result = words[0]
+    for word, space in zip(words[1:], spaces):
+        result += " " * space + word
+    return result
+
+
+text = input("Введите строку без пробелов в начале и конце: ")
+length = int(input("Введите требуемую длину строки: "))
+result = add_spaces(text, length)
+print(result)

@@ -1,0 +1,72 @@
+#а) 
+
+import random
+
+print("Чет (введите 2) или нечет (введите 1)?")
+answer = int(input())
+
+# Генерируем случайное число (1 - нечетное, 2 - четное)
+computer_choice = random.randint(1, 2)
+
+if computer_choice == answer:
+    print("Вы угадали!")
+else:
+    print("Вы не угадали. Компьютер выбрал", "нечетное" if computer_choice == 1 else "четное")
+
+#б) 
+
+import random
+
+score_player = 0
+score_computer = 0
+
+num_games = int(input("Введите количество игр: "))
+
+for i in range(num_games):
+    print("Чет (введите 2) или нечет (введите 1)?")
+    answer = int(input())
+
+    # Генерируем случайное число (1 - нечетное, 2 - четное)
+    computer_choice = random.randint(1, 2)
+
+    if computer_choice == answer:
+        score_player += 1
+        print("Вы угадали!")
+    else:
+        score_computer += 1
+        print("Вы не угадали. Компьютер выбрал", "нечетное" if computer_choice == 1 else "четное")
+
+if score_player > score_computer:
+    print("Счет", score_player, ":", score_computer, "в вашу пользу. Вы выиграли!")
+elif score_player < score_computer:
+    print("Счет", score_player, ":", score_computer, "в пользу компьютера. Вы проиграли!")
+else:
+    print("Счет", score_player, ":", score_computer, "ничья")
+
+в)
+
+import random
+
+correct_answers = 0
+incorrect_answers = 0
+
+while True:
+    print("Чет (введите 2) или нечет (введите 1)?")
+    answer = int(input())
+
+    # Генерируем случайное число (1 - нечетное, 2 - четное)
+    computer_choice = random.randint(1, 2)
+
+    if computer_choice == answer:
+        correct_answers += 1
+        print("Вы угадали!")
+    else:
+        incorrect_answers += 1
+        print("Вы не угадали. Компьютер выбрал", "нечетное" if computer_choice == 1 else "четное")
+
+    choice = input("Продолжить еще раз? (Да/Нет)").lower()
+    if choice == "нет":
+        break
+
+print("Количество верных ответов:", correct_answers)
+print("Количество неверных ответов:", incorrect_answers)

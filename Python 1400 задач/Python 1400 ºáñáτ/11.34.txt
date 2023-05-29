@@ -1,0 +1,32 @@
+# a) 
+
+```python
+arr = [1.1, -2.3, 4.5, -6.7, 8.9, -10.11]
+k1 = 2
+k2 = 4
+
+positive_values = [x for x in arr if x > 0] # находим все положительные элементы
+positive_values[k1-1] -= arr[k1-1] # вычитаем k1-й элемент
+for i in range(len(arr)):
+    if i != k2-1 and arr[i] not in positive_values: 
+        # вычитаем элемент k2, кроме того, который уже был вычтен, 
+        # и кроме положительных элементов, которые уже обработаны
+        arr[i] -= arr[k2-1]
+
+print(arr)
+```
+
+# б) 
+
+```python
+arr = [1.1, -2.3, 4.5, -6.7, 8.9, -10.11]
+
+for i in range(len(arr)):
+    if i % 2 == 0: # для четных индексов
+        arr[i] -= 1
+    else: # для нечетных индексов
+        arr[i] += 1
+
+print(arr)
+```
+

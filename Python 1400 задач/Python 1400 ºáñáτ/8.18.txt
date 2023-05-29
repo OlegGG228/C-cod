@@ -1,0 +1,12 @@
+a = float(input("Введите положительное вещественное число a: "))
+x = float(input("Введите положительное вещественное число x: "))
+e = float(input("Введите положительное вещественное число e: "))
+y_prev = 1
+y_curr = 0.5 * (y_prev + x/y_prev)
+
+while abs(y_curr**2 - y_prev**2) >= e:
+    y_prev = y_curr
+    y_curr = 0.5 * (y_prev + x/y_prev)
+
+print("Первый член y_n, удовлетворяющий неравенству:", y_curr)
+

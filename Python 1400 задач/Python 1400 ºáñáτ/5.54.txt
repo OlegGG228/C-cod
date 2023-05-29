@@ -1,0 +1,8 @@
+a = float(input("Введите вещественное число: "))
+n = int(input("Введите натуральное число: "))
+
+result = 1
+for i in range(n):
+    result *= a
+    print("a" + str(i+1) + " = " + str(result))
+

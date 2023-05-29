@@ -1,0 +1,16 @@
+num = input("Введите число: ")
+incr = True
+decr = True
+
+for i in range(len(num)-1):
+    if num[i] >= num[i+1]:
+        incr = False
+    if num[i] <= num[i+1]:
+        decr = False
+
+if incr:
+    print("Цифры образуют монотонно возрастающую последовательность.")
+elif decr:
+    print("Цифры образуют монотонно убывающую последовательность.")
+else:
+    print("Цифры не образуют монотонную последовательность.")

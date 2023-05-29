@@ -1,0 +1,9 @@
+sequence = [1, 3, 2, 4, 5, 3, 1, 2, 1, 4]
+count = 0
+
+for i in range(1, len(sequence)-1):
+    if sequence[i] > sequence[i-1] and sequence[i] > sequence[i+1]:
+        count += 1
+
+print(f"Количество строгих локальных максимумов: {count}")
+

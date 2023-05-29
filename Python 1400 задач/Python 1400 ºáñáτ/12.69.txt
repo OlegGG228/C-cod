@@ -1,0 +1,11 @@
+sentence = "This is a sample sentence with both a and o." 
+ 
+a_count = sentence.count('a') 
+o_count = sentence.count('o') 
+ 
+if a_count > o_count: 
+    print("Letter 'a' appears more often") 
+elif a_count < o_count: 
+    print("Letter 'o' appears more often") 
+else: 
+    print("Letters 'a' and 'o' appear an equal number of times")

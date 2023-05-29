@@ -1,0 +1,36 @@
+masses = []
+while True:
+    mass = input("Введите массу человека в группе (введите 'стоп', чтобы закончить ввод): ")
+    if mass.lower() == 'стоп':
+        break
+    try:
+        mass = float(mass)
+    except ValueError:
+        print("Ошибка ввода")
+        continue
+    masses.append(mass)
+
+if not masses:
+    print("Нет данных для обработки")
+    exit()
+
+full_masses = []
+other_masses = []
+for mass in masses:
+    if mass > 100:
+        full_masses.append(mass)
+    else:
+        other_masses.append(mass)
+
+if not full_masses:
+    print("Нет данных о полных людях")
+else:
+    avg_full_mass = sum(full_masses) / len(full_masses)
+    print("Средняя масса полных людей: {:.2f}".format(avg_full_mass))
+
+if not other_masses:
+    print("Нет данных о других людях")
+else:
+    avg_other_mass = sum(other_masses) / len(other_masses)
+    print("Средняя масса других людей: {:.2f}".format(avg_other_mass))
+

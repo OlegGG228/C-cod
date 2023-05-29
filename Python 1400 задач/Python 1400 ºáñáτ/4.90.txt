@@ -1,0 +1,47 @@
+
+# функция для определения количества дней в месяце
+def days_in_month(month):
+    if month == 2:
+        return 28
+    elif month in [4, 6, 9, 11]:
+        return 30
+    else:
+        return 31
+
+# функция для определения предыдущей даты
+def previous_date(day, month):
+    if day == 1:
+        # если день первый, то нужно вернуть последний день предыдущего месяца
+        if month == 1:
+            # если месяц январь, то предыдущий месяц - декабрь
+            prev_month = 12
+        else:
+            prev_month = month - 1
+        prev_day = days_in_month(prev_month)
+    else:
+        prev_day = day - 1
+    return prev_day, month
+
+# функция для определения следующей даты
+def next_date(day, month):
+    if day == days_in_month(month):
+        # если день последний, то нужно вернуть первый день следующего месяца
+        if month == 12:
+            # если месяц декабрь, то следующий месяц - январь
+            next_month = 1
+        else:
+            next_month = month + 1
+        next_day = 1
+    else:
+        next_day = day + 1
+    return next_day, month
+
+# пример использования функций
+day = 15
+month = 3
+
+prev_day, prev_month = previous_date(day, month)
+next_day, next_month = next_date(day, month)
+
+print("Предыдущая дата:", prev_day, prev_month)
+print("Следующая дата:", next_day, next_month)

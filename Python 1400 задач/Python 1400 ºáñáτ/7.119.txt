@@ -1,0 +1,10 @@
+n = int(input("Введите количество чисел: "))
+b = []
+for i in range(n):
+    b.append(int(input(f"Введите {i+1}-ое число: ")))
+
+for i in range(n-1, -1, -1):
+    if b[i] > 100:
+        print(f"Номер последнего числа, большего 100: {i+1}")
+        break
+

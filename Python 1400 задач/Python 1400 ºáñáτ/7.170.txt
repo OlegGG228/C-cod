@@ -1,0 +1,28 @@
+#a) 
+```
+nums = [3, 4, 5, 2, 1, 8, 9]
+max_sum = max([nums[i]+nums[i+1] for i in range(len(nums)-1)])
+print(max_sum)
+```
+#б) 
+```
+nums = [3, 4, 5, 2, 1, 8, 9]
+min_sum = min([nums[i]+nums[i+1] for i in range(len(nums)-1)])
+print(min_sum)
+```
+#в) 
+```
+nums = [3, 4, 5, 2, 1, 8, 9]
+max_sum = max([nums[i]+nums[i+1] for i in range(len(nums)-1)])
+max_pair = [i+1 for i in range(len(nums)-1) if nums[i]+nums[i+1] == max_sum][0]
+print(max_pair)
+```
+#г) 
+```
+nums = [3, 4, 5, 2, 1, 8, 9]
+min_sum = min([nums[i]+nums[i+1] for i in range(len(nums)-1)])
+min_pairs = [i+1 for i in range(len(nums)-1) if nums[i]+nums[i+1] == min_sum]
+last_min_pair = min_pairs[-1]
+print(last_min_pair)
+```
+

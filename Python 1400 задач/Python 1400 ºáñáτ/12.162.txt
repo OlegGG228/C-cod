@@ -1,0 +1,18 @@
+num = 123.456
+integer_part = int(num)
+fractional_part = num - integer_part
+int_digits = 0
+frac_digits = 0
+
+while integer_part > 0:
+    int_digits += 1
+    integer_part //= 10
+
+while fractional_part > 0:
+    frac_digits += 1
+    fractional_part *= 10
+    if frac_digits > 15:
+        break
+
+print("Number of digits in integer part:", int_digits)
+print("Number of digits in fractional part:", frac_digits)

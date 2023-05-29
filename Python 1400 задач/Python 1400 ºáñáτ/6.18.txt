@@ -1,0 +1,24 @@
+а) Оператор цикла с предусловием:
+``` python
+import math
+
+a = int(input("Введите a: "))
+b = int(input("Введите b: "))
+
+while a > b:
+    print(math.sqrt(a))
+    a -= 1
+```
+б) Оператор цикла с постусловием:
+``` python
+import math
+
+a = int(input("Введите a: "))
+b = int(input("Введите b: "))
+
+if a > b:
+    while True:
+        print(math.sqrt(a))
+        a -= 1
+        if a <= b:
+            break

@@ -1,0 +1,9 @@
+sentence = input("Введите предложение: ")
+words = sentence.split()
+unique_words = []
+for word in words:
+    if words.count(word) == 1 and word not in unique_words:
+        unique_words.append(word)
+print("Слова, которые встречаются в предложении по одному разу:")
+for u_word in unique_words:
+    print(u_word)

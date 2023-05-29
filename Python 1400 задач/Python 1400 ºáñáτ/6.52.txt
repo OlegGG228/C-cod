@@ -1,0 +1,22 @@
+number = input("Введите натуральное число: ")
+has_3 = False
+has_2_and_5 = False
+
+for digit in number:
+    if digit == '3':
+        has_3 = True
+    elif digit == '2':
+        for other_digit in number:
+            if other_digit == '5':
+                has_2_and_5 = True
+                break
+
+if has_3:
+    print("В числе есть цифра 3")
+else:
+    print("В числе нет цифры 3")
+
+if has_2_and_5:
+    print("В числе есть цифры 2 и 5")
+else:
+    print("В числе нет одновременно цифр 2 и 5")

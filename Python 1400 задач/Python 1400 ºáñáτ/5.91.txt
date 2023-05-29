@@ -1,0 +1,41 @@
+num = int(input("Введите натуральное число: "))
+divisors = []
+even_divisors = []
+odd_divisors = []
+d = int(input("Введите число d для нахождения количества делителей, больших него: "))
+
+# получение всех делителей
+for i in range(1, num+1):
+    if num % i == 0:
+        divisors.append(i)
+        if i % 2 == 0:
+            even_divisors.append(i)
+        else:
+            odd_divisors.append(i)
+
+# нахождение суммы делителей
+divisors_sum = sum(divisors)
+
+# нахождение суммы четных делителей
+even_divisors_sum = sum(even_divisors)
+
+# нахождение количество делителей
+divisors_count = len(divisors)
+
+# нахождение количество нечетных делителей
+odd_divisors_count = len(odd_divisors)
+
+# нахождение количество четных делителей
+even_divisors_count = len(even_divisors)
+
+# нахождение количество делителей, больших d
+greater_than_d_count = len([i for i in divisors if i > d])
+
+# вывод результатов
+print("Делители числа:", divisors)
+print("Сумма делителей:", divisors_sum)
+print("Сумма четных делителей:", even_divisors_sum)
+print("Количество делителей:", divisors_count)
+print("Количество нечетных делителей:", odd_divisors_count)
+print("Количество четных делителей:", even_divisors_count)
+print("Количество делителей, больших", d, ":", greater_than_d_count)

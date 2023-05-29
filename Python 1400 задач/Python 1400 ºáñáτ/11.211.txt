@@ -1,0 +1,22 @@
+
+input_arr = [1, 6, 3, 2, 5, 8, 7, 4, 9, 11]
+
+# Инициализация переменных
+result = []
+is_last_triple = False
+
+# Проход по массиву
+for i in range(1, len(input_arr) - 1):
+    if input_arr[i - 1] < input_arr[i] > input_arr[i + 1]:
+        # Найдена тройка соседних чисел, где средний элемент больше своих «соседей»
+        if not is_last_triple:
+            # Если это первая такая тройка, сохраняем все элементы до нее
+            result = input_arr[:i - 1]
+        is_last_triple = True
+    else:
+        is_last_triple = False
+
+# Вывод результата
+print(result)
+
+

@@ -1,0 +1,11 @@
+x = True
+y = False
+z = False
+
+a = not x or not y or not z
+b = (not x or not y) and (x or y)
+c = (x and y) or (x and z) or not z
+
+print(a)  # True
+print(b)  # True
+print(c)  # True

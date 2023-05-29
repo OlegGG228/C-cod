@@ -1,0 +1,10 @@
+last_name1 = input("Введите первую фамилию: ")
+last_name2 = input("Введите вторую фамилию: ")
+
+if len(last_name1) > len(last_name2):
+    print("Первая фамилия длиннее")
+elif len(last_name1) < len(last_name2):
+    print("Вторая фамилия длиннее")
+else:
+    print("Фамилии равной длины")
+

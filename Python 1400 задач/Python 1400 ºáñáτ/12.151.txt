@@ -1,0 +1,13 @@
+text = input("Введите текст: ")
+max_digit = -1
+max_digit_index = -1
+index = 0
+for char in text:
+    if char.isdigit() and int(char) > max_digit:
+        max_digit = int(char)
+        max_digit_index = index
+    index += 1
+if max_digit_index == -1:
+    print("В тексте нет цифр")
+else:
+    print("Номер максимальной цифры:", max_digit_index)

@@ -1,0 +1,10 @@
+numbers = [int(input()) for _ in range(20)]
+
+count = 0
+prev_number = None
+for number in numbers:
+    if number == prev_number:
+        count += 1
+    prev_number = number
+
+print(count)

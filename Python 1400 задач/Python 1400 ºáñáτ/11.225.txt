@@ -1,0 +1,39 @@
+#1. Без использования дополнительного массива
+
+n = 20
+ploshad = [0]*n
+urozhay = [0]*n
+
+for i in range(n):
+    print("Введите площадь, засеянную пшеницей в", i+1, "районе:", end=" ")
+    ploshad[i] = float(input())
+    print("Введите урожай, собранный в", i+1, "районе:", end=" ")
+    urozhay[i] = float(input())
+
+for i in range(n):
+    sr_ur = urozhay[i] / ploshad[i]
+    print("Средняя урожайность в", i+1, "районе:", sr_ur)
+
+sr_ur_obl = sum(urozhay) / sum(ploshad)
+print("Средняя урожайность по области:", sr_ur_obl)
+
+#2. С использованием дополнительного массива
+
+n = 20
+ploshad = [0]*n
+urozhay = [0]*n
+sr_ur = [0]*n
+
+for i in range(n):
+    print("Введите площадь, засеянную пшеницей в", i+1, "районе:", end=" ")
+    ploshad[i] = float(input())
+    print("Введите урожай, собранный в", i+1, "районе:", end=" ")
+    urozhay[i] = float(input())
+    sr_ur[i] = urozhay[i] / ploshad[i]
+
+for i in range(n):
+    print("Средняя урожайность в", i+1, "районе:", sr_ur[i])
+
+sr_ur_obl = sum(urozhay) / sum(ploshad)
+print("Средняя урожайность по области:", sr_ur_obl)
+

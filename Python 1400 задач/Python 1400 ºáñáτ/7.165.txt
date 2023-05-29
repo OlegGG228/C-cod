@@ -1,0 +1,22 @@
+lengths = []
+times = []
+
+# ввод данных о длинах участков пути и времени, затраченном на каждый участок
+for i in range(25):
+    length = float(input(f"Введите длину участка {i + 1}: "))
+    lengths.append(length)
+    time = float(input(f"Введите время, затраченное на участок {i + 1}: "))
+    times.append(time)
+
+# вычисляем скорости на каждом участке пути
+speeds = [lengths[i] / times[i] for i in range(25)]
+
+# вычисляем среднюю скорость каждой машины
+avg_speeds = [sum(speeds[i:i+1]) / len(speeds[i:i+1]) for i in range(25)]
+
+# определяем номер машины с максимальной средней скоростью
+max_avg_speed = max(avg_speeds)
+max_avg_speed_index = avg_speeds.index(max_avg_speed) + 1
+
+print(f"Машина номер {max_avg_speed_index} имеет максимальную среднюю скорость: {max_avg_speed} км/ч")
+

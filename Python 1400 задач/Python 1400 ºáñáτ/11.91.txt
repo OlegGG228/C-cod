@@ -1,0 +1,29 @@
+masses = [] # массив с массами людей
+
+# Ввод масс людей и добавление их в массив
+for i in range(25):
+    mass = float(input(f"Введите массу {i+1}-го человека: "))
+    masses.append(mass)
+
+full_masses = [] # массив для хранения масс полных людей
+
+for mass in masses:
+    if mass > 100:
+        full_masses.append(mass)
+
+# Проверка на наличие полных людей
+if len(full_masses) == 0:
+    print("Ошибка: отсутствуют полные люди.")
+    exit()
+
+# Рассчет средней массы полных людей
+avg_full = sum(full_masses) / len(full_masses)
+
+# Рассчет средней массы остальных людей
+other_masses = [mass for mass in masses if mass not in full_masses]
+avg_other = sum(other_masses) / len(other_masses)
+
+# Вывод результатов
+print(f"Средняя масса полных людей: {avg_full}")
+print(f"Средняя масса остальных людей: {avg_other}")
+

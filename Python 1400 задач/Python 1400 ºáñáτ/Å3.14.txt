@@ -1,0 +1,10 @@
+x = [True, True, False, False]
+y = [True, False, True, False]
+
+a5 = [not (i or j) for i in x for j in y]
+b5 = [not i and j for i in x for j in y]
+c5 = [i and not j for i in x for j in y]
+
+print(a5)  # [False, False, False, True, False, True, False, False, False, False, False, False, False, False, False, False]
+print(b5)  # [False, False, False, True, True, False, False, False, True, False, False, False, True, False, False, False]
+print(c5)  # [True, False, True, False, False, False, False, True, True, False, False, False, True, False, True, False]

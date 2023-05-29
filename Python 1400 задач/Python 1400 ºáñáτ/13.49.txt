@@ -1,0 +1,10 @@
+students_height = {'John': 165, 'Mike': 172, 'Sara': 158, 'Emily': 164, 'Jack': 178, 
+                   'Anna': 159, 'Tom': 180, 'Kate': 163, 'Emma': 175, 'Oliver': 181, 
+                   'Sophie': 157, 'Lucas': 179, 'Ben': 172, 'Lily': 161, 'Harry': 171, 
+                   'Grace': 167, 'Ella': 173, 'William': 185, 'Mia': 162, 'Charlie': 176, 
+                   'Olivia': 169, 'Max': 182, 'Ava': 166, 'Leo': 187, 'Sophia': 170}
+
+sorted_students = sorted(students_height.items(), key=lambda x: x[1])
+
+for student in sorted_students:
+    print(student[0])

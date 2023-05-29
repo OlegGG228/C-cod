@@ -1,0 +1,11 @@
+# Ввод данных
+rectangle_width = 543
+rectangle_height = 130
+
+# Решение задачи
+square_side = 130
+number_of_squares = (rectangle_width // square_side) * (rectangle_height // square_side)
+
+# Вывод результатов
+print("Из прямоугольника размером", rectangle_width, "x", rectangle_height, "мм можно отрезать",
+      number_of_squares, "квадратов со стороной", square_side, "мм")

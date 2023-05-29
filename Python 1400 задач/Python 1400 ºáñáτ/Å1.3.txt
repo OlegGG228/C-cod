@@ -1,0 +1,54 @@
+# a)
+a = 10
+b = 5
+c = 2
+
+result = a / b / c
+
+print(result)
+
+# b)
+a = 10
+b = 5
+c = 2
+
+result = a + b / c
+
+print(result)
+
+# c)
+a = 10
+b = 5
+c = 2
+
+result = (a + b) / c
+
+print(result)
+
+# d)
+a = 10
+b = 5
+c = 2
+
+result = a * b / (c + 2)
+
+print(result)
+
+# e)
+a = 10
+b = 5
+c = 2
+d = 3
+
+result = a / b * (c - 3) / d
+
+print(result)
+
+# f)
+a = 10
+b = 5
+c = 2
+
+result = ((a / b) + (b / 2)) / (b + c) / (2 + b)
+
+print(result)

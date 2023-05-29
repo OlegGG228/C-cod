@@ -1,0 +1,10 @@
+a = float(input("Введите вещественное число a: "))
+n = 1
+summa = 1
+
+while summa <= a:
+    n += 1
+    summa += 1/n
+
+print("Наименьшее n: ", n)
+

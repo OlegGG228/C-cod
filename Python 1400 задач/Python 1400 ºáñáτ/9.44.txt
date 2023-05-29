@@ -1,0 +1,13 @@
+weights = [100, 200, 300, 500, 1000, 1200, 1400, 1500, 2000, 3000]
+
+def count_combinations(v, i):
+    if v == 0:
+        return 1
+    if v < 0 or i == len(weights):
+        return 0
+    return count_combinations(v - weights[i], i) + count_combinations(v, i + 1)
+
+v = int(input("Введите вес: "))
+combinations = count_combinations(v, 0)
+
+print(f"Количество способов составить вес {v} грамм: {combinations}")

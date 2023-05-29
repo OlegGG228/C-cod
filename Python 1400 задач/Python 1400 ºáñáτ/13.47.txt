@@ -1,0 +1,14 @@
+scores = [60, 50, 40, 30, 20, 10] # исходный список очков
+new_team_score = 35 # количество очков новой команды
+
+# вставляем очки новой команды в исходный список
+for i in range(len(scores)):
+    if new_team_score > scores[i]:
+        scores.insert(i, new_team_score)
+        break
+    elif i == len(scores) - 1:
+        scores.append(new_team_score)
+
+# выводим новый список команд
+for i in range(len(scores)):
+    print(f"{i+1}. Команда {chr(65+i)}: {scores[i]} очков")

@@ -1,0 +1,29 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+word3 = input("Введите третье слово: ")
+unique_letters = []
+for letter in word1:
+    if letter not in word2 and letter not in word3 and letter not in unique_letters:
+        unique_letters.append(letter)
+for letter in word2:
+    if letter not in word1 and letter not in word3 and letter not in unique_letters:
+        unique_letters.append(letter)
+for letter in word3:
+    if letter not in word1 and letter not in word2 and letter not in unique_letters:
+        unique_letters.append(letter)
+print(' '.join(unique_letters))
+
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+word3 = input("Введите третье слово: ")
+unique_letters = []
+for letter in word1:
+    if letter not in word2 + word3 and letter not in unique_letters:
+        unique_letters.append(letter)
+for letter in word2:
+    if letter not in word1 + word3 and letter not in unique_letters:
+        unique_letters.append(letter)
+for letter in word3:
+    if letter not in word1 + word2 and letter not in unique_letters:
+        unique_letters.append(letter)
+print(' '.join(unique_letters))

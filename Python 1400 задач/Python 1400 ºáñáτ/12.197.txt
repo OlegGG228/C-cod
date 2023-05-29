@@ -1,0 +1,17 @@
+def check_brackets(expression):
+    stack = []
+    for i, c in enumerate(expression):
+        if c == "(":
+            stack.append(i)
+        elif c == ")":
+            if not stack:
+                return "нет, есть лишние правые скобки, начиная с позиции {}".format(i)
+            stack.pop()
+    if stack:
+        return "нет, есть лишние левые скобки в количестве {}".format(len(stack))
+    return "да, скобки расставлены правильно"
+
+
+expression = input("Введите арифметическое выражение: ")
+result = check_brackets(expression)
+print("Правильно ли расставлены скобки?", result)

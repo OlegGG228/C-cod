@@ -1,0 +1,12 @@
+def find_factorial(n, res=1):
+    if n == 0:
+        return res
+    else:
+        return find_factorial(n-1, res*n)
+
+n_factorial = 720
+n = 0
+while find_factorial(n) != n_factorial:
+    n += 1
+    
+print("Число, факториал которого равен", n_factorial, ":", n)

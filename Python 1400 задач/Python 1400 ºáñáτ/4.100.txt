@@ -1,0 +1,22 @@
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+
+max_num = a if a > b else b
+min_num = a if a < b else b
+
+print("Наибольшее число:", max_num)
+print("Наименьшее число:", min_num)
+
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+
+max_num = a
+min_num = a
+
+if b > max_num:
+    max_num = b
+if b < min_num:
+    min_num = b
+
+print("Наибольшее число:", max_num)
+print("Наименьшее число:", min_num)

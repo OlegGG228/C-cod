@@ -1,0 +1,12 @@
+team_scores = {"A": 60, "B": 50, "C": 40, "D": 30, "E": 20, "F": 10,
+                "G": 55, "H": 45, "I": 35, "J": 25, "K": 15, "L": 5,
+                "M": 58, "N": 48, "O": 38, "P": 28, "Q": 18, "R": 8,
+                "S": 62, "T": 52, "U": 42, "V": 32, "W": 22}
+
+# сортируем команды по количеству очков
+sorted_teams = sorted(team_scores.items(), key=lambda x:x[1], reverse=True)
+
+# выводим названия команд в соответствии с занятыми местами
+for i, team in enumerate(sorted_teams):
+    print(f"{i+1}. {team[0]}")
+

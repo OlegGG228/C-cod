@@ -1,0 +1,32 @@
+import math
+
+g = 9.8
+
+def calculate_trajectory(a, v0):
+    t = 0
+    x = 0
+    y = 0
+    while y >= 0:
+        x = v0*math.cos(math.radians(a))*t
+        y = v0*math.sin(math.radians(a))*t - (g*t**2)/2
+        t += 0.01
+    return x, y
+
+def calculate_hit_percentage(a, v0, R, H):
+    hits = 0
+    total_shots = 0
+    for i in range(100):
+        total_shots += 1
+        x, y = calculate_trajectory(a, v0)
+        if x >= R and abs(y - H) <= 2:
+            hits += 1
+    return (hits/total_shots)*100
+
+a = float(input("Введите угол вылета снаряда в градусах: "))
+v0 = float(input("Введите начальную скорость снаряда в м/с: "))
+R = float(input("Введите расстояние до цели в метрах: "))
+H = float(input("Введите высоту цели в метрах: "))
+
+percentage = calculate_hit_percentage(a, v0, R, H)
+print("Процент попадания в цель: {:.2f}%".format(percentage))
+

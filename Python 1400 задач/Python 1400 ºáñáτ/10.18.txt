@@ -1,0 +1,70 @@
+import random
+
+# генерируем два случайных числа
+a = random.randint(1, 9)
+b = random.randint(1, 9)
+
+# выводим на экран вопрос
+answer = input(f'Чему равно произведение {a} x {b}? ')
+
+# проверяем правильность ответа
+if int(answer) == a * b:
+    print('Правильно!')
+else:
+    print(f'Неправильно! Правильный ответ: {a * b}')
+```
+
+б) Решение
+
+```python
+import random
+
+correct_answers = 0
+incorrect_answers = 0
+
+# задаем количество вопросов
+n = 20
+
+for i in range(n):
+    # генерируем два случайных числа
+    a = random.randint(1, 9)
+    b = random.randint(1, 9)
+
+    # выводим на экран вопрос
+    answer = input(f'Вопрос {i + 1}: Чему равно произведение {a} x {b}? ')
+
+    # проверяем правильность ответа
+    if int(answer) == a * b:
+        print('Правильно!')
+        correct_answers += 1
+    else:
+        print(f'Неправильно! Правильный ответ: {a * b}')
+        incorrect_answers += 1
+
+# выводим результаты
+print(f"Правильных ответов: {correct_answers}")
+print(f"Неправильных ответов: {incorrect_answers}")
+```
+
+# в) Решение
+
+```python
+import random
+
+while True:
+    # генерируем два случайных числа
+    a = random.randint(1, 9)
+    b = random.randint(1, 9)
+
+    # выводим на экран вопрос
+    answer = input(f'Чему равно произведение {a} x {b}? (для выхода введите 0) ')
+
+    # проверяем, нужно ли выходить из программы
+    if int(answer) == 0:
+        break
+
+    # проверяем правильность ответа
+    if int(answer) == a * b:
+        print('Правильно!')
+    else:
+        print(f'Неправильно! Правильный ответ: {a * b}')

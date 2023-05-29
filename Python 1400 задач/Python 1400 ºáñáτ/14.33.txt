@@ -1,0 +1,13 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+
+gcd_ab = gcd(a, b)
+gcd_abc = gcd(gcd_ab, c)
+
+print("Наибольший общий делитель:", gcd_abc)

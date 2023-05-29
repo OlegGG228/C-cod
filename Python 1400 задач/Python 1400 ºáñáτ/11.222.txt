@@ -1,0 +1,14 @@
+# Решение задачи с помощью библиотеки math
+import math
+
+# Вычисляем значение 100!
+n = 100
+factorial = math.factorial(n)
+
+# Преобразуем полученное значение в строку
+factorial_str = str(factorial)
+
+# Выводим последовательность десятичных цифр числа
+for digit in factorial_str:
+    print(digit)
+

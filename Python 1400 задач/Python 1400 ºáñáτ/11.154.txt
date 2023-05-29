@@ -1,0 +1,30 @@
+# а) элементы, расположенные между вторым и десятым элементами
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+start = 2
+end = 10
+arr[start:end] = arr[start:end][::-1]
+print(arr)
+
+# б) элементы, расположенные между к-м и s-м элементами
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+k = int(input("Введите k: "))
+s = int(input("Введите s: "))
+arr[k+1:s] = arr[k+1:s][::-1]
+print(arr)
+
+# в) элементы, расположенные между максимальным и минимальным элементами, включая их.
+arr = [1, 8, 3, 4, 5, 6, 2, 8, 9, 10, 11, 12, 7, 14, 15]
+
+max_index = arr.index(max(arr))
+min_index = arr.index(min(arr))
+
+if max_index < min_index:
+    start = max_index
+    end = min_index
+else:
+    start = min_index
+    end = max_index
+
+arr[start:end+1] = arr[start:end+1][::-1]
+print(arr)
+

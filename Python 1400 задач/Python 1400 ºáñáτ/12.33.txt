@@ -1,0 +1,4 @@
+word = "муха"
+slon = word[2] + word[1] + word[0] + word[3]
+print(slon)
+

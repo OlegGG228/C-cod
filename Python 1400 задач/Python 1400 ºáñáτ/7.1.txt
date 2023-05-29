@@ -1,0 +1,14 @@
+a1 = int(input("Введите число a1: "))
+a2 = int(input("Введите число a2: "))
+a3 = int(input("Введите число a3: "))
+a4 = int(input("Введите число a4: "))
+a5 = int(input("Введите число a5: "))
+a6 = int(input("Введите число a6: "))
+a7 = int(input("Введите число a7: "))
+a8 = int(input("Введите число a8: "))
+a9 = int(input("Введите число a9: "))
+a10 = int(input("Введите число a10: "))
+
+summa = a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10
+
+print("Сумма чисел:", summa)

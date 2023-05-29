@@ -1,0 +1,13 @@
+s = float(input("Введите значение s: "))
+n = int(input("Введите количество чисел: "))
+
+prod = 1
+for i in range(n):
+    d = float(input(f"Введите число d_{i+1}: "))
+    prod *= d
+
+if prod > s:
+    print("Произведение чисел больше s")
+else:
+    print("Произведение чисел меньше или равно s")
+

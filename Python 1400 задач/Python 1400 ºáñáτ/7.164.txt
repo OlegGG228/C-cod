@@ -1,0 +1,21 @@
+n = int(input("Введите количество пар: "))
+
+max_average = float('-inf')
+max_index = -1
+min_geometric = float('inf')
+min_index = -1
+
+for i in range(n):
+    a, b = map(float, input(f"Введите {i+1}-ю пару чисел через пробел: ").split())
+    average = (a+b)/2
+    geometric = (a*b)**0.5
+    if average > max_average:
+        max_average = average
+        max_index = i
+    if geometric < min_geometric:
+        min_geometric = geometric
+        min_index = i
+
+print(f"Максимальное среднее арифметическое в паре {max_index+1}")
+print(f"Минимальное среднее геометрическое в паре {min_index+1}")
+

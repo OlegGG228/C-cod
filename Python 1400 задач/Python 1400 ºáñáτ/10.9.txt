@@ -1,0 +1,32 @@
+import random
+
+# функция, которая подбрасывает монету n раз и возвращает список результатов (0 или 1)
+def flip_coin(n):
+    results = []
+    for i in range(n):
+        result = random.randint(0, 1)
+        results.append(result)
+    return results
+
+# функция, которая подсчитывает относительную частоту появления каждого из чисел 0 и 1
+def count_frequency(results):
+    zero_count = results.count(0)
+    one_count = results.count(1)
+    zero_frequency = zero_count / len(results)
+    one_frequency = one_count / len(results)
+    return (zero_frequency, one_frequency)
+
+# подбрасываем монету 100 раз и выводим результаты с их относительными частотами
+results = flip_coin(100)
+zero_frequency, one_frequency = count_frequency(results)
+print("Для 100 подбрасываний монеты:")
+print("Частота появления 0: ", zero_frequency)
+print("Частота появления 1: ", one_frequency)
+
+# подбрасываем монету 1000 раз и выводим результаты с их относительными частотами
+results = flip_coin(1000)
+zero_frequency, one_frequency = count_frequency(results)
+print("Для 1000 подбрасываний монеты:")
+print("Частота появления 0: ", zero_frequency)
+print("Частота появления 1: ", one_frequency)
+

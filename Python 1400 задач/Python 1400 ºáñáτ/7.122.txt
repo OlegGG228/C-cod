@@ -1,0 +1,16 @@
+m = int(input("Введите количество чисел: "))
+numbers = []
+for i in range(1, m + 1):
+    x = int(input(f"Введите {i}-е число: "))
+    numbers.append(x)
+
+last_index = -1
+for i in range(0, m):
+    if numbers[i] % 100 == 12:
+        last_index = i
+
+if last_index == -1:
+    print("Таких чисел не найдено")
+else:
+    print(f"Номер последнего числа, оканчивающегося на 12: {last_index + 1}")
+

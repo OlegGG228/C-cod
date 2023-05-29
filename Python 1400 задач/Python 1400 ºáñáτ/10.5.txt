@@ -1,0 +1,9 @@
+import random
+
+# Создаем список из 30 целых чисел в диапазоне от 0 до 5 включительно
+numbers = [random.randint(0, 5) for _ in range(30)]
+
+# Выбираем только нечетные числа из списка и выводим их на экран
+odd_numbers = [num for num in numbers if num % 2 != 0]
+print(odd_numbers)
+

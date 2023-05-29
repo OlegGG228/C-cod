@@ -1,0 +1,34 @@
+# a) 
+
+```
+string = "АРГЕНТИНА МАНИТ НЕГРА"
+string = string.replace(" ", "")
+string = string[:-1]
+if string == string[::-1]:
+    print("Строка является палиндромом")
+else:
+    print("Строка не является палиндромом")
+```
+
+# б) 
+
+```
+string = "ПОТ КАК ПОТОП"
+string = string.replace(" ", "")
+string = string[:-1]
+if string == string[::-1]:
+    print("Строка является палиндромом")
+else:
+    print("Строка не является палиндромом")
+```
+
+# в) 
+
+```
+string = "А РОЗА УПАЛА НА ЛАПУ АЗОРА"
+string = string.replace(" ", "")
+string = string[:-1]
+if string == string[::-1]:
+    print("Строка является палиндромом")
+else:
+    print("Строка не является палиндромом")

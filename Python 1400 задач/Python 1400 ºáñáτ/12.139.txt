@@ -1,0 +1,6 @@
+word = "роцессорп"
+correct_word = "процессор"
+for letter in correct_word:
+    if letter in word:
+        word = word.replace(letter, '', 1)
+print(word)

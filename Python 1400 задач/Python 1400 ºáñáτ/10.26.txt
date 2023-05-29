@@ -1,0 +1,102 @@
+import random
+
+# функция для определения возможности хода ладьи
+def rook_move(start, end, attack):
+    if start[0] != end[0] and start[1] != end[1]:
+        return False
+    if attack[0] == start[0] or attack[1] == start[1]:
+        return False
+    if attack[0] == end[0] or attack[0] == end[1]:
+        return False
+    return True
+
+# функция для определения возможности хода ферзя
+def queen_move(start, end, attack):
+    if start[0] != end[0] and start[1] != end[1]:
+        diff = abs(end[0]-start[0])
+        if diff != abs(end[1] - start[1]):
+            return False
+    if attack[0] == start[0] or attack[1] == start[1]:
+        return False
+    if attack[0] == end[0] or attack[0] == end[1]:
+        return False
+    return True
+
+# функция для определения возможности хода коня
+def knight_move(start, end, attack):
+    moves = [(1,2), (2,1), (2,-1), (1,-2), (-1,-2), (-2,-1), (-2,1), (-1,2)]
+    if not (end[0] - start[0], end[1] - start[1]) in moves:
+        return False
+    if attack[0] == start[0] or attack[1] == start[1]:
+        return False
+    if attack[0] == end[0] or attack[0] == end[1]:
+        return False
+    return True
+
+# функция для определения возможности хода слона
+def bishop_move(start, end, attack):
+    if abs(end[0]-start[0]) != abs(end[1] - start[1]):
+        return False
+    if attack[0] == start[0] or attack[1] == start[1]:
+        return False
+    if attack[0] == en
+d[0] or attack[0] == end[1]:
+        return False
+    return True
+
+# функция для определения возможности хода короля
+def king_move(start, end, attack):
+    if abs(end[0]-start[0]) > 1 or abs(end[1] - start[1]) > 1:
+        return False
+    if attack[0] == start[0] or attack[1] == start[1]:
+        return False
+    if attack[0] == end[0] or attack[0] == end[1]:
+        return False
+    return True
+
+# функция для определения возможности хода на шахматной доске
+def can_move(piece1, piece2, target):
+    start = (piece1[0], piece1[1])
+    end = (target[0], target[1])
+    attack = (piece2[0], piece2[1])
+    if piece1[0] < 1 or piece1[0] > 8 or piece1[1] < 1 or piece1[1] > 8:
+        return False
+    if piece2[0] < 1 or piece2[0] > 8 or piece2[1] < 1 or piece2[1] > 8:
+        return False
+    if target[0] < 1 or target[0] > 8 or target[1] < 1 or target[1] > 8:
+        return False
+    if piece1 == piece2:
+        return False
+    if piece1[0] == attack[0] and piece1[1] == attack[1]:
+        return False
+    if piece2[0] == target[0] and piece2[1] == target[1]:
+        return False
+
+    if piece1[0] == piece2[0] and piece1[1] == piece2[1]:
+        return False
+    elif piece1[0] == piece2[0]: # ладья атакует
+        return rook_move(start, end, attack)
+    elif piece1[1] == piece2[1]: # ладья атакует
+        return rook_move(start, end, attack)
+    elif abs(piece1[1] - piece2[1]) == abs(piece1[0] - piece2[0]): # слон атакует
+        return bishop_move(start, end, attack)
+    elif piece1[0] == piece2[0] + 2 or piece1[0] == piece2[0]-2\
+            or piece1[1] == piece2[1] + 2 or piece1[1] == piece2[1] - 2: # конь атакует
+        return knight_move(start, end, attack)
+    elif (piece1[0] == piece2[0] or piece1[1] == piece2[1] or abs(piece1[1] - piece2[1]) == abs(piece1[0] - piece2[0])): # ферзь атакует
+        return queen_move(start, end, attack)
+    elif abs(piece1[0]-piece2[0]) == 1 or abs(piece1[1] - piece2[1]) == 1: # король атакует
+        return king_move(start, end, attack)
+    else:
+        return False
+
+# создание начальных позиций фигур
+white_piece = (random.randint(1,8), random.randint(1,8))
+black_piece = (random.randint(1,8), random.randint(1,8))
+target = (random.randint(1,8), random.randint(1,8))
+
+# определение возможности перемещения
+if can_move(white_piece, black_piece, target):
+    print("Белая фигура может передвинуться на поле", target, "без риска попасть под удар")
+else:
+    print("Белая фигура не может передвинуться на поле", target, "без риска попасть под удар")

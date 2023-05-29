@@ -1,0 +1,57 @@
+# а) Сложение 20-значных чисел:
+
+```python
+number1 = list(map(int, input("Введите первое 20-значное число: ")))
+number2 = list(map(int, input("Введите второе 20-значное число: ")))
+
+if len(number1) < 20:
+    number1 = [0] * (20 - len(number1)) + number1 
+if len(number2) < 20:
+    number2 = [0] * (20 - len(number2)) + number2 
+
+result = []
+carry = 0
+
+for i in range(19, -1, -1):
+    s = number1[i] + number2[i] + carry
+    carry = s // 10
+    result.append(s % 10)
+    
+if carry:
+    result.append(carry)
+    
+result.reverse()
+
+print("Результат сложения: ", end="")
+for digit in result:
+    print(digit, end="")
+print()
+# б) Вычитание 30-значных чисел:
+
+```python
+number1 = list(map(int, input("Введите первое 30-значное число: ")))
+number2 = list(map(int, input("Введите второе 30-значное число: ")))
+
+if len(number1) < 30:
+    number1 = [0] * (30 - len(number1)) + number1 
+if len(number2) < 30:
+    number2 = [0] * (30 - len(number2)) + number2 
+
+result = []
+borrow = 0
+
+for i in range(29, -1, -1):
+    d = number1[i] - number2[i] - borrow
+    if d < 0:
+        borrow = 1
+        d += 10
+    else:
+        borrow = 0
+    result.append(d)
+    
+result.reverse()
+
+print("Результат вычитания: ", end="")
+for digit in result:
+    print(digit, end="")
+print()

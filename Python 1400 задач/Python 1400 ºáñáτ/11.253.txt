@@ -1,0 +1,26 @@
+array = [1, -5, 4, 0, -3, 9, 6, -2, 8, -1]
+positive_array = []
+negative_array = []
+
+# записываем положительные значения в positive_array, остальные - в negative_array
+for i in array:
+    if i > 0:
+        positive_array.append(i)
+    else:
+        negative_array.append(i)
+
+# заполняем новые массивы:
+# для варианта (а) просто оставляем значения на тех же местах, что и в исходном массиве
+array_pos_a = [i if i <= 0 else positive_array.pop(0) for i in array]
+array_neg_a = [i if i >= 0 else negative_array.pop(0) for i in array]
+
+# для варианта (б) сначала в новых массивах идут значения из positive_array, затем - из negative_array
+array_pos_b = [i if i <= 0 else positive_array.pop(0) for i in range(len(array))]
+array_neg_b = [i if i >= 0 else negative_array.pop(0) for i in range(len(array))]
+
+print("Исходный массив:", array)
+print("Массив из положительных элементов на тех же местах (вариант а):", array_pos_a)
+print("Массив из отрицательных элементов на тех же местах (вариант а):", array_neg_a)
+print("Массив из положительных элементов в начале исходного массива (вариант б):", array_pos_b)
+print("Массив из отрицательных элементов в начале исходного массива (вариант б):", array_neg_b)
+

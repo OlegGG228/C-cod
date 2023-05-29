@@ -1,0 +1,4 @@
+path = input("Введите полное имя файла: ")
+parts = path.split("\\")
+for part in parts:
+    print(part)

@@ -1,0 +1,9 @@
+t_values = [x + 3 for x in range(4, 29)]
+# или можно использовать генератор списка: t_values = [(x+3) for x in range(4, 29)]
+
+y_values = [3*(t**2) + 4.87*t - 3 for t in t_values]
+
+# выводим полученные значения y
+for i in range(len(y_values)):
+    print("Значение y при х={}, равно {}".format(i+4, y_values[i]))
+

@@ -1,0 +1,9 @@
+number = input("Введите натуральное число: ")
+digits = [int(d) for d in number]
+max_digit = max(digits)
+min_digit = min(digits)
+difference = max_digit - min_digit
+if difference % 2 == 0:
+    print("Разность максимальной и минимальной цифр является четным числом")
+else:
+    print("Разность максимальной и минимальной цифр не является четным числом")

@@ -1,0 +1,9 @@
+sentence = input("Введите предложение: ")
+
+if 'чу' in sentence or 'щу' in sentence:
+    for i in range(len(sentence)-1):
+        if sentence[i:i+2] == 'чу' or sentence[i:i+2] == 'щу':
+            print("Первое вхождение буквосочетания 'чу' или 'щу' на", i+1)
+            break
+else:
+    print("В предложении нет буквосочетаний 'чу' или 'щу'")

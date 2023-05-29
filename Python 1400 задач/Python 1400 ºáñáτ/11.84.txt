@@ -1,0 +1,32 @@
+# a) 
+
+```
+array = [1.2, 3.5, -4.7, 0.8, 2.0, 6.1, -5.3]
+count_positive = 0
+
+for num in array:
+    if num > 0:
+        count_positive += 1
+
+if count_positive <= 5:
+    print("Количество положительных элементов не превышает 5")
+else:
+    print("Количество положительных элементов превышает 5")
+```
+
+# б) 
+
+```
+array = [10, 20, 30, 40, 50, 55, 60, 70, 80, 90]
+count_divisible = 0
+
+for num in array:
+    if num <= 50.55 and num % 4 == 0:
+        count_divisible += 1
+
+if count_divisible == len(array):
+    print("Количество элементов, которые не больше 50.55, кратно четырем")
+else:
+    print("Есть элементы, которые не больше 50.55, но не кратны четырем")
+```
+

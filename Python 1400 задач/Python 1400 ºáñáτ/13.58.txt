@@ -1,0 +1,9 @@
+students = {"1a": 25, "1b": 27, "2a": 30, "2b": 28, "3a": 29, "3b": 26}
+
+def get_students(class_name):
+    if class_name in students:
+        print(f"The class {class_name} has {students[class_name]} students")
+    else:
+        print(f"Sorry, we don\'t have information about {class_name}")
+
+get_students("2a") # Output: The class 2a has 30 students

@@ -1,0 +1,7 @@
+summa = 0
+
+for i in range(2, 11):
+    summa += 2 ** i
+
+print(summa)
+

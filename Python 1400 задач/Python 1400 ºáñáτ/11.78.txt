@@ -1,0 +1,14 @@
+array = [10, 15, 23, 35, 48, 50, 55, 67, 72, 93]
+
+even_count = 0
+ending_five_count = 0
+
+for num in array:
+    if num % 2 == 0:
+        even_count += 1
+    if num % 10 == 5:
+        ending_five_count += 1
+
+print("Количество четных элементов в массиве:", even_count)
+print("Количество элементов, оканчивающихся на цифру 5:", ending_five_count)
+

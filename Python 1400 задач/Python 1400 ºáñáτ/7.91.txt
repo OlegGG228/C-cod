@@ -1,0 +1,13 @@
+# данные о количестве осадков за каждый день марта
+precipitation = [0, 0.2, 0.8, 0, 1.2, 0, 0, 0, 0, 0, 0.5, 1.6, 0.7, 0, 0, 0, 0, 0, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0.3, 0.7, 0.4, 0]
+
+no_precipitation_days = 0
+
+for p in precipitation:
+    if p == 0:
+        no_precipitation_days += 1
+
+if no_precipitation_days >= 10:
+    print("Было 10 и более дней без осадков в марте")
+else:
+    print("Не было 10 и более дней без осадков в марте")

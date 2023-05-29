@@ -1,0 +1,26 @@
+a = float(input('Введите первое число: '))
+b = float(input('Введите второе число: '))
+
+if a >= 0 and b >= 0:
+    polusumma = (abs(a) + abs(b))/2
+    kor_proizv = (abs(a)*abs(b))**(1/2)
+    print('Полусумма абсолютных величин заданных чисел: ', polusumma)
+    print('Квадратный корень из произведения абсолютных величин заданных чисел: ', kor_proizv)
+elif a < 0 and b >= 0:
+    polusumma = (abs(a) + b)/2
+    kor_proizv = (abs(a)*b)**(1/2)
+    print(f'Полусумма абсолютных величин заданных чисел: {polusumma: .2f}')
+    print(f'Квадратный корень из произведения абсолютных'
+          f' величин заданных чисел: {kor_proizv: .2f}')
+elif a >= 0 and b < 0:
+    polusumma = (a + abs(b))/2
+    kor_proizv = (a*abs(b))**(1/2)
+    print(f'Полусумма абсолютных величин заданных чисел: {polusumma: .2f}')
+    print(f'Квадратный корень из произведения абсолютных'
+          f' величин заданных чисел: {kor_proizv: .2f}')
+else:
+    polusumma = (abs(a) + abs(b))/2
+    kor_proizv = (abs(a)*abs(b))**(1/2)
+    print(f'Полусумма абсолютных величин заданных чисел: {polusumma: .2f}')
+    print(f'Квадратный корень из произведения абсолютных'
+          f' величин заданных чисел: {kor_proizv: .2f}')

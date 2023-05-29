@@ -1,0 +1,4 @@
+text = input("Введите выражение вида 'd1 + d2 + ... + dn', где di - цифры: ")
+digits = [int(d) for d in text.split("+")]
+sum_digits = sum(digits)
+print("Сумма чисел в выражении:", sum_digits)

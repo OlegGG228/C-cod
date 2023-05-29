@@ -1,0 +1,10 @@
+arr = [2, 5, 7, 1, 9, 4, 1, 8]
+min_val = min(arr)
+max_val = max(arr)
+min_indexes = [i for i in range(len(arr)) if arr[i] == min_val]
+max_indexes = [i for i in range(len(arr)) if arr[i] == max_val]
+print("Минимальное значение:", min_val)
+print("Индексы элементов с минимальным значением:", min_indexes)
+print("Максимальное значение:", max_val)
+print("Индексы элементов с максимальным значением:", max_indexes)
+

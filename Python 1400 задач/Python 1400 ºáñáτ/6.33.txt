@@ -1,0 +1,29 @@
+# заданные параметры
+area = 100  # площадь участка в га
+yield_ha = 20  # урожайность ячменя в ц/га
+increase_area_per_year = 0.05  # увеличение площади участка на 5% в год
+increase_yield_per_year = 0.02  # увеличение урожайности на 2% в год
+
+# инициализация переменных
+year = 0  # текущий год
+total_yield = 0  # общий урожай
+current_area = area  # текущая площадь участка
+current_yield_ha = yield_ha  # текущая урожайность ячменя 
+
+# решение задачи
+while True:
+    year += 1
+    current_yield = current_area * current_yield_ha  # текущий урожай в целом
+    total_yield += current_yield  # добавляем текущий урожай к общему
+    if current_yield_ha > 22:
+        print(f"а) урожайность превысит 22 ц/га в {year} году")
+        break
+    if current_area > 120:
+        print(f"б) площадь участка станет больше 120 га в {year} году")
+        break
+    if total_yield > 800:
+        print(f"в) общий урожай превысит 800 ц в {year} году")
+        break
+    current_area += current_area * increase_area_per_year  # увеличиваем площадь
+    current_yield_ha += current_yield_ha * increase_yield_per_year  # увеличиваем урожайность
+

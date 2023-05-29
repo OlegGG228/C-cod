@@ -1,0 +1,30 @@
+# Создаем список из 20 чисел
+numbers = [32, 22, 10, 12, 20, 11, 00, 21, 01, 33, 13, 23, 03, 30, 31, 02, 11, 22, 00, 13]
+
+# Инициализируем переменные для хранения количества пятерок, четверок, троек и двоек
+fives = 0
+fours = 0
+threes = 0
+twos = 0
+
+# Проходим по всем числам в списке
+for number in numbers:
+    # Вычисляем количество забитых и пропущенных мячей
+    scored = int(str(number)[0])
+    missed = int(str(number)[1]) if len(str(number)) == 2 else 0
+    
+    # Вычисляем оценку за игру и увеличиваем соответствующую переменную
+    if scored == 3 and missed == 0:
+        fives += 1
+    elif (scored == 2 and missed == 0) or (scored == 3 and missed == 1):
+        fours += 1
+    elif (scored == 1 and missed == 0) or (scored == 2 and missed == 1) or (scored == 3 and missed == 2):
+        threes += 1
+    elif (scored == 0 and missed == 0) or (scored == 1 and missed == 1) or (scored == 2 and missed == 2) or (scored == 3 and missed == 3):
+        twos += 1
+
+# Выводим результаты
+print("Пятерки:", fives)
+print("Четверки:", fours)
+print("Тройки:", threes)
+print("Двойки:", twos)

@@ -1,0 +1,12 @@
+scores_athlete1 = [54, 76, 90, 82, 68, 73, 91, 85, 79, 80] 
+scores_athlete2 = [76, 68, 85, 81, 72, 74, 89, 77, 82, 83] 
+
+athlete1_total_score = sum(scores_athlete1) 
+athlete2_total_score = sum(scores_athlete2) 
+
+if athlete1_total_score > athlete2_total_score: 
+    print("Первый спортсмен показал лучший результат") 
+elif athlete1_total_score < athlete2_total_score: 
+    print("Второй спортсмен показал лучший результат") 
+else: 
+    print("У спортсменов одинаковый результат")

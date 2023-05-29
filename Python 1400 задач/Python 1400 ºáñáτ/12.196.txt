@@ -1,0 +1,41 @@
+# a) Решение:
+
+text = input("Введите текст: ")
+stack = []
+for i in range(len(text)):
+    if text[i] == "(":
+        stack.append("(")
+    elif text[i] == ")":
+        if len(stack) == 0:
+            print("нет")
+            break
+        else:
+            stack.pop()
+if len(stack) > 0:
+    print("нет")
+else:
+    print("да")
+
+# б) Решение:
+
+text = input("Введите текст: ")
+stack = []
+extra_left = 0
+extra_right = 0
+for i in range(len(text)):
+    if text[i] == "(":
+        stack.append("(")
+    elif text[i] == ")":
+        if len(stack) == 0:
+            extra_right += 1
+        else:
+            stack.pop()
+if len(stack) > 0:
+    extra_left = len(stack)
+if extra_left > 0:
+    print("есть", extra_left, "избыточных левых скобок")
+elif extra_right > 0:
+    print("есть избыточные правые скобки начиная с позиции", len(text) - extra_right)
+else:
+    print("скобки расставлены правильно")
+

@@ -1,0 +1,13 @@
+num = int(input())
+
+# получаем первую и третью цифры числа
+first_digit = num // 100
+third_digit = num % 10
+
+# образуем двузначное число без второй цифры
+new_num = first_digit * 10 + third_digit
+
+# добавляем вторую цифру и получаем число п
+p = int(str(num)[1] + str(new_num))
+
+print(p)

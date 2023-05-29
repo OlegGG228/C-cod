@@ -1,0 +1,14 @@
+results = []
+for i in range(22):
+    result = float(input("Введите результат {}-го спортсмена: ".format(i+1)))
+    results.append(result)
+    
+# первое место
+top_result = min(results)
+print("Первое место:", top_result)
+
+# второе место
+results.remove(top_result)
+second_result = min(results)
+print("Второе место:", second_result)
+

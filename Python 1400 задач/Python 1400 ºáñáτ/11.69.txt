@@ -1,0 +1,26 @@
+# a) 
+```python
+arr = [1, 2, 3, 4, 5, 4]
+last = arr[-1]
+
+count = 0
+for i in range(len(arr)):
+    if arr[i] != last:
+        count += 1
+        
+print("Количество элементов, отличных от последнего элемента:", count)
+```
+
+# б)
+```python
+arr = [2, 4, 6, 8, 10, 12]
+a = 3
+
+count = 0
+for i in range(len(arr)):
+    if arr[i] % a == 0:
+        count += 1
+        
+print("Количество элементов, кратных", a, ":", count)
+```
+

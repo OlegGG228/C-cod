@@ -1,0 +1,12 @@
+num = int(input("Введите число k: "))
+if num <= 101:
+    print("Ошибка: число должно быть больше 101")
+else:
+    num -= 101
+    if num % 3 == 0:
+        print((num // 3) % 10)
+    elif num % 3 == 1:
+        print((num // 3 + 1) // 10)
+    else:
+        print((num // 3 + 1) % 10)
+

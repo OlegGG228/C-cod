@@ -1,0 +1,16 @@
+def is_palindrome(word):
+    """Функция для распознавания слов-палиндромов"""
+    reversed_word = word[::-1]
+    if word == reversed_word:
+        return True
+    else:
+        return False
+
+word1 = "noon"
+word2 = "hello"
+word3 = "rotor"
+
+if is_palindrome(word1) or is_palindrome(word2) or is_palindrome(word3):
+    print("Хотя бы одно из слов является палиндромом.")
+else:
+    print("Ни одно из слов не является палиндромом.")

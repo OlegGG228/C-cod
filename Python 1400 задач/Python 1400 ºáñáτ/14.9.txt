@@ -1,0 +1,30 @@
+def trapezium_perimeter(base1, base2, height):
+    side = ((base2 - base1) / 2) ** 2 + height ** 2
+    perimeter = base1 + base2 + 2 * side ** 0.5
+    return perimeter
+
+def trapezium_area(base1, base2, height):
+    area = (base1 + base2) / 2 * height
+    return area
+
+base1_1 = 3
+base2_1 = 7
+height1 = 4
+perimeter1 = trapezium_perimeter(base1_1, base2_1, height1)
+area1 = trapezium_area(base1_1, base2_1, height1)
+
+base1_2 = 4
+base2_2 = 8
+height2 = 5
+perimeter2 = trapezium_perimeter(base1_2, base2_2, height2)
+area2 = trapezium_area(base1_2, base2_2, height2)
+
+total_perimeter = perimeter1 + perimeter2
+total_area = area1 + area2
+
+print("Perimeter 1:", perimeter1)
+print("Area 1:", area1)
+print("Perimeter 2:", perimeter2)
+print("Area 2:", area2)
+print("Total perimeter:", total_perimeter)
+print("Total area:", total_area)

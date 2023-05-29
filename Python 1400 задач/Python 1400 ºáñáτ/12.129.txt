@@ -1,0 +1,6 @@
+word = "слово_"
+index = 3
+letter = "т"
+word_corrected = word[:index] + letter + word[index:]
+print(word_corrected)
+

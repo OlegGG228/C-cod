@@ -1,0 +1,13 @@
+# вводим данные в таблицу
+table = []
+for i in range(8):
+    row = input(f"Введите баллы для спортсмена {i+1} (через пробел): ").split()
+    table.append([int(x) for x in row])
+
+# находим максимальную оценку
+max_score = max([max(row) for row in table])
+print(f"Максимальная оценка: {max_score}")
+
+# находим победителя
+winner_score = max([sum(row) for row in table])
+print(f"Победитель набрал {winner_score} баллов")

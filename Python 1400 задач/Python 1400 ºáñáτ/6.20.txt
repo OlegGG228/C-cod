@@ -1,0 +1,40 @@
+num = int(input("Введите натуральное число: "))
+# а) сумма цифр
+sum_digits = 0
+for digit in str(num):
+    sum_digits += int(digit)
+print("Сумма цифр:", sum_digits)
+
+# б) количество цифр
+count_digits = len(str(num))
+print("Количество цифр:", count_digits)
+
+# в) произведение цифр
+product_digits = 1
+for digit in str(num):
+    product_digits *= int(digit)
+print("Произведение цифр:", product_digits)
+
+# г) среднее арифметическое цифр
+average_digits = sum_digits / count_digits
+print("Среднее арифметическое цифр:", average_digits)
+
+# д) сумма квадратов цифр
+sum_squares = 0
+for digit in str(num):
+    sum_squares += int(digit) ** 2
+print("Сумма квадратов цифр:", sum_squares)
+
+# е) сумма кубов цифр
+sum_cubes = 0
+for digit in str(num):
+    sum_cubes += int(digit) ** 3
+print("Сумма кубов цифр:", sum_cubes)
+
+# ж) первая цифра
+first_digit = int(str(num)[0])
+print("Первая цифра:", first_digit)
+
+# з) сумма первой и последней цифры
+last_digit = int(str(num)[-1])
+print("Сумма первой и последней цифры:", first_digit + last_digit)

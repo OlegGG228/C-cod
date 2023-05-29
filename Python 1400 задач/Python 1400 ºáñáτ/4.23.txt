@@ -1,0 +1,5 @@
+
+def is_divisor(a, p):
+    if p % a == 0:
+        return True
+    return False

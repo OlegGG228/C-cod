@@ -1,0 +1,12 @@
+for A in [True, False]:
+    for B in [True, False]:
+        for C in [True, False]:
+            Q = False # Q не задано, поэтому устанавливаем False
+            result_a = not (A and B) and (not A or not C)
+            result_b = not (A and not B) or (A or not Q)
+            result_c = A and not B or not (A or not C)
+            print(f"A={A}, B={B}, C={C}, Q={Q}")
+            print(f"a) {result_a}")
+            print(f"б) {result_b}")
+            print(f"в) {result_c}")
+            print()

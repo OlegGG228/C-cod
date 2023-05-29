@@ -1,0 +1,14 @@
+arr = [2, 7, 9, 14, 15, 18, 21, 23, 26]
+
+odd_neighbors = []
+
+for i in range(len(arr)-1):
+    if arr[i] % 2 != 0 and arr[i+1] % 2 != 0:
+        odd_neighbors.append((i, i+1))
+        break
+
+if len(odd_neighbors) == 0:
+    print("В массиве нет соседних нечетных чисел")
+else:
+    print("Первая пара соседних нечетных чисел имеет номера элементов", odd_neighbors[0])
+

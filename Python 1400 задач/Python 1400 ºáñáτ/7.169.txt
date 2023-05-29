@@ -1,0 +1,10 @@
+times = [50, 46, 52, 55, 60, 48, 70, 45]
+
+max_time = max(times)
+min_time = min(times)
+
+if times.index(max_time) < times.index(min_time):
+    print("True")
+else:
+    print("False")
+

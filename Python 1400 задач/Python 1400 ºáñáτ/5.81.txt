@@ -1,0 +1,15 @@
+a) 
+
+```python
+for i in range(100, 1000):
+    num_sqr = str(i**2)[-3:]
+    if num_sqr == str(i):
+        print(i)
+```
+
+б)
+
+```python
+for i in range(105, 1000, 7):
+    if sum(int(d) for d in str(i)) % 7 == 0:
+        print(i)

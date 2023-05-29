@@ -1,0 +1,53 @@
+# Решение задачи без использования дополнительного массива
+
+# Задаем размеры параллелепипедов
+a = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+b = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+c = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+# Определяем максимальный объем фигуры
+max_volume = a[0] * b[0] * c[0]
+max_volume_num = 1
+for i in range(1, len(a)):
+    volume = a[i] * b[i] * c[i]
+    if volume > max_volume:
+        max_volume = volume
+        max_volume_num = i+1
+
+# Определяем минимальный объем фигуры
+min_volume = a[0] * b[0] * c[0]
+min_volume_num = 1
+for i in range(1, len(a)):
+    volume = a[i] * b[i] * c[i]
+    if volume < min_volume:
+        min_volume = volume
+        min_volume_num = i+1
+
+# Выводим результаты
+print("Максимальный объем фигуры:", max_volume)
+print("Минимальный объем фигуры:", min_volume)
+print("Номер фигуры, имеющей максимальный объем:", max_volume_num)
+print("Номер фигуры, имеющей минимальный объем:", min_volume_num)
+
+
+# Решение задачи с использованием дополнительного массива
+
+# Создаем массив объемов фигур
+volumes = []
+for i in range(len(a)):
+    volumes.append(a[i] * b[i] * c[i])
+
+# Определяем максимальный объем фигуры
+max_volume = max(volumes)
+max_volume_num = volumes.index(max_volume) + 1
+
+# Определяем минимальный объем фигуры
+min_volume = min(volumes)
+min_volume_num = volumes.index(min_volume) + 1
+
+# Выводим результаты
+print("Максимальный объем фигуры:", max_volume)
+print("Минимальный объем фигуры:", min_volume)
+print("Номер фигуры, имеющей максимальный объем:", max_volume_num)
+print("Номер фигуры, имеющей минимальный объем:", min_volume_num)
+

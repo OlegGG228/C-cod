@@ -1,0 +1,27 @@
+# a) 
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+p = 5
+
+if p in arr:
+  for i in range(arr.index(p)):
+    print(arr[i])
+else:
+  for i in range(len(arr)):
+    print(arr[i])
+
+# б) 
+
+arr = [11, 22, 33, 44, 57, 68, 79, 80, 91]
+flag = False
+
+for i in range(len(arr)):
+  if str(arr[i])[-1] == '7':
+    flag = True
+    for j in range(i+1, len(arr)):
+      print(arr[j])
+    break
+
+if not flag:
+  print("Нет элементов, оканчивающихся на цифру 7")
+

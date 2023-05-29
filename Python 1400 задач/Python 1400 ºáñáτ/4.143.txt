@@ -1,0 +1,34 @@
+# функция для определения количества дней в месяце
+def days_in_month(month):
+    if month in [4, 6, 9, 11]:
+        return 30
+    elif month == 2:
+        return 28
+    else:
+        return 31
+
+# ввод порядкового номера месяца и числа
+month = int(input("Введите порядковый номер месяца: "))
+day = int(input("Введите число: "))
+
+# определяем дату предыдущего дня
+prev_day = day - 1
+prev_month = month
+if prev_day < 1:
+    prev_month -= 1
+    if prev_month == 0:
+        prev_month = 12
+    prev_day = days_in_month(prev_month)
+
+# определяем дату следующего дня
+next_day = day + 1
+next_month = month
+if next_day > days_in_month(month):
+    next_month += 1
+    if next_month == 13:
+        next_month = 1
+    next_day = 1
+
+# выводим результаты
+print("Дата предыдущего дня:", prev_day, prev_month)
+print("Дата следующего дня:", next_day, next_month)

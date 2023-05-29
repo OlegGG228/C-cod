@@ -1,0 +1,10 @@
+heights = []
+
+for i in range(3):
+    height = float(input(f"Введите рост {i+1}-го человека: "))
+    heights.append(height)
+
+if len(set(heights)) == 1:
+    print("Рост всех трех человек одинаковый.")
+else:
+    print("Рост трех человек различается.")

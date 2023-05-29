@@ -1,0 +1,13 @@
+```python
+# Перебираем числа от 200 до 500
+for i in range(200, 501):
+    # Ищем делители числа i
+    divisors = []
+    for j in range(1, i+1):
+        if i % j == 0:
+            divisors.append(j)
+    # Если у числа ровно 6 делителей, выводим его
+    if len(divisors) == 6:
+        print(i)
+```
+

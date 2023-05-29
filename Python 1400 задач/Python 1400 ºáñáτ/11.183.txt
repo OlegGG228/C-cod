@@ -1,0 +1,13 @@
+numbers = [] # создаем пустой массив
+
+# заполняем массив данными о количестве жителей в городах
+for i in range(30):
+    num = int(input(f"Введите количество жителей в {i+1} городе: "))
+    numbers.append(num)
+
+# проверяем, нужно ли менять порядок элементов в массиве
+if not all(numbers[i] <= numbers[i+1] for i in range(len(numbers)-1)):
+    numbers.sort()
+
+print("Отсортированный массив: ", numbers)
+

@@ -1,0 +1,31 @@
+
+arr = [23, 4, 19, 10, 45, 8, 30, 15]
+
+max_val = max(arr)
+max_idx = arr.index(max_val)
+
+arr_copy = arr.copy()
+arr_copy.remove(max_val)
+max_val_without = max(arr_copy)
+max_idx_without = arr.index(max_val_without)
+
+
+min_val = min(arr)
+min_idx = arr.index(min_val)
+
+arr_copy = arr.copy()
+arr_copy.remove(min_val)
+min_val_without = min(arr_copy)
+min_idx_without = arr.index(min_val_without)
+
+
+print(f"Max element: {max_val}")
+print(f"Max element without: {max_val_without}")
+print(f"Max index: {max_idx}")
+print(f"Max index without: {max_idx_without}")
+print(f"Min element: {min_val}")
+print(f"Min element without: {min_val_without}")
+print(f"Min index: {min_idx}")
+print(f"Min index without: {min_idx_without}")
+
+

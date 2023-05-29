@@ -1,0 +1,22 @@
+
+number = int(input("Введите трехзначное число: "))
+
+# находим число единиц
+units = number % 10
+
+# находим число десятков
+tens = (number // 10) % 10
+
+# находим число сотен
+hundreds = number // 100
+
+# находим сумму цифр
+sum_digits = units + tens + hundreds
+
+# находим произведение цифр
+product_digits = units * tens * hundreds
+
+print("Число единиц:", units)
+print("Число десятков:", tens)
+print("Сумма цифр:", sum_digits)
+print("Произведение цифр:", product_digits)

@@ -1,0 +1,14 @@
+# a)
+import math
+print("Please, input a")
+a=int(input())
+n=2*a+math.sin(abs(3*a))
+y= math.sqrt((n/3.56))
+print(y)
+# b)
+import math
+print("Please, input x")
+x=int(input())
+m=(3.2+math.sqrt(1+x))/abs(5*x)
+y=math.sin(m)
+print(y)

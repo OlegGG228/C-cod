@@ -1,0 +1,11 @@
+def is_square(n):
+    # Функция для распознавания полных квадратов
+    return n**0.5 == int(n**0.5)
+
+p = 5
+a1 = 1
+a2 = 4
+a3 = 9
+a4 = 16
+a5 = 25
+print(sum([is_square(i) for i in [a1, a2, a3, a4, a5]]))

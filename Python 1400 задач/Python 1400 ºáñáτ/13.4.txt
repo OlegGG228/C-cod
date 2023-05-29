@@ -1,0 +1,8 @@
+employees = {'Иванов': True, 'Петров': False, 'Сидоров': True, 'Новиков': True, 
+             'Кузнецов': False, 'Медведев': False, 'Смирнов': True, 'Федоров': False,
+             'Козлов': False, 'Поляков': False, 'Егоров': True, 'Волков': False,
+             'Дмитриев': False, 'Андреев': True, 'Соколов': True, 'Соловьев': False}
+
+for key, value in employees.items():
+    if value:
+        print(key)

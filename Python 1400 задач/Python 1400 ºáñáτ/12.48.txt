@@ -1,0 +1,4 @@
+long_word = input("Введите длинное слово: ")
+short_word = input("Введите короткое слово: ")
+new_word = long_word.replace(short_word, "*"*len(short_word))
+print(new_word)

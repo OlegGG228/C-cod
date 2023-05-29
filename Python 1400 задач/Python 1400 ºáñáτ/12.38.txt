@@ -1,0 +1,11 @@
+word = "python"
+new_word_1 = word[3:] + word[:3]
+print(new_word_1)
+
+new_word_2 = ""
+for i in range(3, len(word)):
+    new_word_2 += word[i]
+for i in range(3):
+    new_word_2 += word[i]
+print(new_word_2)
+

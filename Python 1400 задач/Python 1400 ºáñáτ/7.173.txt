@@ -1,0 +1,12 @@
+max_speed = []
+for i in range(12):
+    speed = int(input(f"Введите максимальную скорость {i+1} автомобиля: "))
+    max_speed.append(speed)
+
+max_speed.sort()
+
+if max_speed[-1] == max_speed[-2]:
+    print("Ошибка: есть несколько автомобилей с максимальной скоростью.")
+else:
+    print(f"Скорость автомобиля, больше которой только максимальное значение скорости: {max_speed[-2]}")
+

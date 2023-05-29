@@ -1,0 +1,6 @@
+sentence = "Это предложение для удаления символов"
+new_sentence = ""
+for i in range(len(sentence)):
+    if i % 2 == 0 or sentence[i] != 'о':
+        new_sentence += sentence[i]
+print(new_sentence)

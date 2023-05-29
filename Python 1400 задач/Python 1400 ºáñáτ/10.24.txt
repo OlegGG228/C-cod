@@ -1,0 +1,36 @@
+
+import random
+
+Затем создадим функцию для проверки условий для фигур:
+
+def validate_rook(a, b, c, d):
+    return (a != c) and (b != d)
+
+def validate_bishop(a, b, c, d):
+    return abs(a - c) == abs(b - d)
+
+def validate_king(a, b, c, d):
+    return abs(a-c) <= 1 and abs(b-d) <= 1
+
+def validate_queen(a, b, c, d):
+    return validate_rook(a, b, c, d) or validate_bishop(a, b, c, d)
+
+Затем создадим цикл, который будет генерировать случайные числа и проверять их на соответствие условиям задачи:
+
+while True:
+    a = random.randint(1, 8)
+    b = random.randint(1, 8)
+    c = random.randint(1, 8)
+    d = random.randint(1, 8)
+    if validate_rook(a, b, c, d):
+        print(f"Пройдено условие для ладьи: ({a}, {b}) -> ({c}, {d})")
+    if validate_bishop(a, b, c, d):
+        print(f"Пройдено условие для слона: ({a}, {b}) -> ({c}, {d})")
+    if validate_king(a, b, c, d):
+        print(f"Пройдено условие для короля: ({a}, {b}) -> ({c}, {d})")
+    if validate_queen(a, b, c, d):
+        print(f"Пройдено условие для ферзя: ({a}, {b}) -> ({c}, {d})")
+    if all([validate_rook(a, b, c, d), validate_bishop(a, b, c, d), validate_king(a, b, c, d), validate_queen(a, b, c, d)]):
+        print("Условие для всех фигур пройдено!")
+        break
+

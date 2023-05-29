@@ -1,0 +1,20 @@
+seq = [0.1, 0.25, 0.3, 0.5, 0.6, 0.8, 0.9, 1.0, 1.1, 1.2, 1.5, 1.7, 2.0, 2.3, 2.6]
+n = 1.3
+
+# a)
+sum_less_n = sum([x for x in seq if x < n])
+print("Сумма чисел последовательности, меньших n:", sum_less_n)
+
+# б)
+index1 = 0
+index2 = 0
+for i, x in enumerate(seq):
+    if i == 0:
+        continue
+    if n < x:
+        index1 = i-1
+        index2 = i
+        break
+print("Два элемента между которыми находится n: {}, {}".format(index1, index2))
+print("Значения этих элементов:", seq[index1], seq[index2])
+

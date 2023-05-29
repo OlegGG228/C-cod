@@ -1,0 +1,14 @@
+# 1
+a = [3, -5, 8, -2, 7, 0, -4, 1, 6, -9]
+negative_numbers = []
+
+for num in a:
+    if num < 0:
+        negative_numbers.append(num)
+        
+print(negative_numbers) # выводит [-5, -2, -4, -9]
+# 2
+a = [3, -5, 8, -2, 7, 0, -4, 1, 6, -9]
+negative_numbers = [num for num in a if num < 0]
+
+print(negative_numbers) # выводит [-5, -2, -4, -9]

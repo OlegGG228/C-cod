@@ -1,0 +1,40 @@
+number = input("Введите натуральное число: ")
+k = 10
+b = 100
+x = 2
+y = 8
+a = 50
+t = 15
+
+digits = [int(d) for d in number]
+digit_sum = sum(digits)
+digit_product = 1
+for digit in digits:
+    digit_product *= digit
+is_even_number = int(number) % 2 == 0
+is_sum_greater_than_k = digit_sum > k and is_even_number
+is_number_less_than_b = int(number) <= b and len(digits) % 2 == 0
+is_starts_with_x_and_ends_with_y = digits[0] == x and digits[-1] == y
+is_product_less_than_a_and_divisible_by_b = digit_product < a and int(number) % b == 0
+is_sum_greater_than_t_and_divisible_by_p = digit_sum > t and int(number) % p == 0
+
+if is_sum_greater_than_k:
+    print("Сумма цифр больше", k, "и число четное")
+else:
+    print("Сумма цифр не больше", k, "и/или число нечетное")
+if is_number_less_than_b:
+    print("Число не превышает", b, "и количество его цифр четное")
+else:
+    print("Число превышает", b, "и/или количество его цифр нечетное")
+if is_starts_with_x_and_ends_with_y:
+    print("Число начинается с", x, "и заканчивается на", y)
+else:
+    print("Число не начинается с", x, "и/или не заканчивается на", y)
+if is_product_less_than_a_and_divisible_by_b:
+    print("Произведение цифр меньше", a, "и число делится на", b)
+else:
+    print("Произведение цифр не меньше", a, "и/или число не делится на", b)
+if is_sum_greater_than_t_and_divisible_by_p:
+    print("Сумма цифр больше", t, "и число делится на", p)
+else:
+    print("Сумма цифр не больше", t, "и/или число не делится на", p)

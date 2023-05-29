@@ -1,0 +1,42 @@
+# Решение без использования дополнительного массива
+
+# ввод данных
+
+lengths = [float(input(f'Длина пути автомобиля {i+1} (в км): ')) for i in range(25)]
+times = [float(input(f'Время в пути автомобиля {i+1} (в часах): ')) for i in range(25)]
+
+# функция для расчета средней скорости
+
+def average_speed(length, time):
+    return length/time
+
+# находим минимальную из средних скоростей
+
+min_speed = float('inf') # бесконечность
+for i in range(25):
+    speed = average_speed(lengths[i], times[i])
+    if speed < min_speed:
+        min_speed = speed
+
+print('Минимальная из средних скоростей:', min_speed)
+
+# Решение с использованием дополнительного массива
+
+# ввод данных
+
+lengths = [float(input(f'Длина пути автомобиля {i+1} (в км): ')) for i in range(25)]
+times = [float(input(f'Время в пути автомобиля {i+1} (в часах): ')) for i in range(25)]
+
+# создаем массив средних скоростей
+
+speeds = []
+for i in range(25):
+    speed = lengths[i]/times[i]
+    speeds.append(speed)
+
+# находим минимальную из средних скоростей
+
+min_speed = min(speeds)
+
+print('Минимальная из средних скоростей:', min_speed)
+

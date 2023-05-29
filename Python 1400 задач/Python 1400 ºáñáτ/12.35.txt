@@ -1,0 +1,11 @@
+word = "абвгде"
+half_len = len(word) // 2
+new_word = word[half_len:] + word[:half_len]
+print(new_word)
+# (с использованием цикла)
+word = "абвгде"
+word_list = list(word)
+for i in range(len(word) // 2):
+    word_list[i], word_list[i+half_len] = word_list[i+half_len], word_list[i]
+new_word = "".join(word_list)
+print(new_word)

@@ -1,0 +1,36 @@
+# Решение без использования дополнительного массива
+
+areas = 10
+wheat_areas = [5, 6, 4, 7, 3, 5, 6, 2, 4, 8]
+harvest = [36, 42, 31, 38, 32, 34, 40, 30, 28, 45]
+
+total_wheat = 0
+total_harvest = 0
+
+for i in range(areas):
+    total_wheat += wheat_areas[i] * 10000  # переводим гектары в квадратные метры
+    total_harvest += wheat_areas[i] * harvest[i]
+
+average_harvest = total_harvest / total_wheat * 100  # переводим центнеры на гектар в килограммы на квадратный метр
+
+print("Количество пшеницы, собранное в области:", total_wheat, "кв.м")
+print("Средняя урожайность по области:", average_harvest, "кг/кв.м")
+
+# Решение с использованием дополнительного массива
+
+areas = 10
+wheat_areas = [5, 6, 4, 7, 3, 5, 6, 2, 4, 8]
+harvest = [36, 42, 31, 38, 32, 34, 40, 30, 28, 45]
+
+wheat_harvest = [0] * areas  # создаем пустой массив
+
+for i in range(areas):
+    wheat_harvest[i] = wheat_areas[i] * harvest[i]
+    total_wheat = sum(wheat_areas) * 10000
+    total_harvest = sum(wheat_harvest)
+
+average_harvest = total_harvest / total_wheat * 100  # переводим центнеры на гектар в килограммы на квадратный метр
+
+print("Количество пшеницы, собранное в области:", total_wheat, "кв.м")
+print("Средняя урожайность по области:", average_harvest, "кг/кв.м")
+

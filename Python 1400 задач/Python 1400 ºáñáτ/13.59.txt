@@ -1,0 +1,20 @@
+students = {"1a": 25, "1б": 22, "2a": 30, "2б": 28, "3a": 29, "3б": 26}
+
+# Update the number of students in some classes
+students["1a"] = 24
+students["2a"] = 32
+students["3a"] = 28
+
+# Add two new classes
+students["4a"] = 31
+students["4б"] = 27
+
+# Remove one class
+del students["1б"]
+
+# Print the total number of students
+print(f"The school has {sum(students.values())} students")
+
+# Print all classes and their number of students
+for class_name, num_students in students.items():
+    print(f"{class_name} - {num_students} students")

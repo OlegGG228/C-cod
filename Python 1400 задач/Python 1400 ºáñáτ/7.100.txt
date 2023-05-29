@@ -1,0 +1,11 @@
+seq = [float(x) for x in input("Введите последовательность чисел через пробел: ").split()]
+
+sorted_seq = sorted(seq)
+
+if seq == sorted_seq:
+    print("Последовательность упорядочена по возрастанию")
+else:
+    for i in range(len(seq)):
+        if seq[i] != sorted_seq[i]:
+            print("Последовательность не упорядочена по возрастанию, нарушение на позиции", i+1)
+            break

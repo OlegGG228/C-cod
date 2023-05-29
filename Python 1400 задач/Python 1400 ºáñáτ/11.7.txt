@@ -1,0 +1,12 @@
+import random
+
+n = int(input("Введите количество элементов массива: "))
+a = int(input("Введите начало интервала: "))
+b = int(input("Введите конец интервала: "))
+
+arr = []
+for i in range(n):
+    arr.append(random.randint(a, b))
+
+print("Сгенерированный массив:", arr)
+

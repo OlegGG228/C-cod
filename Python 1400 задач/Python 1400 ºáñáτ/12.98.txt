@@ -1,0 +1,6 @@
+sentence = input("Введите предложение: ")
+
+sentence = sentence.replace('е', 'и')
+
+print("Исправленное предложение:", sentence)
+

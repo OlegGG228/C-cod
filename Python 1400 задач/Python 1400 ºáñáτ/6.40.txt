@@ -1,0 +1,4 @@
+number = int(input("Введите натуральное число: "))
+first_digit = int(str(number)[0]) # находим первую цифру числа
+count = str(number).count(str(first_digit)) # считаем количество вхождений этой цифры в число
+print(f"В числе {number} первая цифра ({first_digit}) встречается {count} раз(а).")

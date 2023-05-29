@@ -1,0 +1,18 @@
+x = 1
+y = -1
+
+a3 = x ** 2 - y ** 2 < 0
+b3 = (x > 2) or (y ** 2 - 4)
+c3 = (x > 0) and (y ** 2 > 4)
+d3 = (x - y == 4) and (y > x)
+e3 = (x - y != 0) or (y < x)
+f3 = (not (x - y < 1)) and (y > x)
+g3 = (not (x - y < 0)) or (y > x)
+
+print(a3)  # False
+print(b3)  # True
+print(c3)  # True
+print(d3)  # False
+print(e3)  # True
+print(f3)  # False
+print(g3)  # True

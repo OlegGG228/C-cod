@@ -1,0 +1,30 @@
+d_1 = int(input("Введите первое число: "))
+d_2 = int(input("Введите второе число: "))
+d_3 = int(input("Введите третье число: "))
+d_4 = int(input("Введите четвертое число: "))
+
+summa = 0 # переменная для суммы
+kolichestvo = 0 # переменная для количества четных чисел
+
+if d_1 % 2 == 0:
+    summa += d_1 # если число четное, добавляем его к сумме
+    kolichestvo += 1 # увеличиваем количество на 1
+ 
+if d_2 % 2 == 0:
+    summa += d_2
+    kolichestvo += 1
+ 
+if d_3 % 2 == 0:
+    summa += d_3
+    kolichestvo += 1
+ 
+if d_4 % 2 == 0:
+    summa += d_4
+    kolichestvo += 1
+ 
+if kolichestvo == 0:
+    print("Четных чисел нет")
+else:
+    srednee_arifmeticheskoe = summa / kolichestvo # считаем среднее арифметическое
+    print("Среднее арифметическое четных чисел:", srednee_arifmeticheskoe)
+

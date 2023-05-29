@@ -1,0 +1,10 @@
+s = int(input("Введите значение s (0 < s < 27): "))
+count = 0
+
+for i in range(100, 1000):
+    sum_digits = sum(int(digit) for digit in str(i))
+    if sum_digits == s:
+        count += 1
+
+print("Количество трехзначных чисел, сумма цифр которых равна", s, ":", count)
+

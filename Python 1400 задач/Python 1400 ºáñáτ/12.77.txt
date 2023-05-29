@@ -1,0 +1,8 @@
+sentence = input("Введите предложение: ")
+words = sentence.split("  ")
+first_word = words[0]
+second_word = words[1]
+third_word = words[2]
+print("Первое слово: ", first_word)
+print("Второе слово: ", second_word)
+print("Третье слово: ", third_word)
